@@ -1,12 +1,12 @@
 ---
-title: "R Markdown Demo"
+title: "Ahmed Alluqmani"
 author: "Yihui Xie"
 date: '2020-11-10'
 slug: r-markdown-demo
 features: [+sticky_menu]
 toc-title: Outline
 bibliography: packages.bib
----
+--- 
 
 ```{r, setup, include=FALSE}
 knitr::opts_chunk$set(fig.retina = 2, dev = if (xfun::loadable('svglite')) 'svglite' else 'svg')
@@ -19,13 +19,13 @@ knitr::opts_chunk$set(fig.retina = 2, dev = if (xfun::loadable('svglite')) 'svgl
 Use a fenced `Div` with the class `fullwidth`, e.g.,
 
 ```` {.md}
-::: {.fullwidth}
-Any Markdown content or code blocks here.
+library(plotly)
 
-```{r, echo=FALSE, fig.dim=c(14, 4)}`r ''`
-plot(sunspots)
-```
-:::
+fig <- plot_ly()
+
+fig
+ 
+ 
 ````
 
 ::: {.fullwidth}

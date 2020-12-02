@@ -1,17 +1,15 @@
 ---
-author: Yihui Xie
-bibliography: packages.bib
-date: "2020-11-10"
-features:
-- +sticky_menu
+title: "Ahmed Alluqmani"
+author: "Yihui Xie"
+date: '2020-11-10'
 slug: r-markdown-demo
-title: R Markdown Demo
+features: [+sticky_menu]
 toc-title: Outline
----
+bibliography: packages.bib
+--- 
 
-<script src="{{< relref "post/2020-11-10-r-markdown-demo/index.html" >}}index_files/header-attrs/header-attrs.js"></script>
-<link href="{{< relref "post/2020-11-10-r-markdown-demo/index.html" >}}index_files/anchor-sections/anchor-sections.css" rel="stylesheet" />
-<script src="{{< relref "post/2020-11-10-r-markdown-demo/index.html" >}}index_files/anchor-sections/anchor-sections.js"></script>
+<link href="index_files/anchor-sections/anchor-sections.css" rel="stylesheet" />
+<script src="index_files/anchor-sections/anchor-sections.js"></script>
 
 
 <div id="floats" class="section level2">
@@ -19,16 +17,16 @@ toc-title: Outline
 <div id="full-width-figures" class="section level3">
 <h3>Full-width figures</h3>
 <p>Use a fenced <code>Div</code> with the class <code>fullwidth</code>, e.g.,</p>
-<pre class="md"><code>::: {.fullwidth}
-Any Markdown content or code blocks here.
+<pre class="md"><code>library(plotly)
 
-```{r, echo=FALSE, fig.dim=c(14, 4)}
-plot(sunspots)
-```
-:::</code></pre>
+fig &lt;- plot_ly()
+
+fig
+ 
+ </code></pre>
 <div class="fullwidth">
 <div class="figure"><span id="fig:sunspots"></span>
-<img src="{{< relref "post/2020-11-10-r-markdown-demo/index.html" >}}index_files/figure-html/sunspots-1.svg" alt="Monthly mean relative sunspot numbers from 1749 to 1983. Collected at Swiss Federal Observatory, Zurich until 1960, then Tokyo Astronomical Observatory." width="1344" />
+<img src="index_files/figure-html/sunspots-1.svg" alt="Monthly mean relative sunspot numbers from 1749 to 1983. Collected at Swiss Federal Observatory, Zurich until 1960, then Tokyo Astronomical Observatory." width="1344" />
 <p class="caption">
 Figure 1: Monthly mean relative sunspot numbers from 1749 to 1983. Collected at Swiss Federal Observatory, Zurich until 1960, then Tokyo Astronomical Observatory.
 </p>
@@ -41,7 +39,7 @@ e.g.,</p>
 :::</code></pre>
 <div class="fullwidth fullscroll">
 <div class="figure"><span id="fig:scroll"></span>
-<img src="{{< relref "post/2020-11-10-r-markdown-demo/index.html" >}}index_files/figure-html/scroll-1.svg" alt="This is a super wide figure that you need to scroll to view it fully." width="2880" />
+<img src="index_files/figure-html/scroll-1.svg" alt="This is a super wide figure that you need to scroll to view it fully." width="2880" />
 <p class="caption">
 Figure 2: This is a super wide figure that you need to scroll to view it fully.
 </p>
@@ -54,7 +52,7 @@ Figure 2: This is a super wide figure that you need to scroll to view it fully.
 Use a fenced <code>Div</code> with the class <code>embed-left</code> or <code>embed-right</code>, e.g.,</p>
 <div class="embed-right">
 <div class="figure"><span id="fig:embed-plot"></span>
-<img src="{{< relref "post/2020-11-10-r-markdown-demo/index.html" >}}index_files/figure-html/embed-plot-1.svg" alt="This is a figure embedded on the right." width="480" />
+<img src="index_files/figure-html/embed-plot-1.svg" alt="This is a figure embedded on the right." width="480" />
 <p class="caption">
 Figure 3: This is a figure embedded on the right.
 </p>
@@ -219,14 +217,14 @@ This is a **sidenote** on the right.
 <div id="citations" class="section level3">
 <h3>Citations</h3>
 <p>Use <code>bibliography</code> or <code>references</code> in YAML to include the bibliography database,
-and use <code>@</code> to cite items, e.g., <code>@R-base</code> generates <span class="citation"><a href="#ref-R-base" role="doc-biblioref">R Core Team</a> (<a href="#ref-R-base" role="doc-biblioref">2020</a>)</span>.</p>
+and use <code>@</code> to cite items, e.g., <code>@R-base</code> generates <span class="citation">R Core Team (2020)</span>.</p>
 <pre class="r"><code>knitr::write_bib(&#39;base&#39;, &#39;packages.bib&#39;)</code></pre>
 <p>As you can see above, we generated a <code>.bib</code> database with <code>knitr::write_bib()</code>.</p>
 <p>Citation entries are displayed in the right margin by default like footnotes. To
 disable this behavior, set <code>features: [-sidenotes]</code> in YAML.</p>
-<div id="refs" class="references csl-bib-body hanging-indent">
-<div id="ref-R-base" class="csl-entry">
-R Core Team. 2020. <em>R: A Language and Environment for Statistical Computing</em>. Vienna, Austria: R Foundation for Statistical Computing. <a href="https://www.R-project.org/">https://www.R-project.org/</a>.
+<div id="refs" class="references">
+<div id="ref-R-base">
+<p>R Core Team. 2020. <em>R: A Language and Environment for Statistical Computing</em>. Vienna, Austria: R Foundation for Statistical Computing. <a href="https://www.R-project.org/">https://www.R-project.org/</a>.</p>
 </div>
 </div>
 </div>
