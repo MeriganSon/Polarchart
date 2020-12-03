@@ -1,0 +1,617 @@
+<link href="layout--layout--_files/anchor-sections/anchor-sections.css" rel="stylesheet" />
+<script src="layout--layout--_files/anchor-sections/anchor-sections.js"></script>
+<script src="layout--layout--_files/htmlwidgets/htmlwidgets.js"></script>
+<script src="layout--layout--_files/plotly-binding/plotly.js"></script>
+<script src="layout--layout--_files/typedarray/typedarray.min.js"></script>
+<script src="layout--layout--_files/jquery/jquery.min.js"></script>
+<link href="layout--layout--_files/crosstalk/css/crosstalk.css" rel="stylesheet" />
+<script src="layout--layout--_files/crosstalk/js/crosstalk.min.js"></script>
+<link href="layout--layout--_files/plotly-htmlwidgets-css/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="layout--layout--_files/plotly-main/plotly-latest.min.js"></script>
+
+
+<p>#```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE)</p>
+<div id="r-markdown" class="section level1">
+<h1>R Markdown</h1>
+<p>This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <a href="http://rmarkdown.rstudio.com" class="uri">http://rmarkdown.rstudio.com</a>.</p>
+<p>You can embed an R code chunk like this:</p>
+<pre class="r"><code>  library(plotly)
+fig &lt;- plot_ly(
+  type = &#39;scatterpolar&#39;,
+  r = c(0,1,2,3),
+  theta = c(0,45,90,135),
+    mode = &#39;lines+markers&#39;, marker = list(size = 10,color=&quot;red&quot;),
+  lines = list(size = 10,color=&quot;black&quot;),
+  fill = &#39;toself&#39;,
+  name=&#39;Trail&#39;
+) 
+fig &lt;- fig %&gt;%
+  layout(
+    polar = list(
+      hole=0.2,
+      radialaxis = list(
+        visible = T,
+        range = c(0,3),
+          angle=90,
+        color = &#39;grey&#39;,
+        nticks = 4,
+        tickcolor =toRGB(&#39;blue&#39;)
+      )
+    ),
+      showlegend = T,
+    showline = T
+  )
+
+fig &lt;- fig %&gt;% layout(
+  title = &quot;Radar Charts in R with Plotly&quot;,
+  scene = list(
+  ))
+
+fig</code></pre>
+<div id="htmlwidget-85603876496fd951934e" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-85603876496fd951934e">{"x":{"visdat":{"15a3a2175b2bd":["function () ","plotlyVisDat"]},"cur_data":"15a3a2175b2bd","attrs":{"15a3a2175b2bd":{"r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","marker":{"size":10,"color":"red"},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"polar":{"hole":0.2,"radialaxis":{"visible":true,"range":[0,3],"angle":90,"color":"grey","nticks":4,"tickcolor":"rgba(0,0,255,1)"}},"showlegend":true,"showline":true,"title":"Radar Charts in R with Plotly","hovermode":"closest"},"source":"A","config":{"showSendToCloud":false},"data":[{"fillcolor":"rgba(31,119,180,0.5)","r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","marker":{"color":"red","size":10,"line":{"color":"rgba(31,119,180,1)"}},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","type":"scatterpolar","line":{"color":"black","size":10},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="including-plots" class="section level1">
+<h1>Including Plots</h1>
+<p>You can also embed plots. See Figure <a href="#fig:pie"><strong>??</strong></a> for example:</p>
+<pre class="r"><code>  library(plotly)
+fig &lt;- plot_ly(
+  type = &#39;scatterpolar&#39;,
+  r = c(0,1,2,3),
+  theta = c(0,45,90,135),
+    mode = &#39;lines+markers&#39;, marker = list(size = 10,color=&quot;red&quot;),
+  lines = list(size = 10,color=&quot;black&quot;),
+  fill = &#39;toself&#39;,
+  name=&#39;Trail&#39;
+) 
+fig &lt;- fig %&gt;%
+  layout(
+    polar = list(
+      hole=0.2,
+      radialaxis = list(
+        visible = T,
+        range = c(0,3),
+          angle=90,
+        color = &#39;grey&#39;,
+        nticks = 4,
+        tickcolor =toRGB(&#39;blue&#39;)
+      )
+    ),
+      showlegend = T,
+    showline = T
+  )
+
+fig &lt;- fig %&gt;% layout(
+  title = &quot;Radar Charts in R with Plotly&quot;,
+  scene = list(
+    xaxis = list(title = &quot;Cos&quot;),
+    yaxis = list(title = &quot;Sin&quot;),
+    zaxis = list(title = &quot;Z&quot;)
+  ))
+
+fig</code></pre>
+<p><div id="htmlwidget-b60ff4b09969acd86ef6" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-b60ff4b09969acd86ef6">{"x":{"visdat":{"15a3a68b0cc73":["function () ","plotlyVisDat"]},"cur_data":"15a3a68b0cc73","attrs":{"15a3a68b0cc73":{"r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","marker":{"size":10,"color":"red"},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"polar":{"hole":0.2,"radialaxis":{"visible":true,"range":[0,3],"angle":90,"color":"grey","nticks":4,"tickcolor":"rgba(0,0,255,1)"}},"showlegend":true,"showline":true,"title":"Radar Charts in R with Plotly","scene":{"xaxis":{"title":"Cos"},"yaxis":{"title":"Sin"},"zaxis":{"title":"Z"}},"hovermode":"closest"},"source":"A","config":{"showSendToCloud":false},"data":[{"fillcolor":"rgba(31,119,180,0.5)","r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","marker":{"color":"red","size":10,"line":{"color":"rgba(31,119,180,1)"}},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","type":"scatterpolar","line":{"color":"black","size":10},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+# Including Plots</p>
+<p>You can also embed plots. See Figure <a href="#fig:pie"><strong>??</strong></a> for example:</p>
+<pre class="r"><code>  library(plotly)
+fig &lt;- plot_ly(
+  type = &#39;scatterpolar&#39;,
+  r = c(0,1,2,3),
+  theta = c(0,45,90,135),
+    mode = &#39;lines+markers&#39;, marker = list(size = 10,color=&quot;red&quot;),
+  lines = list(size = 10,color=&quot;black&quot;),
+  fill = &#39;toself&#39;,
+  name=&#39;Trail&#39;
+) 
+fig &lt;- fig %&gt;%
+  layout(
+    polar = list(
+      hole=0.2,
+      radialaxis = list(
+        visible = T,
+        range = c(0,3),
+          angle=90,
+        color = &#39;grey&#39;,
+        nticks = 4,
+        tickcolor =toRGB(&#39;blue&#39;),
+        tickfont = list(
+               size = 10,
+               color = &quot;blue&quot;
+             )
+
+      )
+    ),
+      showlegend = T,
+    showline = T
+  )
+
+fig &lt;- fig %&gt;% layout(
+  title = &quot;Radar Charts in R with Plotly&quot;,
+  scene = list(
+    xaxis = list(title = &quot;Cos&quot;),
+    yaxis = list(title = &quot;Sin&quot;),
+    zaxis = list(title = &quot;Z&quot;)
+  ))
+
+fig</code></pre>
+<div id="htmlwidget-967ea78a3d4a595c97ee" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-967ea78a3d4a595c97ee">{"x":{"visdat":{"15a3a42a9d79c":["function () ","plotlyVisDat"]},"cur_data":"15a3a42a9d79c","attrs":{"15a3a42a9d79c":{"r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","marker":{"size":10,"color":"red"},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"polar":{"hole":0.2,"radialaxis":{"visible":true,"range":[0,3],"angle":90,"color":"grey","nticks":4,"tickcolor":"rgba(0,0,255,1)","tickfont":{"size":10,"color":"blue"}}},"showlegend":true,"showline":true,"title":"Radar Charts in R with Plotly","scene":{"xaxis":{"title":"Cos"},"yaxis":{"title":"Sin"},"zaxis":{"title":"Z"}},"hovermode":"closest"},"source":"A","config":{"showSendToCloud":false},"data":[{"fillcolor":"rgba(31,119,180,0.5)","r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","marker":{"color":"red","size":10,"line":{"color":"rgba(31,119,180,1)"}},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","type":"scatterpolar","line":{"color":"black","size":10},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="including-plots-1" class="section level1">
+<h1>Including Plots</h1>
+<p>You can also embed plots. See Figure <a href="#fig:pie"><strong>??</strong></a> for example:</p>
+<pre class="r"><code>   library(plotly)
+fig &lt;- plot_ly(
+  type = &#39;scatterpolar&#39;,
+  r = c(0,1,2,3),
+  theta = c(0,45,90,135),
+    mode = &#39;lines+markers&#39;, marker = list(size = 10,color=&quot;red&quot;),
+  lines = list(size = 10,color=&quot;black&quot;),
+  fill = &#39;toself&#39;,
+  name=&#39;Trail&#39;
+) 
+fig &lt;- fig %&gt;%
+  layout(
+    polar = list(
+      hole=0.2,
+      radialaxis = list(
+        visible = T,
+        range = c(0,3),
+          angle=90,
+        color = &#39;grey&#39;,
+        nticks = 4,
+        tickcolor =toRGB(&#39;blue&#39;),
+        tickfont = list(
+               size = 10,
+               color = &quot;blue&quot;
+             ), 
+        ticks = &quot;inside&quot;
+
+      )
+    ),
+      showlegend = T,
+    showline = T
+    
+  )
+
+
+fig &lt;- fig %&gt;% layout(
+  title = &quot;Radar Charts in R with Plotly&quot;,
+  scene = list(
+    xaxis = list(title = &quot;Cos&quot;),
+    yaxis = list(title = &quot;Sin&quot;),
+    zaxis = list(title = &quot;Z&quot;)
+  ))
+
+fig</code></pre>
+<div id="htmlwidget-199687231dac06cc76fb" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-199687231dac06cc76fb">{"x":{"visdat":{"15a3a41ea1f76":["function () ","plotlyVisDat"]},"cur_data":"15a3a41ea1f76","attrs":{"15a3a41ea1f76":{"r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","marker":{"size":10,"color":"red"},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"polar":{"hole":0.2,"radialaxis":{"visible":true,"range":[0,3],"angle":90,"color":"grey","nticks":4,"tickcolor":"rgba(0,0,255,1)","tickfont":{"size":10,"color":"blue"},"ticks":"inside"}},"showlegend":true,"showline":true,"title":"Radar Charts in R with Plotly","scene":{"xaxis":{"title":"Cos"},"yaxis":{"title":"Sin"},"zaxis":{"title":"Z"}},"hovermode":"closest"},"source":"A","config":{"showSendToCloud":false},"data":[{"fillcolor":"rgba(31,119,180,0.5)","r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","marker":{"color":"red","size":10,"line":{"color":"rgba(31,119,180,1)"}},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","type":"scatterpolar","line":{"color":"black","size":10},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="including-plots-2" class="section level1">
+<h1>Including Plots</h1>
+<p>You can also embed plots. See Figure <a href="#fig:pie"><strong>??</strong></a> for example:</p>
+<pre class="r"><code>  library(plotly)
+fig &lt;- plot_ly(
+  type = &#39;scatterpolar&#39;,
+  r = c(0,1,2,3),
+  theta = c(0,45,90,135),
+    mode = &#39;lines+markers&#39;, marker = list(size = 10,color=&quot;red&quot;),
+  lines = list(size = 10,color=&quot;black&quot;),
+  fill = &#39;toself&#39;,
+  name=&#39;Trail&#39;
+) 
+fig &lt;- fig %&gt;%
+  layout(
+    polar = list(
+      hole=0.2,
+      radialaxis = list(
+        visible = T,
+        range = c(0,3),
+          angle=90,
+        color = &#39;grey&#39;,
+        nticks = 4,
+        tickcolor =toRGB(&#39;blue&#39;),
+        tickfont = list(
+               size = 10,
+               color = &quot;blue&quot;
+             ), 
+        ticks = &quot;outside&quot;,
+        ticklen = 100
+        
+
+      )
+    ),
+      showlegend = T,
+    showline = T
+  )
+
+fig &lt;- fig %&gt;% layout(
+  title = &quot;Radar Charts in R with Plotly&quot;,
+  scene = list(
+    xaxis = list(title = &quot;Cos&quot;),
+    yaxis = list(title = &quot;Sin&quot;),
+    zaxis = list(title = &quot;Z&quot;)
+  ))
+
+fig</code></pre>
+<div id="htmlwidget-ad0ac8580bd33be8acdd" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-ad0ac8580bd33be8acdd">{"x":{"visdat":{"15a3a4dd7efcb":["function () ","plotlyVisDat"]},"cur_data":"15a3a4dd7efcb","attrs":{"15a3a4dd7efcb":{"r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","marker":{"size":10,"color":"red"},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"polar":{"hole":0.2,"radialaxis":{"visible":true,"range":[0,3],"angle":90,"color":"grey","nticks":4,"tickcolor":"rgba(0,0,255,1)","tickfont":{"size":10,"color":"blue"},"ticks":"outside","ticklen":100}},"showlegend":true,"showline":true,"title":"Radar Charts in R with Plotly","scene":{"xaxis":{"title":"Cos"},"yaxis":{"title":"Sin"},"zaxis":{"title":"Z"}},"hovermode":"closest"},"source":"A","config":{"showSendToCloud":false},"data":[{"fillcolor":"rgba(31,119,180,0.5)","r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","marker":{"color":"red","size":10,"line":{"color":"rgba(31,119,180,1)"}},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","type":"scatterpolar","line":{"color":"black","size":10},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="including-plots-3" class="section level1">
+<h1>Including Plots</h1>
+<p>You can also embed plots. See Figure <a href="#fig:pie"><strong>??</strong></a> for example:</p>
+<pre class="r"><code>  library(plotly)
+fig &lt;- plot_ly(
+  type = &#39;scatterpolar&#39;,
+  r = c(0,1,2,3),
+  theta = c(0,45,90,135),
+    mode = &#39;lines+markers&#39;, marker = list(size = 10,color=&quot;red&quot;),
+  lines = list(size = 10,color=&quot;black&quot;),
+  fill = &#39;toself&#39;,
+  name=&#39;Trail&#39;
+) 
+fig &lt;- fig %&gt;%
+  layout(
+    polar = list(
+      hole=0.2,
+      radialaxis = list(
+        visible = T,
+        range = c(0,3),
+          angle=90,
+        color = &#39;grey&#39;,
+        nticks = 4,
+        tickcolor =toRGB(&#39;blue&#39;),
+        tickfont = list(
+               size = 10,
+               color = &quot;blue&quot;
+             ), 
+        ticks = &quot;outside&quot;,
+        ticklen = 20,
+        tickwidth = 20
+        
+
+      )
+    ),
+      showlegend = T,
+    showline = T
+  )
+
+fig &lt;- fig %&gt;% layout(
+  title = &quot;Radar Charts in R with Plotly&quot;,
+  scene = list(
+    xaxis = list(title = &quot;Cos&quot;),
+    yaxis = list(title = &quot;Sin&quot;),
+    zaxis = list(title = &quot;Z&quot;)
+  ))
+
+fig</code></pre>
+<div id="htmlwidget-41b5650778c485e74636" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-41b5650778c485e74636">{"x":{"visdat":{"15a3a628c02f1":["function () ","plotlyVisDat"]},"cur_data":"15a3a628c02f1","attrs":{"15a3a628c02f1":{"r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","marker":{"size":10,"color":"red"},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"polar":{"hole":0.2,"radialaxis":{"visible":true,"range":[0,3],"angle":90,"color":"grey","nticks":4,"tickcolor":"rgba(0,0,255,1)","tickfont":{"size":10,"color":"blue"},"ticks":"outside","ticklen":20,"tickwidth":20}},"showlegend":true,"showline":true,"title":"Radar Charts in R with Plotly","scene":{"xaxis":{"title":"Cos"},"yaxis":{"title":"Sin"},"zaxis":{"title":"Z"}},"hovermode":"closest"},"source":"A","config":{"showSendToCloud":false},"data":[{"fillcolor":"rgba(31,119,180,0.5)","r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","marker":{"color":"red","size":10,"line":{"color":"rgba(31,119,180,1)"}},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","type":"scatterpolar","line":{"color":"black","size":10},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="including-plots-4" class="section level1">
+<h1>Including Plots</h1>
+<p>You can also embed plots. See Figure <a href="#fig:pie"><strong>??</strong></a> for example:</p>
+<pre class="r"><code>  library(plotly)
+fig &lt;- plot_ly(
+  type = &#39;scatterpolar&#39;,
+  r = c(0,1,2,3),
+  theta = c(0,45,90,135),
+    mode = &#39;lines+markers&#39;, marker = list(size = 10,color=&quot;red&quot;),
+  lines = list(size = 10,color=&quot;black&quot;),
+  fill = &#39;toself&#39;,
+  name=&#39;Trail&#39;
+) 
+fig &lt;- fig %&gt;%
+  layout(
+    polar = list(
+      hole=0.2,
+      radialaxis = list(
+        visible = T,
+        range = c(0,3),
+          angle=90,
+        tickangle = 90,
+        color = &#39;grey&#39;,
+        nticks = 4,
+        tickcolor =toRGB(&#39;blue&#39;),
+        tickfont = list(
+               size = 10,
+               color = &quot;blue&quot;
+             ), 
+        ticks = &quot;outside&quot;,
+        ticklen = 10,
+        tickwidth = 3
+        
+
+      )
+    ),
+      showlegend = T,
+    showline = T
+  )
+
+fig &lt;- fig %&gt;% layout(
+  title = &quot;Radar Charts in R with Plotly&quot;,
+  scene = list(
+    xaxis = list(title = &quot;Cos&quot;),
+    yaxis = list(title = &quot;Sin&quot;),
+    zaxis = list(title = &quot;Z&quot;)
+  ))
+
+fig</code></pre>
+<div id="htmlwidget-83fa21160e9b74c7dda9" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-83fa21160e9b74c7dda9">{"x":{"visdat":{"15a3a10e5ceb5":["function () ","plotlyVisDat"]},"cur_data":"15a3a10e5ceb5","attrs":{"15a3a10e5ceb5":{"r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","marker":{"size":10,"color":"red"},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"polar":{"hole":0.2,"radialaxis":{"visible":true,"range":[0,3],"angle":90,"tickangle":90,"color":"grey","nticks":4,"tickcolor":"rgba(0,0,255,1)","tickfont":{"size":10,"color":"blue"},"ticks":"outside","ticklen":10,"tickwidth":3}},"showlegend":true,"showline":true,"title":"Radar Charts in R with Plotly","scene":{"xaxis":{"title":"Cos"},"yaxis":{"title":"Sin"},"zaxis":{"title":"Z"}},"hovermode":"closest"},"source":"A","config":{"showSendToCloud":false},"data":[{"fillcolor":"rgba(31,119,180,0.5)","r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","marker":{"color":"red","size":10,"line":{"color":"rgba(31,119,180,1)"}},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","type":"scatterpolar","line":{"color":"black","size":10},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="including-plots-5" class="section level1">
+<h1>Including Plots</h1>
+<p>You can also embed plots. See Figure <a href="#fig:pie"><strong>??</strong></a> for example:</p>
+<pre class="r"><code>  library(plotly)
+fig &lt;- plot_ly(
+  type = &#39;scatterpolar&#39;,
+  r = c(0,1,2,3),
+  theta = c(0,45,90,135),
+    mode = &#39;lines+markers&#39;, marker = list(size = 10,color=&quot;red&quot;),
+  lines = list(size = 10,color=&quot;black&quot;),
+  fill = &#39;toself&#39;,
+  name=&#39;Trail&#39;
+) 
+fig &lt;- fig %&gt;%
+  layout(
+    polar = list(
+      hole=0.2,
+      radialaxis = list(
+        visible = T,
+        range = c(0,3),
+          angle=90,
+        tickangle = 90,
+        color = &#39;grey&#39;,
+        nticks = 4,
+        tickcolor =toRGB(&#39;blue&#39;),
+        tickfont = list(
+               size = 10,
+               color = &quot;blue&quot;
+             ), 
+        ticks = &quot;outside&quot;,
+        ticklen = 10,
+        tickwidth = 3,
+        gridcolor = &#39;red&#39;#color of grid lines
+        
+
+      )
+    ),
+      showlegend = T,
+    showline = T
+  )
+
+fig &lt;- fig %&gt;% layout(
+  title = &quot;Radar Charts in R with Plotly&quot;,
+  scene = list(
+    xaxis = list(title = &quot;Cos&quot;),
+    yaxis = list(title = &quot;Sin&quot;),
+    zaxis = list(title = &quot;Z&quot;)
+  ))
+
+fig</code></pre>
+<div id="htmlwidget-39e6f61bc16528a942e8" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-39e6f61bc16528a942e8">{"x":{"visdat":{"15a3a16b39c39":["function () ","plotlyVisDat"]},"cur_data":"15a3a16b39c39","attrs":{"15a3a16b39c39":{"r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","marker":{"size":10,"color":"red"},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"polar":{"hole":0.2,"radialaxis":{"visible":true,"range":[0,3],"angle":90,"tickangle":90,"color":"grey","nticks":4,"tickcolor":"rgba(0,0,255,1)","tickfont":{"size":10,"color":"blue"},"ticks":"outside","ticklen":10,"tickwidth":3,"gridcolor":"red"}},"showlegend":true,"showline":true,"title":"Radar Charts in R with Plotly","scene":{"xaxis":{"title":"Cos"},"yaxis":{"title":"Sin"},"zaxis":{"title":"Z"}},"hovermode":"closest"},"source":"A","config":{"showSendToCloud":false},"data":[{"fillcolor":"rgba(31,119,180,0.5)","r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","marker":{"color":"red","size":10,"line":{"color":"rgba(31,119,180,1)"}},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","type":"scatterpolar","line":{"color":"black","size":10},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="including-plots-6" class="section level1">
+<h1>Including Plots</h1>
+<p>You can also embed plots. See Figure <a href="#fig:pie"><strong>??</strong></a> for example:</p>
+<pre class="r"><code>  library(plotly)
+fig &lt;- plot_ly(
+  type = &#39;scatterpolar&#39;,
+  r = c(0,1,2,3),
+  theta = c(0,45,90,135),
+    mode = &#39;lines+markers&#39;, marker = list(size = 10,color=&quot;red&quot;),
+  lines = list(size = 10,color=&quot;black&quot;),
+  fill = &#39;toself&#39;,
+  name=&#39;Trail&#39;
+) 
+fig &lt;- fig %&gt;%
+  layout(
+    polar = list(
+      hole=0.2,
+      radialaxis = list(
+        visible = T,
+        range = c(0,3),
+          angle=90,
+        tickangle = 90,
+        color = &#39;grey&#39;,
+        nticks = 4,
+        tickcolor =toRGB(&#39;blue&#39;),
+        tickfont = list(
+               size = 10,
+               color = &quot;blue&quot;
+             ), 
+        ticks = &quot;outside&quot;,
+        ticklen = 10,
+        tickwidth = 3,
+        gridcolor = &#39;red&#39; #color of grid lines
+    
+        
+
+      )
+    ),
+      showlegend = T,
+    showline = T
+  )
+
+fig &lt;- fig %&gt;% layout(
+  title = &quot;Radar Charts in R with Plotly&quot;,
+  scene = list(
+    xaxis = list(title = &quot;Cos&quot;),
+    yaxis = list(title = &quot;Sin&quot;),
+    zaxis = list(title = &quot;Z&quot;)
+  ))
+
+fig</code></pre>
+<div id="htmlwidget-2cf18bad70e6c4d56c35" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-2cf18bad70e6c4d56c35">{"x":{"visdat":{"15a3a3b1d6ded":["function () ","plotlyVisDat"]},"cur_data":"15a3a3b1d6ded","attrs":{"15a3a3b1d6ded":{"r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","marker":{"size":10,"color":"red"},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"polar":{"hole":0.2,"radialaxis":{"visible":true,"range":[0,3],"angle":90,"tickangle":90,"color":"grey","nticks":4,"tickcolor":"rgba(0,0,255,1)","tickfont":{"size":10,"color":"blue"},"ticks":"outside","ticklen":10,"tickwidth":3,"gridcolor":"red"}},"showlegend":true,"showline":true,"title":"Radar Charts in R with Plotly","scene":{"xaxis":{"title":"Cos"},"yaxis":{"title":"Sin"},"zaxis":{"title":"Z"}},"hovermode":"closest"},"source":"A","config":{"showSendToCloud":false},"data":[{"fillcolor":"rgba(31,119,180,0.5)","r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","marker":{"color":"red","size":10,"line":{"color":"rgba(31,119,180,1)"}},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","type":"scatterpolar","line":{"color":"black","size":10},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="including-plots-7" class="section level1">
+<h1>Including Plots</h1>
+<p>You can also embed plots. See Figure <a href="#fig:pie"><strong>??</strong></a> for example:</p>
+<pre class="r"><code>  library(plotly)
+fig &lt;- plot_ly(
+  type = &#39;scatterpolar&#39;,
+  r = c(0,1,2,3),
+  theta = c(0,45,90,135),
+    mode = &#39;lines+markers&#39;, marker = list(size = 10,color=&quot;red&quot;),
+  lines = list(size = 10,color=&quot;black&quot;),
+  fill = &#39;toself&#39;,
+  name=&#39;Trail&#39;
+) 
+fig &lt;- fig %&gt;%
+  layout(
+    polar = list(
+      hole=0.2,
+      radialaxis = list(
+        visible = T,
+        range = c(0,3),
+          angle=90,
+        tickangle = 90,
+        color = &#39;grey&#39;,
+        nticks = 4,
+        tickcolor =toRGB(&#39;blue&#39;),
+        tickfont = list(
+               size = 10,
+               color = &quot;blue&quot;
+             ), 
+        ticks = &quot;outside&quot;,
+        ticklen = 10,
+        tickwidth = 3,
+        gridcolor = &#39;red&#39; #color of grid lines
+    
+        
+
+      )
+    ),
+      showlegend = T,
+    showline = T
+  )
+
+fig &lt;- fig %&gt;% layout(paper_bgcolor=&#39;#5875D5&#39;,
+  title = &quot;Radar Charts in R with Plotly&quot;,
+  scene = list(
+    xaxis = list(title = &quot;Cos&quot;),
+    yaxis = list(title = &quot;Sin&quot;),
+    zaxis = list(title = &quot;Z&quot;)
+  ))
+
+fig </code></pre>
+<div id="htmlwidget-c42d5be97f8b27664bca" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-c42d5be97f8b27664bca">{"x":{"visdat":{"15a3ad80cc47":["function () ","plotlyVisDat"]},"cur_data":"15a3ad80cc47","attrs":{"15a3ad80cc47":{"r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","marker":{"size":10,"color":"red"},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"polar":{"hole":0.2,"radialaxis":{"visible":true,"range":[0,3],"angle":90,"tickangle":90,"color":"grey","nticks":4,"tickcolor":"rgba(0,0,255,1)","tickfont":{"size":10,"color":"blue"},"ticks":"outside","ticklen":10,"tickwidth":3,"gridcolor":"red"}},"showlegend":true,"showline":true,"paper_bgcolor":"#5875D5","title":"Radar Charts in R with Plotly","scene":{"xaxis":{"title":"Cos"},"yaxis":{"title":"Sin"},"zaxis":{"title":"Z"}},"hovermode":"closest"},"source":"A","config":{"showSendToCloud":false},"data":[{"fillcolor":"rgba(31,119,180,0.5)","r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","marker":{"color":"red","size":10,"line":{"color":"rgba(31,119,180,1)"}},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","type":"scatterpolar","line":{"color":"black","size":10},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="including-plots-8" class="section level1">
+<h1>Including Plots</h1>
+<p>You can also embed plots. See Figure <a href="#fig:pie"><strong>??</strong></a> for example:</p>
+<pre class="r"><code>  library(plotly)
+fig &lt;- plot_ly(
+  type = &#39;scatterpolar&#39;,
+  r = c(0,1,2,3),
+  theta = c(0,45,90,135),
+    mode = &#39;lines+markers&#39;, marker = list(size = 10,color=&quot;red&quot;),
+  lines = list(size = 10,color=&quot;black&quot;),
+  fill = &#39;toself&#39;,
+  name=&#39;Trail&#39;
+) 
+fig &lt;- fig %&gt;%
+  layout(
+    polar = list(
+      hole=0.2,
+      radialaxis = list(
+        visible = T,
+        range = c(0,3),
+          angle=90,
+        tickangle = 90,
+        color = &#39;grey&#39;,
+        nticks = 4,
+        tickcolor =toRGB(&#39;blue&#39;),
+        tickfont = list(
+               size = 10,
+               color = &quot;blue&quot;
+             ), 
+        ticks = &quot;outside&quot;,
+        ticklen = 10,
+        tickwidth = 3,
+        gridcolor = &#39;red&#39; #color of grid lines
+    
+        
+
+      )
+    ),
+      showlegend = T,
+    showline = T
+  )
+
+fig &lt;- fig %&gt;% layout(paper_bgcolor=&#39;#5875D5&#39;,
+                      showlegend = F, 
+  title = &quot;Radar Charts in R with Plotly&quot;,
+  scene = list(
+    xaxis = list(title = &quot;Cos&quot;),
+    yaxis = list(title = &quot;Sin&quot;),
+    zaxis = list(title = &quot;Z&quot;)
+  ))
+
+fig</code></pre>
+<div id="htmlwidget-5d0a75dee0b7a60311b2" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-5d0a75dee0b7a60311b2">{"x":{"visdat":{"15a3a19a917ed":["function () ","plotlyVisDat"]},"cur_data":"15a3a19a917ed","attrs":{"15a3a19a917ed":{"r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","marker":{"size":10,"color":"red"},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"polar":{"hole":0.2,"radialaxis":{"visible":true,"range":[0,3],"angle":90,"tickangle":90,"color":"grey","nticks":4,"tickcolor":"rgba(0,0,255,1)","tickfont":{"size":10,"color":"blue"},"ticks":"outside","ticklen":10,"tickwidth":3,"gridcolor":"red"}},"showlegend":false,"showline":true,"paper_bgcolor":"#5875D5","title":"Radar Charts in R with Plotly","scene":{"xaxis":{"title":"Cos"},"yaxis":{"title":"Sin"},"zaxis":{"title":"Z"}},"hovermode":"closest"},"source":"A","config":{"showSendToCloud":false},"data":[{"fillcolor":"rgba(31,119,180,0.5)","r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","marker":{"color":"red","size":10,"line":{"color":"rgba(31,119,180,1)"}},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","type":"scatterpolar","line":{"color":"black","size":10},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<pre class="r"><code>   library(plotly)
+fig &lt;- plot_ly(
+  type = &#39;scatterpolar&#39;,
+  r = c(0,1,2,3),
+  theta = c(0,45,90,135),
+    mode = &#39;lines+markers&#39;, marker = list(size = 10,color=&quot;red&quot;),
+  lines = list(size = 10,color=&quot;black&quot;),
+  fill = &#39;toself&#39;,
+  name=&#39;Trail&#39;
+) 
+fig &lt;- fig %&gt;%
+  layout(
+    polar = list(
+      hole=0.2,
+      radialaxis = list(
+        visible = T,
+        range = c(0,3),
+          angle=90,
+        tickangle = 90,
+        color = &#39;grey&#39;,
+        nticks = 4,
+        tickcolor =toRGB(&#39;blue&#39;),
+        tickfont = list(
+               size = 10,
+               color = &quot;blue&quot;
+             ), 
+        ticks = &quot;outside&quot;,
+        ticklen = 10,
+        tickwidth = 3,
+        gridcolor = &#39;red&#39; #color of grid lines
+    
+        
+
+      )
+    ),
+      showlegend = T,
+    showline = T
+  )
+
+fig &lt;- fig %&gt;% layout(paper_bgcolor=&#39;#5875D5&#39;,
+                      showlegend = T, 
+  title = &quot;Radar Charts in R with Plotly&quot;,
+  scene = list(
+    xaxis = list(title = &quot;Cos&quot;),
+    yaxis = list(title = &quot;Sin&quot;),
+    zaxis = list(title = &quot;Z&quot;)
+  ), titlefont = list(
+  color = &#39;#ffffff&#39;,size=12,family = &quot;Agency FB&quot;),
+  font = list(family = &#39;Agency FB&#39;,
+              size = 10), 
+              margin = 0)
+  
+  
+
+fig</code></pre>
+<div id="htmlwidget-0c6f5c31971807135977" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-0c6f5c31971807135977">{"x":{"visdat":{"15a3a4b194d9f":["function () ","plotlyVisDat"]},"cur_data":"15a3a4b194d9f","attrs":{"15a3a4b194d9f":{"r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","marker":{"size":10,"color":"red"},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar"}},"layout":{"margin":0,"polar":{"hole":0.2,"radialaxis":{"visible":true,"range":[0,3],"angle":90,"tickangle":90,"color":"grey","nticks":4,"tickcolor":"rgba(0,0,255,1)","tickfont":{"size":10,"color":"blue"},"ticks":"outside","ticklen":10,"tickwidth":3,"gridcolor":"red"}},"showlegend":true,"showline":true,"paper_bgcolor":"#5875D5","title":"Radar Charts in R with Plotly","scene":{"xaxis":{"title":"Cos"},"yaxis":{"title":"Sin"},"zaxis":{"title":"Z"}},"titlefont":{"color":"#ffffff","size":12,"family":"Agency FB"},"font":{"family":"Agency FB","size":10},"hovermode":"closest"},"source":"A","config":{"showSendToCloud":false},"data":[{"fillcolor":"rgba(31,119,180,0.5)","r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","marker":{"color":"red","size":10,"line":{"color":"rgba(31,119,180,1)"}},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","type":"scatterpolar","line":{"color":"black","size":10},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>

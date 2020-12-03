@@ -1,0 +1,1725 @@
+---
+title: "Polarchart add_Trace add_Trace"
+author: "Ahmed Alluqmani"
+date: 2020-12-01T21:13:14-05:00
+categories: ["R"]
+tags: ["R Markdown", "plot", "regression"]
+---
+
+#```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE)
+
+```{r setup, include=FALSE} 
+knitr::opts_chunk$set(warning = FALSE, message = FALSE)
+```
+ 
+# R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+You can embed an R code chunk like this:
+
+```{r}
+ 
+library('plotly')
+fig <- plot_ly(
+  type = 'scatterpolar',
+  r = c(0,1,2,3),
+  theta = c(0,45,90,135),
+    mode = 'lines+markers', marker = list(size = 10,color="red"),
+  lines = list(size = 10,color="black"),
+  fill = 'toself',
+  name='Trail'
+) 
+ 
+ 
+library('plotly')
+fig <- plot_ly(
+  type = 'scatterpolar',
+  r = c(0,1,2,3),
+  theta = c(0,45,90,135),
+    mode = 'lines+markers', marker = list(size = 10),
+  fill = 'toself',
+  name="Trail01"
+)
+ 
+fig <- fig %>%
+  layout(
+    polar = list(
+      hole=0.2,
+      radialaxis = list(
+        visible = T,
+        range = c(0,3),
+          angle=90,
+        tickangle = 90,
+        color = 'grey',
+        nticks = 4,
+        tickcolor =toRGB('blue'),
+        tickfont = list(
+               size = 10,
+               color = "blue"
+             ), 
+        ticks = "outside",
+        ticklen = 10,
+        tickwidth = 3,
+        gridcolor = 'red'#color of grid lines
+        
+
+      )
+    ),
+      showlegend = T,
+    showline = T
+  )
+
+fig <- fig %>% layout(
+  title = "Radar Charts in R with Plotly",
+  scene = list(
+    xaxis = list(title = "Cos"),
+    yaxis = list(title = "Sin"),
+    zaxis = list(title = "Z")
+  ))
+
+
+
+  
+fig <- fig %>%
+  add_trace( r = c(0,1,2,3),
+  theta = c(0,45,90,135),
+  line = list(
+    color = "blue"),
+  marker = list(
+    color = "red",size = 6, symbol = 'square'),
+  name="Trail02"
+  )
+fig
+
+
+  
+fig <- fig %>%
+  add_trace( r = c(0,1,2,3),
+  theta = c(180,225,270,315),
+  line = list(
+    color = "blue"),
+  marker = list(
+    color = "red",size = 6, symbol = 'square'),
+  name="Trail02"
+  )
+fig
+ 
+```
+
+# Including Plots
+
+You can also embed plots. See Figure \@ref(fig:pie) for example:
+
+```{r}
+  
+library('plotly')
+fig <- plot_ly(
+  type = 'scatterpolar',
+  r = c(0,1,2,3),
+  theta = c(0,45,90,135),
+    mode = 'lines+markers', marker = list(size = 10,color="red"),
+  lines = list(size = 10,color="black"),
+  fill = 'toself',
+  name='Trail'
+) 
+ 
+fig <- fig %>%
+  layout(
+    polar = list(
+      hole=0.2,
+      radialaxis = list(
+        visible = T,
+        range = c(0,3),
+          angle=90,
+        tickangle = 90,
+        color = 'grey',
+        nticks = 4,
+        tickcolor =toRGB('blue'),
+        tickfont = list(
+               size = 10,
+               color = "blue"
+             ), 
+        ticks = "outside",
+        ticklen = 10,
+        tickwidth = 3,
+        gridcolor = 'red'#color of grid lines
+        
+
+      )
+    ),
+      showlegend = T,
+    showline = T
+  )
+
+fig <- fig %>% layout(
+  title = "Radar Charts in R with Plotly",
+  scene = list(
+    xaxis = list(title = "Cos"),
+    yaxis = list(title = "Sin"),
+    zaxis = list(title = "Z")
+  ))
+
+
+
+  
+fig <- fig %>%
+  add_trace( r = c(0,1,2,3),
+  theta = c(180,225,270,315),
+  line = list(
+    color = "blue"),
+  marker = list(
+    color = "red",size = 6, symbol = 'square'),
+  name="Trail02"
+  )
+fig 
+
+```
+# Including Plots
+
+You can also embed plots. See Figure \@ref(fig:pie) for example:
+
+```{r}
+ 
+ fig <- plot_ly(
+  type = 'scatterpolar',
+  r = c(0,1,2,3),
+  theta = c(0,45,90,135),
+    mode = 'lines+markers', marker = list(size = 10,color="red"),
+  lines = list(size = 10,color="black"),
+  fill = 'toself',
+  name='Trail'
+) 
+
+
+  
+fig <- fig %>%
+  add_trace( r = c(0,1,2,3),
+  theta = c(180,225,270,315),
+  line = list(
+    color = "blue"),
+  marker = list(
+    color = "red",size = 6, symbol = 'square'),
+  name="Trail02"
+  )
+
+fig <- fig %>%
+  layout(
+    polar = list(
+      hole=0.2,
+      radialaxis = list(
+        visible = T,
+        range = c(0,3),
+          angle=90,
+        tickangle = 90,
+        color = 'grey',
+        nticks = 4,
+        tickcolor =toRGB('blue'),
+        tickfont = list(
+               size = 10,
+               color = "blue"
+             ), 
+        ticks = "outside",
+        ticklen = 10,
+        tickwidth = 3,
+        gridcolor = 'red'#color of grid lines
+        
+
+      )
+    ),
+      showlegend = T,
+    showline = T
+  )
+
+fig <- fig %>% layout(paper_bgcolor='#5875D5',
+                      showlegend = T, 
+  title = "Radar Charts in R with Plotly",
+  scene = list(
+    xaxis = list(title = "Cos"),
+    yaxis = list(title = "Sin"),
+    zaxis = list(title = "Z")
+  ), titlefont = list(
+  color = '#ffffff',size=12,family = "Agency FB"),
+  font = list(family = 'Agency FB',
+              size = 10), 
+              margin = 0)
+  
+
+fig 
+ 
+ 
+
+```
+
+# Including Plots
+
+You can also embed plots. See Figure \@ref(fig:pie) for example:
+
+```{r}
+ 
+
+library('plotly')
+fig <- plot_ly(
+  type = 'scatterpolar',
+  r = c(0,1,2,3),
+  theta = c(0,45,90,135),
+    mode = 'lines+markers', marker = list(size = 10,color="red"),
+  lines = list(size = 10,color="black"),
+  fill = 'toself',
+  name='Trail'
+) 
+
+
+  
+fig <- fig %>%
+  add_trace( r = c(0,1,2,3),
+  theta = c(180,225,270,315),
+  line = list(
+    color = "blue"),
+  marker = list(
+    color = "red",size = 6, symbol = 'square'),
+  name="Trail02"
+  )
+
+
+fig <- fig %>%
+  add_trace( r = c(4,3,5,5),
+             theta = c(180,225,270,315),
+             line = list(
+               color = "blue"),
+             marker = list(
+               color = "red",
+               symbol = 'square',
+               size = 8
+               
+             ) 
+  )
+
+fig <- fig %>%
+  layout(
+    polar = list(
+      hole=0.2,
+      radialaxis = list(
+        visible = T,
+        range = c(0,4),
+          angle=90,
+        tickangle = 90,
+        color = 'grey',
+        nticks = 4,
+        tickcolor =toRGB('blue'),
+        tickfont = list(
+               size = 10,
+               color = "blue"
+             ), 
+        ticks = "outside",
+        ticklen = 10,
+        tickwidth = 3,
+        gridcolor = 'red'#color of grid lines
+        
+
+      )
+    ),
+      showlegend = T,
+    showline = T
+  )
+
+fig <- fig %>% layout(paper_bgcolor='#5875D5',
+                      showlegend = T, 
+  title = "Radar Charts in R with Plotly",
+  scene = list(
+    xaxis = list(title = "Cos"),
+    yaxis = list(title = "Sin"),
+    zaxis = list(title = "Z")
+  ), titlefont = list(
+  color = '#ffffff',size=12,family = "Agency FB"),
+  font = list(family = 'Agency FB',
+              size = 10), 
+              margin = 0)
+  
+
+fig 
+ 
+  
+
+```
+
+
+# Including Plots
+
+You can also embed plots. See Figure \@ref(fig:pie) for example:
+
+```{r}
+
+library('plotly')
+fig <- plot_ly(
+  type = 'scatterpolar',
+  r = c(0,1,2,3),
+  theta = c(0,45,90,135),
+    mode = 'lines+markers', marker = list(size = 10,color="red"),
+  lines = list(size = 10,color="black"),
+  fill = 'toself',
+  name='Trail'
+) 
+
+
+  
+fig <- fig %>%
+  add_trace( r = c(0,1,2,3),
+  theta = c(180,225,270,315),
+  line = list(
+    color = "blue"),
+  marker = list(
+    color = "red",size = 6, symbol = 'square'),
+  name="Trail02"
+  )
+
+
+fig <- fig %>%
+  add_trace( r = c(4,3,5,5),
+             theta = c(180,225,270,315),
+             line = list(
+               color = "blue"),
+             marker = list(
+               color = "red",
+               symbol = 'square',
+               size = 8
+               
+             ),
+             subplot = 'polar2'
+  )
+
+fig <- fig %>%
+  layout(
+    polar2 = list(
+      hole=0.2,
+      radialaxis = list(
+        visible = T,
+        range = c(0,4),
+          angle=90,
+        tickangle = 90,
+        color = 'grey',
+        nticks = 4,
+        tickcolor =toRGB('blue'),
+        tickfont = list(
+               size = 10,
+               color = "blue"
+             ), 
+        ticks = "outside",
+        ticklen = 10,
+        tickwidth = 3,
+        gridcolor = 'red'#color of grid lines
+        
+
+      )
+    ),
+      showlegend = T,
+    showline = T
+  )
+
+fig <- fig %>% layout(paper_bgcolor='#5875D5',
+                      showlegend = T, 
+  title = "Radar Charts in R with Plotly",
+  scene = list(
+    xaxis = list(title = "Cos"),
+    yaxis = list(title = "Sin"),
+    zaxis = list(title = "Z")
+  ), titlefont = list(
+  color = '#ffffff',size=12,family = "Agency FB"),
+  font = list(family = 'Agency FB',
+              size = 10), 
+              margin = 0)
+  
+
+fig 
+ 
+ 
+
+
+
+ 
+
+```
+
+
+# Including Plots
+
+You can also embed plots. See Figure \@ref(fig:pie) for example:
+
+```{r}
+ 
+ 
+ 
+ library('plotly')
+fig <- plot_ly(
+  type = 'scatterpolar',
+  r = c(0,1,2,3),
+  theta = c(0,45,90,135),
+    mode = 'lines+markers', marker = list(size = 10,color="red"),
+  lines = list(size = 10,color="black"),
+  fill = 'toself',
+  name='Trail'
+) 
+
+
+  
+fig <- fig %>%
+  add_trace( r = c(0,1,2,3),
+  theta = c(180,225,270,315),
+  line = list(
+    color = "blue"),
+  marker = list(
+    color = "red",size = 6, symbol = 'square'),
+  name="Trail02"
+  )
+
+
+fig <- fig %>%
+  add_trace( r = c(4,3,5,5),
+             theta = c(180,225,270,315),
+             line = list(
+               color = "blue"),
+             marker = list(
+               color = "red",
+               symbol = 'square',
+               size = 8
+               
+             ),
+             subplot = 'polar2'
+  )
+
+fig <- fig %>%
+  layout(
+    polar2 = list(
+    domain = list(
+        x = c(0,0.1),
+        y = c(0,1)
+      ),
+      hole=0.2,
+      radialaxis = list(
+        visible = T,
+        range = c(0,3),
+          angle=90,
+        tickangle = 90,
+        color = 'grey',
+        nticks = 4,
+        tickcolor =toRGB('blue'),
+        tickfont = list(
+               size = 10,
+               color = "blue"
+             ), 
+        ticks = "outside",
+        ticklen = 10,
+        tickwidth = 3,
+        gridcolor = 'red'#color of grid lines
+        
+
+      )
+    ),
+      showlegend = T,
+    showline = T
+  )
+
+fig <- fig %>% layout(paper_bgcolor='#5875D5',
+                      showlegend = T, 
+  title = "Radar Charts in R with Plotly",
+  scene = list(
+    xaxis = list(title = "Cos"),
+    yaxis = list(title = "Sin"),
+    zaxis = list(title = "Z")
+  ), titlefont = list(
+  color = '#ffffff',size=12,family = "Agency FB"),
+  font = list(family = 'Agency FB',
+              size = 10), 
+              margin = 0)
+  
+
+fig 
+
+
+ 
+ 
+
+```
+
+
+# Including Plots
+
+You can also embed plots. See Figure \@ref(fig:pie) for example:
+
+```{r}
+ 
+
+ 
+ 
+ library('plotly')
+fig <- plot_ly(
+  type = 'scatterpolar',
+  r = c(0,1,2,3),
+  theta = c(0,45,90,135),
+    mode = 'lines+markers', marker = list(size = 10,color="red"),
+  lines = list(size = 10,color="black"),
+  fill = 'toself',
+  name='Trail'
+) 
+
+
+  
+fig <- fig %>%
+  add_trace( r = c(0,1,2,3),
+  theta = c(180,225,270,315),
+  line = list(
+    color = "blue"),
+  marker = list(
+    color = "red",size = 6, symbol = 'square'),
+  name="Trail02"
+  )
+
+
+fig <- fig %>%
+  add_trace( r = c(4,3,5,5),
+             theta = c(180,225,270,315),
+             line = list(
+               color = "blue"),
+             marker = list(
+               color = "red",
+               symbol = 'square',
+               size = 8
+               
+             ),
+             subplot = 'polar2'
+  )
+
+fig <- fig %>%
+  layout(
+    polar2 = list(
+    domain = list(
+        x = c(0,100),
+        y = c(0,1)
+      ),
+      hole=0.2,
+      radialaxis = list(
+        visible = T,
+        range = c(0,4),
+          angle=90,
+        tickangle = 90,
+        color = 'grey',
+        nticks = 4,
+        tickcolor =toRGB('blue'),
+        tickfont = list(
+               size = 10,
+               color = "blue"
+             ), 
+        ticks = "outside",
+        ticklen = 10,
+        tickwidth = 3,
+        gridcolor = 'red'#color of grid lines
+        
+
+      )
+    ),
+      showlegend = T,
+    showline = T
+  )
+
+fig <- fig %>% layout(paper_bgcolor='#5875D5',
+                      showlegend = T, 
+  title = "Radar Charts in R with Plotly",
+  scene = list(
+    xaxis = list(title = "Cos"),
+    yaxis = list(title = "Sin"),
+    zaxis = list(title = "Z")
+  ), titlefont = list(
+  color = '#ffffff',size=12,family = "Agency FB"),
+  font = list(family = 'Agency FB',
+              size = 10), 
+              margin = 0)
+  
+
+fig 
+
+```
+
+
+# Including Plots
+
+You can also embed plots. See Figure \@ref(fig:pie) for example:
+
+```{r}
+  
+ library('plotly')
+fig <- plot_ly(
+  type = 'scatterpolar',
+  r = c(0,1,2,3),
+  theta = c(0,45,90,135),
+    mode = 'lines+markers', marker = list(size = 10,color="red"),
+  lines = list(size = 10,color="black"),
+  fill = 'toself',
+  name='Trail'
+) 
+
+
+  
+fig <- fig %>%
+  add_trace( r = c(0,1,2,3),
+  theta = c(180,225,270,315),
+  line = list(
+    color = "blue"),
+  marker = list(
+    color = "red",size = 6, symbol = 'square'),
+  name="Trail02"
+  )
+
+
+fig <- fig %>%
+  add_trace( r = c(4,3,5,5),
+             theta = c(180,225,270,315),
+             line = list(
+               color = "blue"),
+             marker = list(
+               color = "red",
+               symbol = 'square',
+               size = 8
+               
+             ),
+             subplot = 'polar2'
+  )
+
+fig <- fig %>%
+  layout(
+    polar2 = list(
+    domain = list(
+        x = c(100,100),
+        y = c(0,1)
+      ),
+      hole=0.2,
+      radialaxis = list(
+        visible = T,
+        range = c(0,3),
+          angle=90,
+        tickangle = 90,
+        color = 'grey',
+        nticks = 4,
+        tickcolor =toRGB('blue'),
+        tickfont = list(
+               size = 10,
+               color = "blue"
+             ), 
+        ticks = "outside",
+        ticklen = 10,
+        tickwidth = 3,
+        gridcolor = 'red'#color of grid lines
+        
+
+      )
+    ),
+      showlegend = T,
+    showline = T
+  )
+
+fig <- fig %>% layout(paper_bgcolor='#5875D5',
+                      showlegend = T, 
+  title = "Radar Charts in R with Plotly",
+  scene = list(
+    xaxis = list(title = "Cos"),
+    yaxis = list(title = "Sin"),
+    zaxis = list(title = "Z")
+  ), titlefont = list(
+  color = '#ffffff',size=12,family = "Agency FB"),
+  font = list(family = 'Agency FB',
+              size = 10), 
+              margin = 0)
+  
+
+fig 
+
+
+
+```
+
+
+# Including Plots
+
+You can also embed plots. See Figure \@ref(fig:pie) for example:
+
+```{r}
+ 
+ 
+ library('plotly')
+fig <- plot_ly(
+  type = 'scatterpolar',
+  r = c(0,1,2,3),
+  theta = c(0,45,90,135),
+    mode = 'lines+markers', marker = list(size = 10,color="red"),
+  lines = list(size = 10,color="black"),
+  fill = 'toself',
+  name='Trail'
+) 
+
+
+  
+fig <- fig %>%
+  add_trace( r = c(0,1,2,3),
+  theta = c(180,225,270,315),
+  line = list(
+    color = "blue"),
+  marker = list(
+    color = "red",size = 6, symbol = 'square'),
+  name="Trail02"
+  )
+
+
+fig <- fig %>%
+  add_trace( r = c(4,3,5,5),
+             theta = c(180,225,270,315),
+             line = list(
+               color = "blue"),
+             marker = list(
+               color = "red",
+               symbol = 'square',
+               size = 8
+               
+             ),
+             subplot = 'polar2'
+  )
+
+fig <- fig %>%
+  layout(
+    polar2 = list(
+    domain = list(
+        x = c(100,100),
+        y = c(0,0.1)
+      ),
+      hole=0.2,
+      radialaxis = list(
+        visible = T,
+        range = c(0,4),
+          angle=90,
+        tickangle = 90,
+        color = 'grey',
+        nticks = 4,
+        tickcolor =toRGB('blue'),
+        tickfont = list(
+               size = 10,
+               color = "blue"
+             ), 
+        ticks = "outside",
+        ticklen = 10,
+        tickwidth = 3,
+        gridcolor = 'red'#color of grid lines
+        
+
+      )
+    ),
+      showlegend = T,
+    showline = T
+  )
+
+fig <- fig %>% layout(paper_bgcolor='#5875D5',
+                      showlegend = T, 
+  title = "Radar Charts in R with Plotly",
+  scene = list(
+    xaxis = list(title = "Cos"),
+    yaxis = list(title = "Sin"),
+    zaxis = list(title = "Z")
+  ), titlefont = list(
+  color = '#ffffff',size=12,family = "Agency FB"),
+  font = list(family = 'Agency FB',
+              size = 10), 
+              margin = 0)
+  
+
+fig 
+
+
+ 
+ 
+ 
+
+```
+
+```{r}
+ 
+
+ library('plotly')
+fig <- plot_ly(
+  type = 'scatterpolar',
+  r = c(0,1,2,3),
+  theta = c(0,45,90,135),
+    mode = 'lines+markers', marker = list(size = 10,color="red"),
+  lines = list(size = 10,color="black"),
+  fill = 'toself',
+  name='Trail'
+) 
+
+
+  
+fig <- fig %>%
+  add_trace( r = c(0,1,2,3),
+  theta = c(180,225,270,315),
+  line = list(
+    color = "blue"),
+  marker = list(
+    color = "red",size = 6, symbol = 'square'),
+  name="Trail02"
+  )
+
+
+fig <- fig %>%
+  add_trace( r = c(4,3,5,5),
+             theta = c(180,225,270,315),
+             line = list(
+               color = "blue"),
+             marker = list(
+               color = "red",
+               symbol = 'square',
+               size = 8
+               
+             ),
+             subplot = 'polar2'
+  )
+
+fig <- fig %>%
+  layout(
+    polar2 = list(
+    domain = list(
+        x = c(100,100),
+        y = c(0,100)
+      ),
+      hole=0.2,
+      radialaxis = list(
+        visible = T,
+        range = c(0,4),
+          angle=90,
+        tickangle = 90,
+        color = 'grey',
+        nticks = 4,
+        tickcolor =toRGB('blue'),
+        tickfont = list(
+               size = 10,
+               color = "blue"
+             ), 
+        ticks = "outside",
+        ticklen = 10,
+        tickwidth = 3,
+        gridcolor = 'red'#color of grid lines
+        
+
+      )
+    ),
+      showlegend = T,
+    showline = T
+  )
+
+fig <- fig %>% layout(paper_bgcolor='#5875D5',
+                      showlegend = T, 
+  title = "Radar Charts in R with Plotly",
+  scene = list(
+    xaxis = list(title = "Cos"),
+    yaxis = list(title = "Sin"),
+    zaxis = list(title = "Z")
+  ), titlefont = list(
+  color = '#ffffff',size=12,family = "Agency FB"),
+  font = list(family = 'Agency FB',
+              size = 10), 
+              margin = 0)
+  
+
+fig 
+
+
+ 
+ 
+  
+ 
+
+ 
+ 
+ 
+ 
+
+```
+
+
+
+```{r}
+ 
+ 
+ 
+ 
+ library('plotly')
+fig <- plot_ly(
+  type = 'scatterpolar',
+  r = c(0,1,2,3),
+  theta = c(0,45,90,135),
+    mode = 'lines+markers', marker = list(size = 10,color="red"),
+  lines = list(size = 10,color="black"),
+  fill = 'toself',
+  name='Trail'
+) 
+
+
+  
+fig <- fig %>%
+  add_trace( r = c(0,1,2,3),
+  theta = c(180,225,270,315),
+  line = list(
+    color = "blue"),
+  marker = list(
+    color = "red",size = 6, symbol = 'square'),
+  name="Trail02"
+  )
+
+
+fig <- fig %>%
+  add_trace( r = c(4,3,5,5),
+             theta = c(180,225,270,315),
+             line = list(
+               color = "blue"),
+             marker = list(
+               color = "red",
+               symbol = 'square',
+               size = 8
+               
+             ),
+             subplot = 'polar2'
+  )
+
+fig <- fig %>%
+  layout(
+    polar2 = list(
+    domain = list(
+        x = c(100,100),
+        y = c(100,0)
+      ),
+      hole=0.2,
+      radialaxis = list(
+        visible = T,
+        range = c(0,6),
+          angle=90,
+        tickangle = 90,
+        color = 'grey',
+        nticks = 4,
+        tickcolor =toRGB('blue'),
+        tickfont = list(
+               size = 10,
+               color = "blue"
+             ), 
+        ticks = "outside",
+        ticklen = 10,
+        tickwidth = 3,
+        gridcolor = 'red'#color of grid lines
+        
+
+      )
+    ),
+      showlegend = T,
+    showline = T
+  )
+
+fig <- fig %>% layout(paper_bgcolor='#5875D5',
+                      showlegend = T, 
+  title = "Radar Charts in R with Plotly",
+  scene = list(
+    xaxis = list(title = "Cos"),
+    yaxis = list(title = "Sin"),
+    zaxis = list(title = "Z")
+  ), titlefont = list(
+  color = '#ffffff',size=12,family = "Agency FB"),
+  font = list(family = 'Agency FB',
+              size = 10), 
+              margin = 0)
+  
+
+fig 
+
+
+ 
+ 
+
+ 
+ 
+ 
+ 
+
+```
+
+
+```{r}
+
+ 
+ 
+ library('plotly')
+fig <- plot_ly(
+  type = 'scatterpolar',
+  r = c(0,1,2,3),
+  theta = c(0,45,90,135),
+    mode = 'lines+markers', marker = list(size = 10,color="red"),
+  lines = list(size = 10,color="black"),
+  fill = 'toself',
+  name='Trail'
+) 
+
+
+  
+fig <- fig %>%
+  add_trace( r = c(0,1,2,3),
+  theta = c(180,225,270,315),
+  line = list(
+    color = "blue"),
+  marker = list(
+    color = "red",size = 6, symbol = 'square'),
+  name="Trail02"
+  )
+
+
+fig <- fig %>%
+  add_trace( r = c(4,3,5,5),
+             theta = c(180,225,270,315),
+             line = list(
+               color = "blue"),
+             marker = list(
+               color = "red",
+               symbol = 'square',
+               size = 8
+               
+             ),
+             subplot = 'polar2'
+  )
+
+fig <- fig %>%
+  layout(
+    polar2 = list(
+    domain = list(
+        x = c(100,100),
+        y = c(0,0)
+      ),
+      hole=0.2,
+      radialaxis = list(
+        visible = T,
+        range = c(0,6),
+          angle=90,
+        tickangle = 90,
+        color = 'grey',
+        nticks = 4,
+        tickcolor =toRGB('blue'),
+        tickfont = list(
+               size = 10,
+               color = "blue"
+             ), 
+        ticks = "outside",
+        ticklen = 10,
+        tickwidth = 3,
+        gridcolor = 'red'#color of grid lines
+        
+
+      )
+    ),
+      showlegend = T,
+    showline = T
+  )
+
+fig <- fig %>% layout(paper_bgcolor='#5875D5',
+                      showlegend = T, 
+  title = "Radar Charts in R with Plotly",
+  scene = list(
+    xaxis = list(title = "Cos"),
+    yaxis = list(title = "Sin"),
+    zaxis = list(title = "Z")
+  ), titlefont = list(
+  color = '#ffffff',size=12,family = "Agency FB"),
+  font = list(family = 'Agency FB',
+              size = 10), 
+              margin = 0)
+  
+
+fig 
+
+
+ 
+  
+ 
+ 
+
+ 
+ 
+ 
+ 
+
+```
+
+
+
+```{r}
+ 
+ 
+ 
+ 
+ library('plotly')
+fig <- plot_ly(
+  type = 'scatterpolar',
+  r = c(0,1,2,3),
+  theta = c(0,45,90,135),
+    mode = 'lines+markers', marker = list(size = 10,color="red"),
+  lines = list(size = 10,color="black"),
+  fill = 'toself',
+  name='Trail'
+) 
+
+
+  
+fig <- fig %>%
+  add_trace( r = c(0,1,2,3),
+  theta = c(180,225,270,315),
+  line = list(
+    color = "blue"),
+  marker = list(
+    color = "red",size = 6, symbol = 'square'),
+  name="Trail02"
+  )
+
+
+fig <- fig %>%
+  add_trace( r = c(4,3,5,5),
+             theta = c(180,225,270,315),
+             line = list(
+               color = "blue"),
+             marker = list(
+               color = "red",
+               symbol = 'square',
+               size = 8
+               
+             ),
+             subplot = 'polar2'
+  )
+
+fig <- fig %>%
+  layout(
+    polar2 = list(
+    domain = list(
+        x = c(100,100),
+        y = c(0,10)
+      ),
+      hole=0.2,
+      radialaxis = list(
+        visible = T,
+        range = c(0,6),
+          angle=90,
+        tickangle = 90,
+        color = 'grey',
+        nticks = 4,
+        tickcolor =toRGB('blue'),
+        tickfont = list(
+               size = 10,
+               color = "blue"
+             ), 
+        ticks = "outside",
+        ticklen = 10,
+        tickwidth = 3,
+        gridcolor = 'red'#color of grid lines
+        
+
+      )
+    ),
+      showlegend = T,
+    showline = T
+  )
+
+fig <- fig %>% layout(paper_bgcolor='#5875D5',
+                      showlegend = T, 
+  title = "Radar Charts in R with Plotly",
+  scene = list(
+    xaxis = list(title = "Cos"),
+    yaxis = list(title = "Sin"),
+    zaxis = list(title = "Z")
+  ), titlefont = list(
+  color = '#ffffff',size=12,family = "Agency FB"),
+  font = list(family = 'Agency FB',
+              size = 10), 
+              margin = 0)
+  
+
+fig 
+
+
+ 
+ 
+
+ 
+ 
+ 
+ 
+
+```
+
+
+
+
+```{r}
+ 
+
+
+ 
+ 
+ library('plotly')
+fig <- plot_ly(
+  type = 'scatterpolar',
+  r = c(0,1,2,3),
+  theta = c(0,45,90,135),
+    mode = 'lines+markers', marker = list(size = 10,color="red"),
+  lines = list(size = 10,color="black"),
+  fill = 'toself',
+  name='Trail'
+) 
+
+
+  
+fig <- fig %>%
+  add_trace( r = c(0,1,2,3),
+  theta = c(180,225,270,315),
+  line = list(
+    color = "blue"),
+  marker = list(
+    color = "red",size = 6, symbol = 'square'),
+  name="Trail02",
+               subplot = 'polar1'
+
+  )
+
+
+fig <- fig %>%
+  add_trace( r = c(4,3,5,5),
+             theta = c(180,225,270,315),
+             line = list(
+               color = "blue"),
+             marker = list(
+               color = "red",
+               symbol = 'square',
+               size = 8
+               
+             ),
+             subplot = 'polar2'
+  )
+
+fig <- fig %>%
+  layout(
+    polar2 = list(
+    domain = list(
+        x = c(100,100),
+        y = c(0,10)
+      ),
+      hole=0.2,
+      radialaxis = list(
+        visible = T,
+        range = c(0,6),
+          angle=90,
+        tickangle = 90,
+        color = 'grey',
+        nticks = 4,
+        tickcolor =toRGB('blue'),
+        tickfont = list(
+               size = 10,
+               color = "blue"
+             ), 
+        ticks = "outside",
+        ticklen = 10,
+        tickwidth = 3,
+        gridcolor = 'red'#color of grid lines
+        
+
+      )),
+    polar1 = list(
+      domain = list(
+        x = c(100,100),
+        y = c(0,0)
+      ),
+      radialaxis = list(
+        tickfont = list(
+          size = 8
+        )
+      ),
+      angularaxis = list(
+        tickfont = list(
+          size = 8
+        ),
+        rotation = 90,
+        direction = 'clockwise'
+      )
+    ),
+      showlegend = T,
+    showline = T
+  )
+
+fig <- fig %>% layout(paper_bgcolor='#5875D5',
+                      showlegend = T, 
+  title = "Radar Charts in R with Plotly",
+  scene = list(
+    xaxis = list(title = "Cos"),
+    yaxis = list(title = "Sin"),
+    zaxis = list(title = "Z")
+  ), titlefont = list(
+  color = '#ffffff',size=12,family = "Agency FB"),
+  font = list(family = 'Agency FB',
+              size = 10), 
+              margin = 0)
+  
+
+fig
+
+```
+```{r}
+ 
+ library('plotly')
+
+fig <- plot_ly(
+  type = 'scatterpolar',
+  mode ='lines+markers'
+)
+
+
+  
+fig <- fig %>%
+  add_trace( r = c(0,1,2,3),
+  theta = c(180,225,270,315),
+  line = list(
+    color = "blue"),
+  marker = list(
+    color = "red",size = 6, symbol = 'square'),
+  name="Trail02",
+               subplot = 'polar1'
+
+  )
+
+
+fig <- fig %>%
+  add_trace( r = c(4,3,5,5),
+             theta = c(180,225,270,315),
+             line = list(
+               color = "blue"),
+             marker = list(
+               color = "red",
+               symbol = 'square',
+               size = 8
+               
+             ),
+             subplot = 'polar2'
+  )
+
+fig <- fig %>%
+  layout(
+    polar2 = list(
+    domain = list(
+        x = c(100,100),
+        y = c(0,10)
+      ),
+      hole=0.2,
+      radialaxis = list(
+        visible = T,
+        range = c(0,6),
+          angle=90,
+        tickangle = 90,
+        color = 'grey',
+        nticks = 4,
+        tickcolor =toRGB('blue'),
+        tickfont = list(
+               size = 10,
+               color = "blue"
+             ), 
+        ticks = "outside",
+        ticklen = 10,
+        tickwidth = 3,
+        gridcolor = 'red'#color of grid lines
+        
+
+      )),
+    polar1 = list(
+      domain = list(
+        x = c(100,100),
+        y = c(0,0)
+      ),
+      radialaxis = list(
+        tickfont = list(
+          size = 8
+        )
+      ),
+      angularaxis = list(
+        tickfont = list(
+          size = 8
+        ),
+        rotation = 90,
+        direction = 'clockwise'
+      )
+    ),
+      showlegend = T,
+    showline = T
+  )
+
+fig <- fig %>% layout(paper_bgcolor='#5875D5',
+                      showlegend = T, 
+  title = "Radar Charts in R with Plotly",
+  scene = list(
+    xaxis = list(title = "Cos"),
+    yaxis = list(title = "Sin"),
+    zaxis = list(title = "Z")
+  ), titlefont = list(
+  color = '#ffffff',size=12,family = "Agency FB"),
+  font = list(family = 'Agency FB',
+              size = 10), 
+              margin = 0)
+  
+
+fig
+
+```
+
+
+
+```{r}
+
+ library('plotly')
+
+fig <- plot_ly(
+  type = 'scatterpolar',
+  mode ='lines+markers'
+)
+
+
+  
+fig <- fig %>%
+  add_trace( r = c(0,1,2,3),
+  theta = c(180,225,270,315),
+  line = list(
+    color = "blue"),
+  marker = list(
+    color = "red",size = 6, symbol = 'square'),
+  name="Trail02",
+               subplot = 'polar1'
+
+  )
+
+
+fig <- fig %>%
+  add_trace( r = c(4,3,5,5),
+             theta = c(180,225,270,315),
+             line = list(
+               color = "blue"),
+             marker = list(
+               color = "red",
+               symbol = 'square',
+               size = 8
+               
+             ),
+             subplot = 'polar2'
+  )
+
+fig <- fig %>%
+  layout(
+    polar2 = list(
+    domain = list(
+        x = c(0,0),
+        y = c(0,10)
+      ),
+      hole=0.2,
+      radialaxis = list(
+        visible = T,
+        range = c(0,6),
+          angle=90,
+        tickangle = 90,
+        color = 'grey',
+        nticks = 4,
+        tickcolor =toRGB('blue'),
+        tickfont = list(
+               size = 10,
+               color = "blue"
+             ), 
+        ticks = "outside",
+        ticklen = 10,
+        tickwidth = 3,
+        gridcolor = 'red'#color of grid lines
+        
+
+      )),
+    polar1 = list(
+      domain = list(
+        x = c(0,0),
+        y = c(0,0)
+      ),
+      radialaxis = list(
+        tickfont = list(
+          size = 8
+        )
+      ),
+      angularaxis = list(
+        tickfont = list(
+          size = 8
+        ),
+        rotation = 90,
+        direction = 'clockwise'
+      )
+    ),
+      showlegend = T,
+    showline = T
+  )
+
+fig <- fig %>% layout(
+  title = "Radar Charts in R with Plotly",
+  scene = list(
+    xaxis = list(title = "Cos"),
+    yaxis = list(title = "Sin"),
+    zaxis = list(title = "Z")
+  ))
+  
+
+
+fig
+ 
+
+```
+
+
+```{r}
+
+
+ library('plotly')
+ 
+
+df <- data.frame( r = c(0,1,2,3,4,3,5,6),
+  theta = c(180,225,270,315,180,225,270,315),           
+  group = c('A', 'A', 'A', 'A', 'B', 'B', 'B', 'B'),
+  size = c(1, 2, 3, 4, 1, 2, 3, 4)
+  )
+
+            
+ colors_map <- c("blue", "green", "red") 
+            
+
+fig <- plot_ly(df,
+  type = 'scatterpolar',
+  mode ='lines+markers',
+  hoverinfo="text",
+  marker = list(symbol = 'circle', line = list(width = 2, color = 'lightgrey')),
+  r = ~r,
+  theta = ~theta,
+  color = ~group, 
+  colors = colors_map, #Provide a color mapped vector
+  size = ~size, 
+  sizes = c(100,200), #Provide a range of size.
+  text = ~paste('<b>DETAILS </b><br>---------------<br>Radius:', r, '<br>Theta:', theta, '<br>Group:', group, '<br>Size:', size))%>%
+  layout(title = 'SAMPLE TITLE',
+         showlegend = TRUE,
+         polar = list(
+           #hole = 0.5,
+           radialaxis = list(
+             tickfont = list(
+               size = 20,
+               color = "blue"
+             ),
+             visible = TRUE,
+             tickcolor = toRGB("red"),
+             ticks = "outside",
+             #ticklen = 15,
+             #tickwidth = 20,
+             
+             range = c(0, max(df$r)),
+             rangemode = "tozero",
+             angle = 90,
+             tickangle = 90,
+             #gridcolor = '#FFF', #color of grid lines
+             categoryorder = "array",
+             categoryarray = c("GroupA", "GroupB", "GroupC", "GroupD") #Not working
+           ),
+           angularaxis = list(
+             tickfont = list(
+               size = 12
+             ),
+             rotation = 90,
+             direction = 'clockwise' ,
+             categoryarray = c("A", "B", "C", "D") #Not working
+           )
+         )
+  )
+ggplotly(fig)
+
+ 
+
+```
+
+
+
+```{r}
+
+ library('plotly')
+ 
+
+df <- data.frame( r = c(0,1,2,3,4,3,5,6),
+  theta = c(180,225,270,315,180,225,270,315),           
+  group = c('A', 'A', 'A', 'A', 'B', 'B', 'B', 'B'),
+  size = c(1, 2, 3, 4, 1, 2, 3, 4)
+  )
+
+            
+ colors_map <- c("blue", "green") 
+            
+
+fig <- plot_ly(df,
+  type = 'scatterpolar',
+  mode ='lines+markers',
+  hoverinfo="text",
+  marker = list(symbol = 'circle', line = list(width = 2, color = 'lightgrey')),
+  r = ~r,
+  theta = ~theta,
+  color = ~group, 
+  colors = colors_map, #Provide a color mapped vector
+  size = ~size, 
+  sizes = c(100,200), #Provide a range of size.
+  text = ~paste('<b>DETAILS </b><br>---------------<br>Radius:', r, '<br>Theta:', theta, '<br>Group:', group, '<br>Size:', size))%>%
+  layout(title = 'SAMPLE TITLE',
+         showlegend = TRUE,
+         polar = list(
+           #hole = 0.5,
+           radialaxis = list(
+             tickfont = list(
+               size = 20,
+               color = "blue"
+             ),
+             visible = TRUE,
+             tickcolor = toRGB("red"),
+             ticks = "outside",
+             #ticklen = 15,
+             #tickwidth = 20,
+             
+             range = c(0, max(df$r)),
+             rangemode = "tozero",
+             angle = 90,
+             tickangle = 90,
+             #gridcolor = '#FFF', #color of grid lines
+             categoryorder = "array",
+             categoryarray = c("GroupA", "GroupB", "GroupC", "GroupD") #Not working
+           ),
+           angularaxis = list(
+             tickfont = list(
+               size = 12
+             ),
+             rotation = 90,
+             direction = 'clockwise' ,
+             categoryarray = c("A", "B", "C", "D") #Not working
+           )
+         )
+  )
+
+fig <- fig %>% layout(
+  title = "Radar Charts in R with Plotly",
+  scene = list(
+    xaxis = list(title = "Cos"),
+    yaxis = list(title = "Sin"),
+    zaxis = list(title = "Z")
+  ))
+ggplotly(fig)
+
+
+ 
+
+```
+
+
+
