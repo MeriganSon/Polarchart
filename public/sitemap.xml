@@ -30,7 +30,17 @@
   </url>
   
   <url>
-    <loc>http://example.org/post/2015-07-23-r-rmarkdown/</loc>
+    <loc>http://example.org/post/2015-07-23-r-rmarkdown/polarchart-add_trace/</loc>
+    <lastmod>2020-12-01T21:13:14-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/post/2015-07-23-r-rmarkdown/untitled-folder-copy-2/</loc>
+    <lastmod>2020-12-01T21:13:14-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/post/2015-07-23-r-rmarkdown/index-posts-01/index01/</loc>
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
   </url>
   
@@ -57,11 +67,6 @@
   <url>
     <loc>http://example.org/tags/</loc>
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://example.org/post/r-markdown-demo/</loc>
-    <lastmod>2020-11-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -92,6 +97,21 @@
   <url>
     <loc>http://example.org/tags/seneca/</loc>
     <lastmod>2019-07-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/friendship/</loc>
+    <lastmod>2019-07-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/post/2019-07-29-letter-3/</loc>
+    <lastmod>2019-07-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/trust/</loc>
+    <lastmod>2019-07-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>

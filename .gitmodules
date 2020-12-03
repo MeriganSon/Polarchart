@@ -1,0 +1,3 @@
+[submodule "Polarchart"]
+	path = Polarchart
+	url = https://github.com/MeriganSon/Polarchart.git

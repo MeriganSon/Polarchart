@@ -1,0 +1,1727 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title> Polarchart add_Trace add_Trace | Merigan Son</title>
+    
+    
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="stylesheet" href="/css/custom.css" />
+    <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Polarchart add_Trace add_Trace"/>
+<meta name="twitter:description" content="#```{r setup, include=FALSE} knitr::opts_chunk$set(collapse = TRUE)
+R Markdown This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
+You can embed an R code chunk like this:
+library(&#39;plotly&#39;) fig &lt;- plot_ly( type = &#39;scatterpolar&#39;, r = c(0,1,2,3), theta = c(0,45,90,135), mode = &#39;lines&#43;markers&#39;, marker = list(size = 10,color=&quot;red&quot;), lines = list(size = 10,color=&quot;black&quot;), fill = &#39;toself&#39;, name=&#39;Trail&#39; ) library(&#39;plotly&#39;) fig &lt;- plot_ly( type = &#39;scatterpolar&#39;, r = c(0,1,2,3), theta = c(0,45,90,135), mode = &#39;lines&#43;markers&#39;, marker = list(size = 10), fill = &#39;toself&#39;, name=&quot;Trail01&quot; ) fig &lt;- fig %&gt;% layout( polar = list( hole=0."/>
+
+
+  </head>
+
+  <body>
+
+    <nav class="menu">
+    <ul>
+      <li class="left">
+        <a href="/"><span>Merigan Son</span></a>
+      </li>
+      
+      <li>
+        <a href="/">Home</a>
+      </li>
+      
+      <li>
+        <a href="/about/">About</a>
+      </li>
+      
+      <li>
+        <a href="/sitemap/">Sitemap</a>
+      </li>
+      
+    </ul>
+    </nav>
+
+
+<div class="container single">
+<main>
+
+<div class="article-meta">
+<h1><span class="title">Polarchart add_Trace add_Trace</span></h1>
+
+<h3 class="author">
+Ahmed Alluqmani
+</h3>
+
+<h3 class="date">2020-12-01</h3>
+<p class="terms">
+  
+  
+  Categories: <a href="/categories/r">R</a> 
+  
+  
+  
+  Tags: <a href="/tags/r-markdown">R Markdown</a> <a href="/tags/plot">plot</a> <a href="/tags/regression">regression</a> 
+  
+  
+</p>
+</div>
+
+<div class="article">
+
+<link href="index_files/anchor-sections/anchor-sections.css" rel="stylesheet" />
+<script src="index_files/anchor-sections/anchor-sections.js"></script>
+<script src="index_files/htmlwidgets/htmlwidgets.js"></script>
+<script src="index_files/plotly-binding/plotly.js"></script>
+<script src="index_files/typedarray/typedarray.min.js"></script>
+<script src="index_files/jquery/jquery.min.js"></script>
+<link href="index_files/crosstalk/css/crosstalk.css" rel="stylesheet" />
+<script src="index_files/crosstalk/js/crosstalk.min.js"></script>
+<link href="index_files/plotly-htmlwidgets-css/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="index_files/plotly-main/plotly-latest.min.js"></script>
+
+
+<p>#```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE)</p>
+<div id="r-markdown" class="section level1">
+<h1>R Markdown</h1>
+<p>This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <a href="http://rmarkdown.rstudio.com" class="uri">http://rmarkdown.rstudio.com</a>.</p>
+<p>You can embed an R code chunk like this:</p>
+<pre class="r"><code>library(&#39;plotly&#39;)
+fig &lt;- plot_ly(
+  type = &#39;scatterpolar&#39;,
+  r = c(0,1,2,3),
+  theta = c(0,45,90,135),
+    mode = &#39;lines+markers&#39;, marker = list(size = 10,color=&quot;red&quot;),
+  lines = list(size = 10,color=&quot;black&quot;),
+  fill = &#39;toself&#39;,
+  name=&#39;Trail&#39;
+) 
+ 
+ 
+library(&#39;plotly&#39;)
+fig &lt;- plot_ly(
+  type = &#39;scatterpolar&#39;,
+  r = c(0,1,2,3),
+  theta = c(0,45,90,135),
+    mode = &#39;lines+markers&#39;, marker = list(size = 10),
+  fill = &#39;toself&#39;,
+  name=&quot;Trail01&quot;
+)
+ 
+fig &lt;- fig %&gt;%
+  layout(
+    polar = list(
+      hole=0.2,
+      radialaxis = list(
+        visible = T,
+        range = c(0,3),
+          angle=90,
+        tickangle = 90,
+        color = &#39;grey&#39;,
+        nticks = 4,
+        tickcolor =toRGB(&#39;blue&#39;),
+        tickfont = list(
+               size = 10,
+               color = &quot;blue&quot;
+             ), 
+        ticks = &quot;outside&quot;,
+        ticklen = 10,
+        tickwidth = 3,
+        gridcolor = &#39;red&#39;#color of grid lines
+        
+
+      )
+    ),
+      showlegend = T,
+    showline = T
+  )
+
+fig &lt;- fig %&gt;% layout(
+  title = &quot;Radar Charts in R with Plotly&quot;,
+  scene = list(
+    xaxis = list(title = &quot;Cos&quot;),
+    yaxis = list(title = &quot;Sin&quot;),
+    zaxis = list(title = &quot;Z&quot;)
+  ))
+
+
+
+  
+fig &lt;- fig %&gt;%
+  add_trace( r = c(0,1,2,3),
+  theta = c(0,45,90,135),
+  line = list(
+    color = &quot;blue&quot;),
+  marker = list(
+    color = &quot;red&quot;,size = 6, symbol = &#39;square&#39;),
+  name=&quot;Trail02&quot;
+  )
+fig</code></pre>
+<div id="htmlwidget-1" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"visdat":{"162ae39178992":["function () ","plotlyVisDat"]},"cur_data":"162ae39178992","attrs":{"162ae39178992":{"r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","marker":{"size":10},"fill":"toself","name":"Trail01","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar"},"162ae39178992.1":{"r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","marker":{"size":6,"color":"red","symbol":"square"},"fill":"toself","name":"Trail02","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar","line":{"color":"blue"},"inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"polar":{"hole":0.2,"radialaxis":{"visible":true,"range":[0,3],"angle":90,"tickangle":90,"color":"grey","nticks":4,"tickcolor":"rgba(0,0,255,1)","tickfont":{"size":10,"color":"blue"},"ticks":"outside","ticklen":10,"tickwidth":3,"gridcolor":"red"}},"showlegend":true,"showline":true,"title":"Radar Charts in R with Plotly","scene":{"xaxis":{"title":"Cos"},"yaxis":{"title":"Sin"},"zaxis":{"title":"Z"}},"hovermode":"closest"},"source":"A","config":{"showSendToCloud":false},"data":[{"fillcolor":"rgba(31,119,180,0.5)","r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","marker":{"color":"rgba(31,119,180,1)","size":10,"line":{"color":"rgba(31,119,180,1)"}},"fill":"toself","name":"Trail01","type":"scatterpolar","line":{"color":"rgba(31,119,180,1)"},"frame":null},{"fillcolor":"rgba(255,127,14,0.5)","r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","marker":{"color":"red","size":6,"symbol":"square","line":{"color":"rgba(255,127,14,1)"}},"fill":"toself","name":"Trail02","type":"scatterpolar","line":{"color":"blue"},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<pre class="r"><code>fig &lt;- fig %&gt;%
+  add_trace( r = c(0,1,2,3),
+  theta = c(180,225,270,315),
+  line = list(
+    color = &quot;blue&quot;),
+  marker = list(
+    color = &quot;red&quot;,size = 6, symbol = &#39;square&#39;),
+  name=&quot;Trail02&quot;
+  )
+fig</code></pre>
+<div id="htmlwidget-2" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-2">{"x":{"visdat":{"162ae39178992":["function () ","plotlyVisDat"]},"cur_data":"162ae39178992","attrs":{"162ae39178992":{"r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","marker":{"size":10},"fill":"toself","name":"Trail01","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar"},"162ae39178992.1":{"r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","marker":{"size":6,"color":"red","symbol":"square"},"fill":"toself","name":"Trail02","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar","line":{"color":"blue"},"inherit":true},"162ae39178992.2":{"r":[0,1,2,3],"theta":[180,225,270,315],"mode":"lines+markers","marker":{"size":6,"color":"red","symbol":"square"},"fill":"toself","name":"Trail02","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar","line":{"color":"blue"},"inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"polar":{"hole":0.2,"radialaxis":{"visible":true,"range":[0,3],"angle":90,"tickangle":90,"color":"grey","nticks":4,"tickcolor":"rgba(0,0,255,1)","tickfont":{"size":10,"color":"blue"},"ticks":"outside","ticklen":10,"tickwidth":3,"gridcolor":"red"}},"showlegend":true,"showline":true,"title":"Radar Charts in R with Plotly","scene":{"xaxis":{"title":"Cos"},"yaxis":{"title":"Sin"},"zaxis":{"title":"Z"}},"hovermode":"closest"},"source":"A","config":{"showSendToCloud":false},"data":[{"fillcolor":"rgba(31,119,180,0.5)","r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","marker":{"color":"rgba(31,119,180,1)","size":10,"line":{"color":"rgba(31,119,180,1)"}},"fill":"toself","name":"Trail01","type":"scatterpolar","line":{"color":"rgba(31,119,180,1)"},"frame":null},{"fillcolor":"rgba(255,127,14,0.5)","r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","marker":{"color":"red","size":6,"symbol":"square","line":{"color":"rgba(255,127,14,1)"}},"fill":"toself","name":"Trail02","type":"scatterpolar","line":{"color":"blue"},"frame":null},{"fillcolor":"rgba(44,160,44,0.5)","r":[0,1,2,3],"theta":[180,225,270,315],"mode":"lines+markers","marker":{"color":"red","size":6,"symbol":"square","line":{"color":"rgba(44,160,44,1)"}},"fill":"toself","name":"Trail02","type":"scatterpolar","line":{"color":"blue"},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="including-plots" class="section level1">
+<h1>Including Plots</h1>
+<p>You can also embed plots. See Figure <a href="#fig:pie"><strong>??</strong></a> for example:</p>
+<pre class="r"><code>library(&#39;plotly&#39;)
+fig &lt;- plot_ly(
+  type = &#39;scatterpolar&#39;,
+  r = c(0,1,2,3),
+  theta = c(0,45,90,135),
+    mode = &#39;lines+markers&#39;, marker = list(size = 10,color=&quot;red&quot;),
+  lines = list(size = 10,color=&quot;black&quot;),
+  fill = &#39;toself&#39;,
+  name=&#39;Trail&#39;
+) 
+ 
+fig &lt;- fig %&gt;%
+  layout(
+    polar = list(
+      hole=0.2,
+      radialaxis = list(
+        visible = T,
+        range = c(0,3),
+          angle=90,
+        tickangle = 90,
+        color = &#39;grey&#39;,
+        nticks = 4,
+        tickcolor =toRGB(&#39;blue&#39;),
+        tickfont = list(
+               size = 10,
+               color = &quot;blue&quot;
+             ), 
+        ticks = &quot;outside&quot;,
+        ticklen = 10,
+        tickwidth = 3,
+        gridcolor = &#39;red&#39;#color of grid lines
+        
+
+      )
+    ),
+      showlegend = T,
+    showline = T
+  )
+
+fig &lt;- fig %&gt;% layout(
+  title = &quot;Radar Charts in R with Plotly&quot;,
+  scene = list(
+    xaxis = list(title = &quot;Cos&quot;),
+    yaxis = list(title = &quot;Sin&quot;),
+    zaxis = list(title = &quot;Z&quot;)
+  ))
+
+
+
+  
+fig &lt;- fig %&gt;%
+  add_trace( r = c(0,1,2,3),
+  theta = c(180,225,270,315),
+  line = list(
+    color = &quot;blue&quot;),
+  marker = list(
+    color = &quot;red&quot;,size = 6, symbol = &#39;square&#39;),
+  name=&quot;Trail02&quot;
+  )
+fig </code></pre>
+<p><div id="htmlwidget-3" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-3">{"x":{"visdat":{"162ae3be21548":["function () ","plotlyVisDat"]},"cur_data":"162ae3be21548","attrs":{"162ae3be21548":{"r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","marker":{"size":10,"color":"red"},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar"},"162ae3be21548.1":{"r":[0,1,2,3],"theta":[180,225,270,315],"mode":"lines+markers","marker":{"size":6,"color":"red","symbol":"square"},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail02","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar","line":{"color":"blue"},"inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"polar":{"hole":0.2,"radialaxis":{"visible":true,"range":[0,3],"angle":90,"tickangle":90,"color":"grey","nticks":4,"tickcolor":"rgba(0,0,255,1)","tickfont":{"size":10,"color":"blue"},"ticks":"outside","ticklen":10,"tickwidth":3,"gridcolor":"red"}},"showlegend":true,"showline":true,"title":"Radar Charts in R with Plotly","scene":{"xaxis":{"title":"Cos"},"yaxis":{"title":"Sin"},"zaxis":{"title":"Z"}},"hovermode":"closest"},"source":"A","config":{"showSendToCloud":false},"data":[{"fillcolor":"rgba(31,119,180,0.5)","r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","marker":{"color":"red","size":10,"line":{"color":"rgba(31,119,180,1)"}},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","type":"scatterpolar","line":{"color":"black","size":10},"frame":null},{"fillcolor":"rgba(255,127,14,0.5)","r":[0,1,2,3],"theta":[180,225,270,315],"mode":"lines+markers","marker":{"color":"red","size":6,"symbol":"square","line":{"color":"rgba(255,127,14,1)"}},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail02","type":"scatterpolar","line":{"color":"blue"},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+# Including Plots</p>
+<p>You can also embed plots. See Figure <a href="#fig:pie"><strong>??</strong></a> for example:</p>
+<pre class="r"><code> fig &lt;- plot_ly(
+  type = &#39;scatterpolar&#39;,
+  r = c(0,1,2,3),
+  theta = c(0,45,90,135),
+    mode = &#39;lines+markers&#39;, marker = list(size = 10,color=&quot;red&quot;),
+  lines = list(size = 10,color=&quot;black&quot;),
+  fill = &#39;toself&#39;,
+  name=&#39;Trail&#39;
+) 
+
+
+  
+fig &lt;- fig %&gt;%
+  add_trace( r = c(0,1,2,3),
+  theta = c(180,225,270,315),
+  line = list(
+    color = &quot;blue&quot;),
+  marker = list(
+    color = &quot;red&quot;,size = 6, symbol = &#39;square&#39;),
+  name=&quot;Trail02&quot;
+  )
+
+fig &lt;- fig %&gt;%
+  layout(
+    polar = list(
+      hole=0.2,
+      radialaxis = list(
+        visible = T,
+        range = c(0,3),
+          angle=90,
+        tickangle = 90,
+        color = &#39;grey&#39;,
+        nticks = 4,
+        tickcolor =toRGB(&#39;blue&#39;),
+        tickfont = list(
+               size = 10,
+               color = &quot;blue&quot;
+             ), 
+        ticks = &quot;outside&quot;,
+        ticklen = 10,
+        tickwidth = 3,
+        gridcolor = &#39;red&#39;#color of grid lines
+        
+
+      )
+    ),
+      showlegend = T,
+    showline = T
+  )
+
+fig &lt;- fig %&gt;% layout(paper_bgcolor=&#39;#5875D5&#39;,
+                      showlegend = T, 
+  title = &quot;Radar Charts in R with Plotly&quot;,
+  scene = list(
+    xaxis = list(title = &quot;Cos&quot;),
+    yaxis = list(title = &quot;Sin&quot;),
+    zaxis = list(title = &quot;Z&quot;)
+  ), titlefont = list(
+  color = &#39;#ffffff&#39;,size=12,family = &quot;Agency FB&quot;),
+  font = list(family = &#39;Agency FB&#39;,
+              size = 10), 
+              margin = 0)
+  
+
+fig </code></pre>
+<div id="htmlwidget-4" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-4">{"x":{"visdat":{"162ae6ab8d4ff":["function () ","plotlyVisDat"]},"cur_data":"162ae6ab8d4ff","attrs":{"162ae6ab8d4ff":{"r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","marker":{"size":10,"color":"red"},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar"},"162ae6ab8d4ff.1":{"r":[0,1,2,3],"theta":[180,225,270,315],"mode":"lines+markers","marker":{"size":6,"color":"red","symbol":"square"},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail02","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar","line":{"color":"blue"},"inherit":true}},"layout":{"margin":0,"polar":{"hole":0.2,"radialaxis":{"visible":true,"range":[0,3],"angle":90,"tickangle":90,"color":"grey","nticks":4,"tickcolor":"rgba(0,0,255,1)","tickfont":{"size":10,"color":"blue"},"ticks":"outside","ticklen":10,"tickwidth":3,"gridcolor":"red"}},"showlegend":true,"showline":true,"paper_bgcolor":"#5875D5","title":"Radar Charts in R with Plotly","scene":{"xaxis":{"title":"Cos"},"yaxis":{"title":"Sin"},"zaxis":{"title":"Z"}},"titlefont":{"color":"#ffffff","size":12,"family":"Agency FB"},"font":{"family":"Agency FB","size":10},"hovermode":"closest"},"source":"A","config":{"showSendToCloud":false},"data":[{"fillcolor":"rgba(31,119,180,0.5)","r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","marker":{"color":"red","size":10,"line":{"color":"rgba(31,119,180,1)"}},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","type":"scatterpolar","line":{"color":"black","size":10},"frame":null},{"fillcolor":"rgba(255,127,14,0.5)","r":[0,1,2,3],"theta":[180,225,270,315],"mode":"lines+markers","marker":{"color":"red","size":6,"symbol":"square","line":{"color":"rgba(255,127,14,1)"}},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail02","type":"scatterpolar","line":{"color":"blue"},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="including-plots-1" class="section level1">
+<h1>Including Plots</h1>
+<p>You can also embed plots. See Figure <a href="#fig:pie"><strong>??</strong></a> for example:</p>
+<pre class="r"><code>library(&#39;plotly&#39;)
+fig &lt;- plot_ly(
+  type = &#39;scatterpolar&#39;,
+  r = c(0,1,2,3),
+  theta = c(0,45,90,135),
+    mode = &#39;lines+markers&#39;, marker = list(size = 10,color=&quot;red&quot;),
+  lines = list(size = 10,color=&quot;black&quot;),
+  fill = &#39;toself&#39;,
+  name=&#39;Trail&#39;
+) 
+
+
+  
+fig &lt;- fig %&gt;%
+  add_trace( r = c(0,1,2,3),
+  theta = c(180,225,270,315),
+  line = list(
+    color = &quot;blue&quot;),
+  marker = list(
+    color = &quot;red&quot;,size = 6, symbol = &#39;square&#39;),
+  name=&quot;Trail02&quot;
+  )
+
+
+fig &lt;- fig %&gt;%
+  add_trace( r = c(4,3,5,5),
+             theta = c(180,225,270,315),
+             line = list(
+               color = &quot;blue&quot;),
+             marker = list(
+               color = &quot;red&quot;,
+               symbol = &#39;square&#39;,
+               size = 8
+               
+             ) 
+  )
+
+fig &lt;- fig %&gt;%
+  layout(
+    polar = list(
+      hole=0.2,
+      radialaxis = list(
+        visible = T,
+        range = c(0,4),
+          angle=90,
+        tickangle = 90,
+        color = &#39;grey&#39;,
+        nticks = 4,
+        tickcolor =toRGB(&#39;blue&#39;),
+        tickfont = list(
+               size = 10,
+               color = &quot;blue&quot;
+             ), 
+        ticks = &quot;outside&quot;,
+        ticklen = 10,
+        tickwidth = 3,
+        gridcolor = &#39;red&#39;#color of grid lines
+        
+
+      )
+    ),
+      showlegend = T,
+    showline = T
+  )
+
+fig &lt;- fig %&gt;% layout(paper_bgcolor=&#39;#5875D5&#39;,
+                      showlegend = T, 
+  title = &quot;Radar Charts in R with Plotly&quot;,
+  scene = list(
+    xaxis = list(title = &quot;Cos&quot;),
+    yaxis = list(title = &quot;Sin&quot;),
+    zaxis = list(title = &quot;Z&quot;)
+  ), titlefont = list(
+  color = &#39;#ffffff&#39;,size=12,family = &quot;Agency FB&quot;),
+  font = list(family = &#39;Agency FB&#39;,
+              size = 10), 
+              margin = 0)
+  
+
+fig </code></pre>
+<div id="htmlwidget-5" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-5">{"x":{"visdat":{"162ae637602d7":["function () ","plotlyVisDat"]},"cur_data":"162ae637602d7","attrs":{"162ae637602d7":{"r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","marker":{"size":10,"color":"red"},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar"},"162ae637602d7.1":{"r":[0,1,2,3],"theta":[180,225,270,315],"mode":"lines+markers","marker":{"size":6,"color":"red","symbol":"square"},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail02","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar","line":{"color":"blue"},"inherit":true},"162ae637602d7.2":{"r":[4,3,5,5],"theta":[180,225,270,315],"mode":"lines+markers","marker":{"size":8,"color":"red","symbol":"square"},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar","line":{"color":"blue"},"inherit":true}},"layout":{"margin":0,"polar":{"hole":0.2,"radialaxis":{"visible":true,"range":[0,4],"angle":90,"tickangle":90,"color":"grey","nticks":4,"tickcolor":"rgba(0,0,255,1)","tickfont":{"size":10,"color":"blue"},"ticks":"outside","ticklen":10,"tickwidth":3,"gridcolor":"red"}},"showlegend":true,"showline":true,"paper_bgcolor":"#5875D5","title":"Radar Charts in R with Plotly","scene":{"xaxis":{"title":"Cos"},"yaxis":{"title":"Sin"},"zaxis":{"title":"Z"}},"titlefont":{"color":"#ffffff","size":12,"family":"Agency FB"},"font":{"family":"Agency FB","size":10},"hovermode":"closest"},"source":"A","config":{"showSendToCloud":false},"data":[{"fillcolor":"rgba(31,119,180,0.5)","r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","marker":{"color":"red","size":10,"line":{"color":"rgba(31,119,180,1)"}},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","type":"scatterpolar","line":{"color":"black","size":10},"frame":null},{"fillcolor":"rgba(255,127,14,0.5)","r":[0,1,2,3],"theta":[180,225,270,315],"mode":"lines+markers","marker":{"color":"red","size":6,"symbol":"square","line":{"color":"rgba(255,127,14,1)"}},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail02","type":"scatterpolar","line":{"color":"blue"},"frame":null},{"fillcolor":"rgba(44,160,44,0.5)","r":[4,3,5,5],"theta":[180,225,270,315],"mode":"lines+markers","marker":{"color":"red","size":8,"symbol":"square","line":{"color":"rgba(44,160,44,1)"}},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","type":"scatterpolar","line":{"color":"blue"},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="including-plots-2" class="section level1">
+<h1>Including Plots</h1>
+<p>You can also embed plots. See Figure <a href="#fig:pie"><strong>??</strong></a> for example:</p>
+<pre class="r"><code>library(&#39;plotly&#39;)
+fig &lt;- plot_ly(
+  type = &#39;scatterpolar&#39;,
+  r = c(0,1,2,3),
+  theta = c(0,45,90,135),
+    mode = &#39;lines+markers&#39;, marker = list(size = 10,color=&quot;red&quot;),
+  lines = list(size = 10,color=&quot;black&quot;),
+  fill = &#39;toself&#39;,
+  name=&#39;Trail&#39;
+) 
+
+
+  
+fig &lt;- fig %&gt;%
+  add_trace( r = c(0,1,2,3),
+  theta = c(180,225,270,315),
+  line = list(
+    color = &quot;blue&quot;),
+  marker = list(
+    color = &quot;red&quot;,size = 6, symbol = &#39;square&#39;),
+  name=&quot;Trail02&quot;
+  )
+
+
+fig &lt;- fig %&gt;%
+  add_trace( r = c(4,3,5,5),
+             theta = c(180,225,270,315),
+             line = list(
+               color = &quot;blue&quot;),
+             marker = list(
+               color = &quot;red&quot;,
+               symbol = &#39;square&#39;,
+               size = 8
+               
+             ),
+             subplot = &#39;polar2&#39;
+  )
+
+fig &lt;- fig %&gt;%
+  layout(
+    polar2 = list(
+      hole=0.2,
+      radialaxis = list(
+        visible = T,
+        range = c(0,4),
+          angle=90,
+        tickangle = 90,
+        color = &#39;grey&#39;,
+        nticks = 4,
+        tickcolor =toRGB(&#39;blue&#39;),
+        tickfont = list(
+               size = 10,
+               color = &quot;blue&quot;
+             ), 
+        ticks = &quot;outside&quot;,
+        ticklen = 10,
+        tickwidth = 3,
+        gridcolor = &#39;red&#39;#color of grid lines
+        
+
+      )
+    ),
+      showlegend = T,
+    showline = T
+  )
+
+fig &lt;- fig %&gt;% layout(paper_bgcolor=&#39;#5875D5&#39;,
+                      showlegend = T, 
+  title = &quot;Radar Charts in R with Plotly&quot;,
+  scene = list(
+    xaxis = list(title = &quot;Cos&quot;),
+    yaxis = list(title = &quot;Sin&quot;),
+    zaxis = list(title = &quot;Z&quot;)
+  ), titlefont = list(
+  color = &#39;#ffffff&#39;,size=12,family = &quot;Agency FB&quot;),
+  font = list(family = &#39;Agency FB&#39;,
+              size = 10), 
+              margin = 0)
+  
+
+fig </code></pre>
+<div id="htmlwidget-6" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-6">{"x":{"visdat":{"162ae3b8c99db":["function () ","plotlyVisDat"]},"cur_data":"162ae3b8c99db","attrs":{"162ae3b8c99db":{"r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","marker":{"size":10,"color":"red"},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar"},"162ae3b8c99db.1":{"r":[0,1,2,3],"theta":[180,225,270,315],"mode":"lines+markers","marker":{"size":6,"color":"red","symbol":"square"},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail02","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar","line":{"color":"blue"},"inherit":true},"162ae3b8c99db.2":{"r":[4,3,5,5],"theta":[180,225,270,315],"mode":"lines+markers","marker":{"size":8,"color":"red","symbol":"square"},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar","line":{"color":"blue"},"subplot":"polar2","inherit":true}},"layout":{"margin":0,"polar2":{"hole":0.2,"radialaxis":{"visible":true,"range":[0,4],"angle":90,"tickangle":90,"color":"grey","nticks":4,"tickcolor":"rgba(0,0,255,1)","tickfont":{"size":10,"color":"blue"},"ticks":"outside","ticklen":10,"tickwidth":3,"gridcolor":"red"}},"showlegend":true,"showline":true,"paper_bgcolor":"#5875D5","title":"Radar Charts in R with Plotly","scene":{"xaxis":{"title":"Cos"},"yaxis":{"title":"Sin"},"zaxis":{"title":"Z"}},"titlefont":{"color":"#ffffff","size":12,"family":"Agency FB"},"font":{"family":"Agency FB","size":10},"hovermode":"closest"},"source":"A","config":{"showSendToCloud":false},"data":[{"fillcolor":"rgba(31,119,180,0.5)","r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","marker":{"color":"red","size":10,"line":{"color":"rgba(31,119,180,1)"}},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","type":"scatterpolar","line":{"color":"black","size":10},"frame":null},{"fillcolor":"rgba(255,127,14,0.5)","r":[0,1,2,3],"theta":[180,225,270,315],"mode":"lines+markers","marker":{"color":"red","size":6,"symbol":"square","line":{"color":"rgba(255,127,14,1)"}},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail02","type":"scatterpolar","line":{"color":"blue"},"frame":null},{"fillcolor":"rgba(44,160,44,0.5)","r":[4,3,5,5],"theta":[180,225,270,315],"mode":"lines+markers","marker":{"color":"red","size":8,"symbol":"square","line":{"color":"rgba(44,160,44,1)"}},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","type":"scatterpolar","line":{"color":"blue"},"subplot":"polar2","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="including-plots-3" class="section level1">
+<h1>Including Plots</h1>
+<p>You can also embed plots. See Figure <a href="#fig:pie"><strong>??</strong></a> for example:</p>
+<pre class="r"><code> library(&#39;plotly&#39;)
+fig &lt;- plot_ly(
+  type = &#39;scatterpolar&#39;,
+  r = c(0,1,2,3),
+  theta = c(0,45,90,135),
+    mode = &#39;lines+markers&#39;, marker = list(size = 10,color=&quot;red&quot;),
+  lines = list(size = 10,color=&quot;black&quot;),
+  fill = &#39;toself&#39;,
+  name=&#39;Trail&#39;
+) 
+
+
+  
+fig &lt;- fig %&gt;%
+  add_trace( r = c(0,1,2,3),
+  theta = c(180,225,270,315),
+  line = list(
+    color = &quot;blue&quot;),
+  marker = list(
+    color = &quot;red&quot;,size = 6, symbol = &#39;square&#39;),
+  name=&quot;Trail02&quot;
+  )
+
+
+fig &lt;- fig %&gt;%
+  add_trace( r = c(4,3,5,5),
+             theta = c(180,225,270,315),
+             line = list(
+               color = &quot;blue&quot;),
+             marker = list(
+               color = &quot;red&quot;,
+               symbol = &#39;square&#39;,
+               size = 8
+               
+             ),
+             subplot = &#39;polar2&#39;
+  )
+
+fig &lt;- fig %&gt;%
+  layout(
+    polar2 = list(
+    domain = list(
+        x = c(0,0.1),
+        y = c(0,1)
+      ),
+      hole=0.2,
+      radialaxis = list(
+        visible = T,
+        range = c(0,3),
+          angle=90,
+        tickangle = 90,
+        color = &#39;grey&#39;,
+        nticks = 4,
+        tickcolor =toRGB(&#39;blue&#39;),
+        tickfont = list(
+               size = 10,
+               color = &quot;blue&quot;
+             ), 
+        ticks = &quot;outside&quot;,
+        ticklen = 10,
+        tickwidth = 3,
+        gridcolor = &#39;red&#39;#color of grid lines
+        
+
+      )
+    ),
+      showlegend = T,
+    showline = T
+  )
+
+fig &lt;- fig %&gt;% layout(paper_bgcolor=&#39;#5875D5&#39;,
+                      showlegend = T, 
+  title = &quot;Radar Charts in R with Plotly&quot;,
+  scene = list(
+    xaxis = list(title = &quot;Cos&quot;),
+    yaxis = list(title = &quot;Sin&quot;),
+    zaxis = list(title = &quot;Z&quot;)
+  ), titlefont = list(
+  color = &#39;#ffffff&#39;,size=12,family = &quot;Agency FB&quot;),
+  font = list(family = &#39;Agency FB&#39;,
+              size = 10), 
+              margin = 0)
+  
+
+fig </code></pre>
+<div id="htmlwidget-7" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-7">{"x":{"visdat":{"162ae3f1fb2e3":["function () ","plotlyVisDat"]},"cur_data":"162ae3f1fb2e3","attrs":{"162ae3f1fb2e3":{"r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","marker":{"size":10,"color":"red"},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar"},"162ae3f1fb2e3.1":{"r":[0,1,2,3],"theta":[180,225,270,315],"mode":"lines+markers","marker":{"size":6,"color":"red","symbol":"square"},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail02","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar","line":{"color":"blue"},"inherit":true},"162ae3f1fb2e3.2":{"r":[4,3,5,5],"theta":[180,225,270,315],"mode":"lines+markers","marker":{"size":8,"color":"red","symbol":"square"},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar","line":{"color":"blue"},"subplot":"polar2","inherit":true}},"layout":{"margin":0,"polar2":{"domain":{"x":[0,0.1],"y":[0,1]},"hole":0.2,"radialaxis":{"visible":true,"range":[0,3],"angle":90,"tickangle":90,"color":"grey","nticks":4,"tickcolor":"rgba(0,0,255,1)","tickfont":{"size":10,"color":"blue"},"ticks":"outside","ticklen":10,"tickwidth":3,"gridcolor":"red"}},"showlegend":true,"showline":true,"paper_bgcolor":"#5875D5","title":"Radar Charts in R with Plotly","scene":{"xaxis":{"title":"Cos"},"yaxis":{"title":"Sin"},"zaxis":{"title":"Z"}},"titlefont":{"color":"#ffffff","size":12,"family":"Agency FB"},"font":{"family":"Agency FB","size":10},"hovermode":"closest"},"source":"A","config":{"showSendToCloud":false},"data":[{"fillcolor":"rgba(31,119,180,0.5)","r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","marker":{"color":"red","size":10,"line":{"color":"rgba(31,119,180,1)"}},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","type":"scatterpolar","line":{"color":"black","size":10},"frame":null},{"fillcolor":"rgba(255,127,14,0.5)","r":[0,1,2,3],"theta":[180,225,270,315],"mode":"lines+markers","marker":{"color":"red","size":6,"symbol":"square","line":{"color":"rgba(255,127,14,1)"}},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail02","type":"scatterpolar","line":{"color":"blue"},"frame":null},{"fillcolor":"rgba(44,160,44,0.5)","r":[4,3,5,5],"theta":[180,225,270,315],"mode":"lines+markers","marker":{"color":"red","size":8,"symbol":"square","line":{"color":"rgba(44,160,44,1)"}},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","type":"scatterpolar","line":{"color":"blue"},"subplot":"polar2","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="including-plots-4" class="section level1">
+<h1>Including Plots</h1>
+<p>You can also embed plots. See Figure <a href="#fig:pie"><strong>??</strong></a> for example:</p>
+<pre class="r"><code> library(&#39;plotly&#39;)
+fig &lt;- plot_ly(
+  type = &#39;scatterpolar&#39;,
+  r = c(0,1,2,3),
+  theta = c(0,45,90,135),
+    mode = &#39;lines+markers&#39;, marker = list(size = 10,color=&quot;red&quot;),
+  lines = list(size = 10,color=&quot;black&quot;),
+  fill = &#39;toself&#39;,
+  name=&#39;Trail&#39;
+) 
+
+
+  
+fig &lt;- fig %&gt;%
+  add_trace( r = c(0,1,2,3),
+  theta = c(180,225,270,315),
+  line = list(
+    color = &quot;blue&quot;),
+  marker = list(
+    color = &quot;red&quot;,size = 6, symbol = &#39;square&#39;),
+  name=&quot;Trail02&quot;
+  )
+
+
+fig &lt;- fig %&gt;%
+  add_trace( r = c(4,3,5,5),
+             theta = c(180,225,270,315),
+             line = list(
+               color = &quot;blue&quot;),
+             marker = list(
+               color = &quot;red&quot;,
+               symbol = &#39;square&#39;,
+               size = 8
+               
+             ),
+             subplot = &#39;polar2&#39;
+  )
+
+fig &lt;- fig %&gt;%
+  layout(
+    polar2 = list(
+    domain = list(
+        x = c(0,100),
+        y = c(0,1)
+      ),
+      hole=0.2,
+      radialaxis = list(
+        visible = T,
+        range = c(0,4),
+          angle=90,
+        tickangle = 90,
+        color = &#39;grey&#39;,
+        nticks = 4,
+        tickcolor =toRGB(&#39;blue&#39;),
+        tickfont = list(
+               size = 10,
+               color = &quot;blue&quot;
+             ), 
+        ticks = &quot;outside&quot;,
+        ticklen = 10,
+        tickwidth = 3,
+        gridcolor = &#39;red&#39;#color of grid lines
+        
+
+      )
+    ),
+      showlegend = T,
+    showline = T
+  )
+
+fig &lt;- fig %&gt;% layout(paper_bgcolor=&#39;#5875D5&#39;,
+                      showlegend = T, 
+  title = &quot;Radar Charts in R with Plotly&quot;,
+  scene = list(
+    xaxis = list(title = &quot;Cos&quot;),
+    yaxis = list(title = &quot;Sin&quot;),
+    zaxis = list(title = &quot;Z&quot;)
+  ), titlefont = list(
+  color = &#39;#ffffff&#39;,size=12,family = &quot;Agency FB&quot;),
+  font = list(family = &#39;Agency FB&#39;,
+              size = 10), 
+              margin = 0)
+  
+
+fig </code></pre>
+<div id="htmlwidget-8" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-8">{"x":{"visdat":{"162ae5d6e721f":["function () ","plotlyVisDat"]},"cur_data":"162ae5d6e721f","attrs":{"162ae5d6e721f":{"r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","marker":{"size":10,"color":"red"},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar"},"162ae5d6e721f.1":{"r":[0,1,2,3],"theta":[180,225,270,315],"mode":"lines+markers","marker":{"size":6,"color":"red","symbol":"square"},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail02","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar","line":{"color":"blue"},"inherit":true},"162ae5d6e721f.2":{"r":[4,3,5,5],"theta":[180,225,270,315],"mode":"lines+markers","marker":{"size":8,"color":"red","symbol":"square"},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar","line":{"color":"blue"},"subplot":"polar2","inherit":true}},"layout":{"margin":0,"polar2":{"domain":{"x":[0,100],"y":[0,1]},"hole":0.2,"radialaxis":{"visible":true,"range":[0,4],"angle":90,"tickangle":90,"color":"grey","nticks":4,"tickcolor":"rgba(0,0,255,1)","tickfont":{"size":10,"color":"blue"},"ticks":"outside","ticklen":10,"tickwidth":3,"gridcolor":"red"}},"showlegend":true,"showline":true,"paper_bgcolor":"#5875D5","title":"Radar Charts in R with Plotly","scene":{"xaxis":{"title":"Cos"},"yaxis":{"title":"Sin"},"zaxis":{"title":"Z"}},"titlefont":{"color":"#ffffff","size":12,"family":"Agency FB"},"font":{"family":"Agency FB","size":10},"hovermode":"closest"},"source":"A","config":{"showSendToCloud":false},"data":[{"fillcolor":"rgba(31,119,180,0.5)","r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","marker":{"color":"red","size":10,"line":{"color":"rgba(31,119,180,1)"}},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","type":"scatterpolar","line":{"color":"black","size":10},"frame":null},{"fillcolor":"rgba(255,127,14,0.5)","r":[0,1,2,3],"theta":[180,225,270,315],"mode":"lines+markers","marker":{"color":"red","size":6,"symbol":"square","line":{"color":"rgba(255,127,14,1)"}},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail02","type":"scatterpolar","line":{"color":"blue"},"frame":null},{"fillcolor":"rgba(44,160,44,0.5)","r":[4,3,5,5],"theta":[180,225,270,315],"mode":"lines+markers","marker":{"color":"red","size":8,"symbol":"square","line":{"color":"rgba(44,160,44,1)"}},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","type":"scatterpolar","line":{"color":"blue"},"subplot":"polar2","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="including-plots-5" class="section level1">
+<h1>Including Plots</h1>
+<p>You can also embed plots. See Figure <a href="#fig:pie"><strong>??</strong></a> for example:</p>
+<pre class="r"><code> library(&#39;plotly&#39;)
+fig &lt;- plot_ly(
+  type = &#39;scatterpolar&#39;,
+  r = c(0,1,2,3),
+  theta = c(0,45,90,135),
+    mode = &#39;lines+markers&#39;, marker = list(size = 10,color=&quot;red&quot;),
+  lines = list(size = 10,color=&quot;black&quot;),
+  fill = &#39;toself&#39;,
+  name=&#39;Trail&#39;
+) 
+
+
+  
+fig &lt;- fig %&gt;%
+  add_trace( r = c(0,1,2,3),
+  theta = c(180,225,270,315),
+  line = list(
+    color = &quot;blue&quot;),
+  marker = list(
+    color = &quot;red&quot;,size = 6, symbol = &#39;square&#39;),
+  name=&quot;Trail02&quot;
+  )
+
+
+fig &lt;- fig %&gt;%
+  add_trace( r = c(4,3,5,5),
+             theta = c(180,225,270,315),
+             line = list(
+               color = &quot;blue&quot;),
+             marker = list(
+               color = &quot;red&quot;,
+               symbol = &#39;square&#39;,
+               size = 8
+               
+             ),
+             subplot = &#39;polar2&#39;
+  )
+
+fig &lt;- fig %&gt;%
+  layout(
+    polar2 = list(
+    domain = list(
+        x = c(100,100),
+        y = c(0,1)
+      ),
+      hole=0.2,
+      radialaxis = list(
+        visible = T,
+        range = c(0,3),
+          angle=90,
+        tickangle = 90,
+        color = &#39;grey&#39;,
+        nticks = 4,
+        tickcolor =toRGB(&#39;blue&#39;),
+        tickfont = list(
+               size = 10,
+               color = &quot;blue&quot;
+             ), 
+        ticks = &quot;outside&quot;,
+        ticklen = 10,
+        tickwidth = 3,
+        gridcolor = &#39;red&#39;#color of grid lines
+        
+
+      )
+    ),
+      showlegend = T,
+    showline = T
+  )
+
+fig &lt;- fig %&gt;% layout(paper_bgcolor=&#39;#5875D5&#39;,
+                      showlegend = T, 
+  title = &quot;Radar Charts in R with Plotly&quot;,
+  scene = list(
+    xaxis = list(title = &quot;Cos&quot;),
+    yaxis = list(title = &quot;Sin&quot;),
+    zaxis = list(title = &quot;Z&quot;)
+  ), titlefont = list(
+  color = &#39;#ffffff&#39;,size=12,family = &quot;Agency FB&quot;),
+  font = list(family = &#39;Agency FB&#39;,
+              size = 10), 
+              margin = 0)
+  
+
+fig </code></pre>
+<div id="htmlwidget-9" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-9">{"x":{"visdat":{"162ae5d08a31f":["function () ","plotlyVisDat"]},"cur_data":"162ae5d08a31f","attrs":{"162ae5d08a31f":{"r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","marker":{"size":10,"color":"red"},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar"},"162ae5d08a31f.1":{"r":[0,1,2,3],"theta":[180,225,270,315],"mode":"lines+markers","marker":{"size":6,"color":"red","symbol":"square"},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail02","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar","line":{"color":"blue"},"inherit":true},"162ae5d08a31f.2":{"r":[4,3,5,5],"theta":[180,225,270,315],"mode":"lines+markers","marker":{"size":8,"color":"red","symbol":"square"},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar","line":{"color":"blue"},"subplot":"polar2","inherit":true}},"layout":{"margin":0,"polar2":{"domain":{"x":[100,100],"y":[0,1]},"hole":0.2,"radialaxis":{"visible":true,"range":[0,3],"angle":90,"tickangle":90,"color":"grey","nticks":4,"tickcolor":"rgba(0,0,255,1)","tickfont":{"size":10,"color":"blue"},"ticks":"outside","ticklen":10,"tickwidth":3,"gridcolor":"red"}},"showlegend":true,"showline":true,"paper_bgcolor":"#5875D5","title":"Radar Charts in R with Plotly","scene":{"xaxis":{"title":"Cos"},"yaxis":{"title":"Sin"},"zaxis":{"title":"Z"}},"titlefont":{"color":"#ffffff","size":12,"family":"Agency FB"},"font":{"family":"Agency FB","size":10},"hovermode":"closest"},"source":"A","config":{"showSendToCloud":false},"data":[{"fillcolor":"rgba(31,119,180,0.5)","r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","marker":{"color":"red","size":10,"line":{"color":"rgba(31,119,180,1)"}},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","type":"scatterpolar","line":{"color":"black","size":10},"frame":null},{"fillcolor":"rgba(255,127,14,0.5)","r":[0,1,2,3],"theta":[180,225,270,315],"mode":"lines+markers","marker":{"color":"red","size":6,"symbol":"square","line":{"color":"rgba(255,127,14,1)"}},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail02","type":"scatterpolar","line":{"color":"blue"},"frame":null},{"fillcolor":"rgba(44,160,44,0.5)","r":[4,3,5,5],"theta":[180,225,270,315],"mode":"lines+markers","marker":{"color":"red","size":8,"symbol":"square","line":{"color":"rgba(44,160,44,1)"}},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","type":"scatterpolar","line":{"color":"blue"},"subplot":"polar2","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="including-plots-6" class="section level1">
+<h1>Including Plots</h1>
+<p>You can also embed plots. See Figure <a href="#fig:pie"><strong>??</strong></a> for example:</p>
+<pre class="r"><code> library(&#39;plotly&#39;)
+fig &lt;- plot_ly(
+  type = &#39;scatterpolar&#39;,
+  r = c(0,1,2,3),
+  theta = c(0,45,90,135),
+    mode = &#39;lines+markers&#39;, marker = list(size = 10,color=&quot;red&quot;),
+  lines = list(size = 10,color=&quot;black&quot;),
+  fill = &#39;toself&#39;,
+  name=&#39;Trail&#39;
+) 
+
+
+  
+fig &lt;- fig %&gt;%
+  add_trace( r = c(0,1,2,3),
+  theta = c(180,225,270,315),
+  line = list(
+    color = &quot;blue&quot;),
+  marker = list(
+    color = &quot;red&quot;,size = 6, symbol = &#39;square&#39;),
+  name=&quot;Trail02&quot;
+  )
+
+
+fig &lt;- fig %&gt;%
+  add_trace( r = c(4,3,5,5),
+             theta = c(180,225,270,315),
+             line = list(
+               color = &quot;blue&quot;),
+             marker = list(
+               color = &quot;red&quot;,
+               symbol = &#39;square&#39;,
+               size = 8
+               
+             ),
+             subplot = &#39;polar2&#39;
+  )
+
+fig &lt;- fig %&gt;%
+  layout(
+    polar2 = list(
+    domain = list(
+        x = c(100,100),
+        y = c(0,0.1)
+      ),
+      hole=0.2,
+      radialaxis = list(
+        visible = T,
+        range = c(0,4),
+          angle=90,
+        tickangle = 90,
+        color = &#39;grey&#39;,
+        nticks = 4,
+        tickcolor =toRGB(&#39;blue&#39;),
+        tickfont = list(
+               size = 10,
+               color = &quot;blue&quot;
+             ), 
+        ticks = &quot;outside&quot;,
+        ticklen = 10,
+        tickwidth = 3,
+        gridcolor = &#39;red&#39;#color of grid lines
+        
+
+      )
+    ),
+      showlegend = T,
+    showline = T
+  )
+
+fig &lt;- fig %&gt;% layout(paper_bgcolor=&#39;#5875D5&#39;,
+                      showlegend = T, 
+  title = &quot;Radar Charts in R with Plotly&quot;,
+  scene = list(
+    xaxis = list(title = &quot;Cos&quot;),
+    yaxis = list(title = &quot;Sin&quot;),
+    zaxis = list(title = &quot;Z&quot;)
+  ), titlefont = list(
+  color = &#39;#ffffff&#39;,size=12,family = &quot;Agency FB&quot;),
+  font = list(family = &#39;Agency FB&#39;,
+              size = 10), 
+              margin = 0)
+  
+
+fig </code></pre>
+<div id="htmlwidget-10" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-10">{"x":{"visdat":{"162ae623d5fda":["function () ","plotlyVisDat"]},"cur_data":"162ae623d5fda","attrs":{"162ae623d5fda":{"r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","marker":{"size":10,"color":"red"},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar"},"162ae623d5fda.1":{"r":[0,1,2,3],"theta":[180,225,270,315],"mode":"lines+markers","marker":{"size":6,"color":"red","symbol":"square"},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail02","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar","line":{"color":"blue"},"inherit":true},"162ae623d5fda.2":{"r":[4,3,5,5],"theta":[180,225,270,315],"mode":"lines+markers","marker":{"size":8,"color":"red","symbol":"square"},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar","line":{"color":"blue"},"subplot":"polar2","inherit":true}},"layout":{"margin":0,"polar2":{"domain":{"x":[100,100],"y":[0,0.1]},"hole":0.2,"radialaxis":{"visible":true,"range":[0,4],"angle":90,"tickangle":90,"color":"grey","nticks":4,"tickcolor":"rgba(0,0,255,1)","tickfont":{"size":10,"color":"blue"},"ticks":"outside","ticklen":10,"tickwidth":3,"gridcolor":"red"}},"showlegend":true,"showline":true,"paper_bgcolor":"#5875D5","title":"Radar Charts in R with Plotly","scene":{"xaxis":{"title":"Cos"},"yaxis":{"title":"Sin"},"zaxis":{"title":"Z"}},"titlefont":{"color":"#ffffff","size":12,"family":"Agency FB"},"font":{"family":"Agency FB","size":10},"hovermode":"closest"},"source":"A","config":{"showSendToCloud":false},"data":[{"fillcolor":"rgba(31,119,180,0.5)","r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","marker":{"color":"red","size":10,"line":{"color":"rgba(31,119,180,1)"}},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","type":"scatterpolar","line":{"color":"black","size":10},"frame":null},{"fillcolor":"rgba(255,127,14,0.5)","r":[0,1,2,3],"theta":[180,225,270,315],"mode":"lines+markers","marker":{"color":"red","size":6,"symbol":"square","line":{"color":"rgba(255,127,14,1)"}},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail02","type":"scatterpolar","line":{"color":"blue"},"frame":null},{"fillcolor":"rgba(44,160,44,0.5)","r":[4,3,5,5],"theta":[180,225,270,315],"mode":"lines+markers","marker":{"color":"red","size":8,"symbol":"square","line":{"color":"rgba(44,160,44,1)"}},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","type":"scatterpolar","line":{"color":"blue"},"subplot":"polar2","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<pre class="r"><code> library(&#39;plotly&#39;)
+fig &lt;- plot_ly(
+  type = &#39;scatterpolar&#39;,
+  r = c(0,1,2,3),
+  theta = c(0,45,90,135),
+    mode = &#39;lines+markers&#39;, marker = list(size = 10,color=&quot;red&quot;),
+  lines = list(size = 10,color=&quot;black&quot;),
+  fill = &#39;toself&#39;,
+  name=&#39;Trail&#39;
+) 
+
+
+  
+fig &lt;- fig %&gt;%
+  add_trace( r = c(0,1,2,3),
+  theta = c(180,225,270,315),
+  line = list(
+    color = &quot;blue&quot;),
+  marker = list(
+    color = &quot;red&quot;,size = 6, symbol = &#39;square&#39;),
+  name=&quot;Trail02&quot;
+  )
+
+
+fig &lt;- fig %&gt;%
+  add_trace( r = c(4,3,5,5),
+             theta = c(180,225,270,315),
+             line = list(
+               color = &quot;blue&quot;),
+             marker = list(
+               color = &quot;red&quot;,
+               symbol = &#39;square&#39;,
+               size = 8
+               
+             ),
+             subplot = &#39;polar2&#39;
+  )
+
+fig &lt;- fig %&gt;%
+  layout(
+    polar2 = list(
+    domain = list(
+        x = c(100,100),
+        y = c(0,100)
+      ),
+      hole=0.2,
+      radialaxis = list(
+        visible = T,
+        range = c(0,4),
+          angle=90,
+        tickangle = 90,
+        color = &#39;grey&#39;,
+        nticks = 4,
+        tickcolor =toRGB(&#39;blue&#39;),
+        tickfont = list(
+               size = 10,
+               color = &quot;blue&quot;
+             ), 
+        ticks = &quot;outside&quot;,
+        ticklen = 10,
+        tickwidth = 3,
+        gridcolor = &#39;red&#39;#color of grid lines
+        
+
+      )
+    ),
+      showlegend = T,
+    showline = T
+  )
+
+fig &lt;- fig %&gt;% layout(paper_bgcolor=&#39;#5875D5&#39;,
+                      showlegend = T, 
+  title = &quot;Radar Charts in R with Plotly&quot;,
+  scene = list(
+    xaxis = list(title = &quot;Cos&quot;),
+    yaxis = list(title = &quot;Sin&quot;),
+    zaxis = list(title = &quot;Z&quot;)
+  ), titlefont = list(
+  color = &#39;#ffffff&#39;,size=12,family = &quot;Agency FB&quot;),
+  font = list(family = &#39;Agency FB&#39;,
+              size = 10), 
+              margin = 0)
+  
+
+fig </code></pre>
+<div id="htmlwidget-11" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-11">{"x":{"visdat":{"162ae30a6b80e":["function () ","plotlyVisDat"]},"cur_data":"162ae30a6b80e","attrs":{"162ae30a6b80e":{"r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","marker":{"size":10,"color":"red"},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar"},"162ae30a6b80e.1":{"r":[0,1,2,3],"theta":[180,225,270,315],"mode":"lines+markers","marker":{"size":6,"color":"red","symbol":"square"},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail02","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar","line":{"color":"blue"},"inherit":true},"162ae30a6b80e.2":{"r":[4,3,5,5],"theta":[180,225,270,315],"mode":"lines+markers","marker":{"size":8,"color":"red","symbol":"square"},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar","line":{"color":"blue"},"subplot":"polar2","inherit":true}},"layout":{"margin":0,"polar2":{"domain":{"x":[100,100],"y":[0,100]},"hole":0.2,"radialaxis":{"visible":true,"range":[0,4],"angle":90,"tickangle":90,"color":"grey","nticks":4,"tickcolor":"rgba(0,0,255,1)","tickfont":{"size":10,"color":"blue"},"ticks":"outside","ticklen":10,"tickwidth":3,"gridcolor":"red"}},"showlegend":true,"showline":true,"paper_bgcolor":"#5875D5","title":"Radar Charts in R with Plotly","scene":{"xaxis":{"title":"Cos"},"yaxis":{"title":"Sin"},"zaxis":{"title":"Z"}},"titlefont":{"color":"#ffffff","size":12,"family":"Agency FB"},"font":{"family":"Agency FB","size":10},"hovermode":"closest"},"source":"A","config":{"showSendToCloud":false},"data":[{"fillcolor":"rgba(31,119,180,0.5)","r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","marker":{"color":"red","size":10,"line":{"color":"rgba(31,119,180,1)"}},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","type":"scatterpolar","line":{"color":"black","size":10},"frame":null},{"fillcolor":"rgba(255,127,14,0.5)","r":[0,1,2,3],"theta":[180,225,270,315],"mode":"lines+markers","marker":{"color":"red","size":6,"symbol":"square","line":{"color":"rgba(255,127,14,1)"}},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail02","type":"scatterpolar","line":{"color":"blue"},"frame":null},{"fillcolor":"rgba(44,160,44,0.5)","r":[4,3,5,5],"theta":[180,225,270,315],"mode":"lines+markers","marker":{"color":"red","size":8,"symbol":"square","line":{"color":"rgba(44,160,44,1)"}},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","type":"scatterpolar","line":{"color":"blue"},"subplot":"polar2","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<pre class="r"><code> library(&#39;plotly&#39;)
+fig &lt;- plot_ly(
+  type = &#39;scatterpolar&#39;,
+  r = c(0,1,2,3),
+  theta = c(0,45,90,135),
+    mode = &#39;lines+markers&#39;, marker = list(size = 10,color=&quot;red&quot;),
+  lines = list(size = 10,color=&quot;black&quot;),
+  fill = &#39;toself&#39;,
+  name=&#39;Trail&#39;
+) 
+
+
+  
+fig &lt;- fig %&gt;%
+  add_trace( r = c(0,1,2,3),
+  theta = c(180,225,270,315),
+  line = list(
+    color = &quot;blue&quot;),
+  marker = list(
+    color = &quot;red&quot;,size = 6, symbol = &#39;square&#39;),
+  name=&quot;Trail02&quot;
+  )
+
+
+fig &lt;- fig %&gt;%
+  add_trace( r = c(4,3,5,5),
+             theta = c(180,225,270,315),
+             line = list(
+               color = &quot;blue&quot;),
+             marker = list(
+               color = &quot;red&quot;,
+               symbol = &#39;square&#39;,
+               size = 8
+               
+             ),
+             subplot = &#39;polar2&#39;
+  )
+
+fig &lt;- fig %&gt;%
+  layout(
+    polar2 = list(
+    domain = list(
+        x = c(100,100),
+        y = c(100,0)
+      ),
+      hole=0.2,
+      radialaxis = list(
+        visible = T,
+        range = c(0,6),
+          angle=90,
+        tickangle = 90,
+        color = &#39;grey&#39;,
+        nticks = 4,
+        tickcolor =toRGB(&#39;blue&#39;),
+        tickfont = list(
+               size = 10,
+               color = &quot;blue&quot;
+             ), 
+        ticks = &quot;outside&quot;,
+        ticklen = 10,
+        tickwidth = 3,
+        gridcolor = &#39;red&#39;#color of grid lines
+        
+
+      )
+    ),
+      showlegend = T,
+    showline = T
+  )
+
+fig &lt;- fig %&gt;% layout(paper_bgcolor=&#39;#5875D5&#39;,
+                      showlegend = T, 
+  title = &quot;Radar Charts in R with Plotly&quot;,
+  scene = list(
+    xaxis = list(title = &quot;Cos&quot;),
+    yaxis = list(title = &quot;Sin&quot;),
+    zaxis = list(title = &quot;Z&quot;)
+  ), titlefont = list(
+  color = &#39;#ffffff&#39;,size=12,family = &quot;Agency FB&quot;),
+  font = list(family = &#39;Agency FB&#39;,
+              size = 10), 
+              margin = 0)
+  
+
+fig </code></pre>
+<div id="htmlwidget-12" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-12">{"x":{"visdat":{"162ae54c0b552":["function () ","plotlyVisDat"]},"cur_data":"162ae54c0b552","attrs":{"162ae54c0b552":{"r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","marker":{"size":10,"color":"red"},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar"},"162ae54c0b552.1":{"r":[0,1,2,3],"theta":[180,225,270,315],"mode":"lines+markers","marker":{"size":6,"color":"red","symbol":"square"},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail02","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar","line":{"color":"blue"},"inherit":true},"162ae54c0b552.2":{"r":[4,3,5,5],"theta":[180,225,270,315],"mode":"lines+markers","marker":{"size":8,"color":"red","symbol":"square"},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar","line":{"color":"blue"},"subplot":"polar2","inherit":true}},"layout":{"margin":0,"polar2":{"domain":{"x":[100,100],"y":[100,0]},"hole":0.2,"radialaxis":{"visible":true,"range":[0,6],"angle":90,"tickangle":90,"color":"grey","nticks":4,"tickcolor":"rgba(0,0,255,1)","tickfont":{"size":10,"color":"blue"},"ticks":"outside","ticklen":10,"tickwidth":3,"gridcolor":"red"}},"showlegend":true,"showline":true,"paper_bgcolor":"#5875D5","title":"Radar Charts in R with Plotly","scene":{"xaxis":{"title":"Cos"},"yaxis":{"title":"Sin"},"zaxis":{"title":"Z"}},"titlefont":{"color":"#ffffff","size":12,"family":"Agency FB"},"font":{"family":"Agency FB","size":10},"hovermode":"closest"},"source":"A","config":{"showSendToCloud":false},"data":[{"fillcolor":"rgba(31,119,180,0.5)","r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","marker":{"color":"red","size":10,"line":{"color":"rgba(31,119,180,1)"}},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","type":"scatterpolar","line":{"color":"black","size":10},"frame":null},{"fillcolor":"rgba(255,127,14,0.5)","r":[0,1,2,3],"theta":[180,225,270,315],"mode":"lines+markers","marker":{"color":"red","size":6,"symbol":"square","line":{"color":"rgba(255,127,14,1)"}},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail02","type":"scatterpolar","line":{"color":"blue"},"frame":null},{"fillcolor":"rgba(44,160,44,0.5)","r":[4,3,5,5],"theta":[180,225,270,315],"mode":"lines+markers","marker":{"color":"red","size":8,"symbol":"square","line":{"color":"rgba(44,160,44,1)"}},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","type":"scatterpolar","line":{"color":"blue"},"subplot":"polar2","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<pre class="r"><code> library(&#39;plotly&#39;)
+fig &lt;- plot_ly(
+  type = &#39;scatterpolar&#39;,
+  r = c(0,1,2,3),
+  theta = c(0,45,90,135),
+    mode = &#39;lines+markers&#39;, marker = list(size = 10,color=&quot;red&quot;),
+  lines = list(size = 10,color=&quot;black&quot;),
+  fill = &#39;toself&#39;,
+  name=&#39;Trail&#39;
+) 
+
+
+  
+fig &lt;- fig %&gt;%
+  add_trace( r = c(0,1,2,3),
+  theta = c(180,225,270,315),
+  line = list(
+    color = &quot;blue&quot;),
+  marker = list(
+    color = &quot;red&quot;,size = 6, symbol = &#39;square&#39;),
+  name=&quot;Trail02&quot;
+  )
+
+
+fig &lt;- fig %&gt;%
+  add_trace( r = c(4,3,5,5),
+             theta = c(180,225,270,315),
+             line = list(
+               color = &quot;blue&quot;),
+             marker = list(
+               color = &quot;red&quot;,
+               symbol = &#39;square&#39;,
+               size = 8
+               
+             ),
+             subplot = &#39;polar2&#39;
+  )
+
+fig &lt;- fig %&gt;%
+  layout(
+    polar2 = list(
+    domain = list(
+        x = c(100,100),
+        y = c(0,0)
+      ),
+      hole=0.2,
+      radialaxis = list(
+        visible = T,
+        range = c(0,6),
+          angle=90,
+        tickangle = 90,
+        color = &#39;grey&#39;,
+        nticks = 4,
+        tickcolor =toRGB(&#39;blue&#39;),
+        tickfont = list(
+               size = 10,
+               color = &quot;blue&quot;
+             ), 
+        ticks = &quot;outside&quot;,
+        ticklen = 10,
+        tickwidth = 3,
+        gridcolor = &#39;red&#39;#color of grid lines
+        
+
+      )
+    ),
+      showlegend = T,
+    showline = T
+  )
+
+fig &lt;- fig %&gt;% layout(paper_bgcolor=&#39;#5875D5&#39;,
+                      showlegend = T, 
+  title = &quot;Radar Charts in R with Plotly&quot;,
+  scene = list(
+    xaxis = list(title = &quot;Cos&quot;),
+    yaxis = list(title = &quot;Sin&quot;),
+    zaxis = list(title = &quot;Z&quot;)
+  ), titlefont = list(
+  color = &#39;#ffffff&#39;,size=12,family = &quot;Agency FB&quot;),
+  font = list(family = &#39;Agency FB&#39;,
+              size = 10), 
+              margin = 0)
+  
+
+fig </code></pre>
+<div id="htmlwidget-13" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-13">{"x":{"visdat":{"162ae30313612":["function () ","plotlyVisDat"]},"cur_data":"162ae30313612","attrs":{"162ae30313612":{"r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","marker":{"size":10,"color":"red"},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar"},"162ae30313612.1":{"r":[0,1,2,3],"theta":[180,225,270,315],"mode":"lines+markers","marker":{"size":6,"color":"red","symbol":"square"},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail02","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar","line":{"color":"blue"},"inherit":true},"162ae30313612.2":{"r":[4,3,5,5],"theta":[180,225,270,315],"mode":"lines+markers","marker":{"size":8,"color":"red","symbol":"square"},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar","line":{"color":"blue"},"subplot":"polar2","inherit":true}},"layout":{"margin":0,"polar2":{"domain":{"x":[100,100],"y":[0,0]},"hole":0.2,"radialaxis":{"visible":true,"range":[0,6],"angle":90,"tickangle":90,"color":"grey","nticks":4,"tickcolor":"rgba(0,0,255,1)","tickfont":{"size":10,"color":"blue"},"ticks":"outside","ticklen":10,"tickwidth":3,"gridcolor":"red"}},"showlegend":true,"showline":true,"paper_bgcolor":"#5875D5","title":"Radar Charts in R with Plotly","scene":{"xaxis":{"title":"Cos"},"yaxis":{"title":"Sin"},"zaxis":{"title":"Z"}},"titlefont":{"color":"#ffffff","size":12,"family":"Agency FB"},"font":{"family":"Agency FB","size":10},"hovermode":"closest"},"source":"A","config":{"showSendToCloud":false},"data":[{"fillcolor":"rgba(31,119,180,0.5)","r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","marker":{"color":"red","size":10,"line":{"color":"rgba(31,119,180,1)"}},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","type":"scatterpolar","line":{"color":"black","size":10},"frame":null},{"fillcolor":"rgba(255,127,14,0.5)","r":[0,1,2,3],"theta":[180,225,270,315],"mode":"lines+markers","marker":{"color":"red","size":6,"symbol":"square","line":{"color":"rgba(255,127,14,1)"}},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail02","type":"scatterpolar","line":{"color":"blue"},"frame":null},{"fillcolor":"rgba(44,160,44,0.5)","r":[4,3,5,5],"theta":[180,225,270,315],"mode":"lines+markers","marker":{"color":"red","size":8,"symbol":"square","line":{"color":"rgba(44,160,44,1)"}},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","type":"scatterpolar","line":{"color":"blue"},"subplot":"polar2","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<pre class="r"><code> library(&#39;plotly&#39;)
+fig &lt;- plot_ly(
+  type = &#39;scatterpolar&#39;,
+  r = c(0,1,2,3),
+  theta = c(0,45,90,135),
+    mode = &#39;lines+markers&#39;, marker = list(size = 10,color=&quot;red&quot;),
+  lines = list(size = 10,color=&quot;black&quot;),
+  fill = &#39;toself&#39;,
+  name=&#39;Trail&#39;
+) 
+
+
+  
+fig &lt;- fig %&gt;%
+  add_trace( r = c(0,1,2,3),
+  theta = c(180,225,270,315),
+  line = list(
+    color = &quot;blue&quot;),
+  marker = list(
+    color = &quot;red&quot;,size = 6, symbol = &#39;square&#39;),
+  name=&quot;Trail02&quot;
+  )
+
+
+fig &lt;- fig %&gt;%
+  add_trace( r = c(4,3,5,5),
+             theta = c(180,225,270,315),
+             line = list(
+               color = &quot;blue&quot;),
+             marker = list(
+               color = &quot;red&quot;,
+               symbol = &#39;square&#39;,
+               size = 8
+               
+             ),
+             subplot = &#39;polar2&#39;
+  )
+
+fig &lt;- fig %&gt;%
+  layout(
+    polar2 = list(
+    domain = list(
+        x = c(100,100),
+        y = c(0,10)
+      ),
+      hole=0.2,
+      radialaxis = list(
+        visible = T,
+        range = c(0,6),
+          angle=90,
+        tickangle = 90,
+        color = &#39;grey&#39;,
+        nticks = 4,
+        tickcolor =toRGB(&#39;blue&#39;),
+        tickfont = list(
+               size = 10,
+               color = &quot;blue&quot;
+             ), 
+        ticks = &quot;outside&quot;,
+        ticklen = 10,
+        tickwidth = 3,
+        gridcolor = &#39;red&#39;#color of grid lines
+        
+
+      )
+    ),
+      showlegend = T,
+    showline = T
+  )
+
+fig &lt;- fig %&gt;% layout(paper_bgcolor=&#39;#5875D5&#39;,
+                      showlegend = T, 
+  title = &quot;Radar Charts in R with Plotly&quot;,
+  scene = list(
+    xaxis = list(title = &quot;Cos&quot;),
+    yaxis = list(title = &quot;Sin&quot;),
+    zaxis = list(title = &quot;Z&quot;)
+  ), titlefont = list(
+  color = &#39;#ffffff&#39;,size=12,family = &quot;Agency FB&quot;),
+  font = list(family = &#39;Agency FB&#39;,
+              size = 10), 
+              margin = 0)
+  
+
+fig </code></pre>
+<div id="htmlwidget-14" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-14">{"x":{"visdat":{"162ae5df6ca2b":["function () ","plotlyVisDat"]},"cur_data":"162ae5df6ca2b","attrs":{"162ae5df6ca2b":{"r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","marker":{"size":10,"color":"red"},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar"},"162ae5df6ca2b.1":{"r":[0,1,2,3],"theta":[180,225,270,315],"mode":"lines+markers","marker":{"size":6,"color":"red","symbol":"square"},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail02","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar","line":{"color":"blue"},"inherit":true},"162ae5df6ca2b.2":{"r":[4,3,5,5],"theta":[180,225,270,315],"mode":"lines+markers","marker":{"size":8,"color":"red","symbol":"square"},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar","line":{"color":"blue"},"subplot":"polar2","inherit":true}},"layout":{"margin":0,"polar2":{"domain":{"x":[100,100],"y":[0,10]},"hole":0.2,"radialaxis":{"visible":true,"range":[0,6],"angle":90,"tickangle":90,"color":"grey","nticks":4,"tickcolor":"rgba(0,0,255,1)","tickfont":{"size":10,"color":"blue"},"ticks":"outside","ticklen":10,"tickwidth":3,"gridcolor":"red"}},"showlegend":true,"showline":true,"paper_bgcolor":"#5875D5","title":"Radar Charts in R with Plotly","scene":{"xaxis":{"title":"Cos"},"yaxis":{"title":"Sin"},"zaxis":{"title":"Z"}},"titlefont":{"color":"#ffffff","size":12,"family":"Agency FB"},"font":{"family":"Agency FB","size":10},"hovermode":"closest"},"source":"A","config":{"showSendToCloud":false},"data":[{"fillcolor":"rgba(31,119,180,0.5)","r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","marker":{"color":"red","size":10,"line":{"color":"rgba(31,119,180,1)"}},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","type":"scatterpolar","line":{"color":"black","size":10},"frame":null},{"fillcolor":"rgba(255,127,14,0.5)","r":[0,1,2,3],"theta":[180,225,270,315],"mode":"lines+markers","marker":{"color":"red","size":6,"symbol":"square","line":{"color":"rgba(255,127,14,1)"}},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail02","type":"scatterpolar","line":{"color":"blue"},"frame":null},{"fillcolor":"rgba(44,160,44,0.5)","r":[4,3,5,5],"theta":[180,225,270,315],"mode":"lines+markers","marker":{"color":"red","size":8,"symbol":"square","line":{"color":"rgba(44,160,44,1)"}},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","type":"scatterpolar","line":{"color":"blue"},"subplot":"polar2","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<pre class="r"><code> library(&#39;plotly&#39;)
+fig &lt;- plot_ly(
+  type = &#39;scatterpolar&#39;,
+  r = c(0,1,2,3),
+  theta = c(0,45,90,135),
+    mode = &#39;lines+markers&#39;, marker = list(size = 10,color=&quot;red&quot;),
+  lines = list(size = 10,color=&quot;black&quot;),
+  fill = &#39;toself&#39;,
+  name=&#39;Trail&#39;
+) 
+
+
+  
+fig &lt;- fig %&gt;%
+  add_trace( r = c(0,1,2,3),
+  theta = c(180,225,270,315),
+  line = list(
+    color = &quot;blue&quot;),
+  marker = list(
+    color = &quot;red&quot;,size = 6, symbol = &#39;square&#39;),
+  name=&quot;Trail02&quot;,
+               subplot = &#39;polar1&#39;
+
+  )
+
+
+fig &lt;- fig %&gt;%
+  add_trace( r = c(4,3,5,5),
+             theta = c(180,225,270,315),
+             line = list(
+               color = &quot;blue&quot;),
+             marker = list(
+               color = &quot;red&quot;,
+               symbol = &#39;square&#39;,
+               size = 8
+               
+             ),
+             subplot = &#39;polar2&#39;
+  )
+
+fig &lt;- fig %&gt;%
+  layout(
+    polar2 = list(
+    domain = list(
+        x = c(100,100),
+        y = c(0,10)
+      ),
+      hole=0.2,
+      radialaxis = list(
+        visible = T,
+        range = c(0,6),
+          angle=90,
+        tickangle = 90,
+        color = &#39;grey&#39;,
+        nticks = 4,
+        tickcolor =toRGB(&#39;blue&#39;),
+        tickfont = list(
+               size = 10,
+               color = &quot;blue&quot;
+             ), 
+        ticks = &quot;outside&quot;,
+        ticklen = 10,
+        tickwidth = 3,
+        gridcolor = &#39;red&#39;#color of grid lines
+        
+
+      )),
+    polar1 = list(
+      domain = list(
+        x = c(100,100),
+        y = c(0,0)
+      ),
+      radialaxis = list(
+        tickfont = list(
+          size = 8
+        )
+      ),
+      angularaxis = list(
+        tickfont = list(
+          size = 8
+        ),
+        rotation = 90,
+        direction = &#39;clockwise&#39;
+      )
+    ),
+      showlegend = T,
+    showline = T
+  )
+
+fig &lt;- fig %&gt;% layout(paper_bgcolor=&#39;#5875D5&#39;,
+                      showlegend = T, 
+  title = &quot;Radar Charts in R with Plotly&quot;,
+  scene = list(
+    xaxis = list(title = &quot;Cos&quot;),
+    yaxis = list(title = &quot;Sin&quot;),
+    zaxis = list(title = &quot;Z&quot;)
+  ), titlefont = list(
+  color = &#39;#ffffff&#39;,size=12,family = &quot;Agency FB&quot;),
+  font = list(family = &#39;Agency FB&#39;,
+              size = 10), 
+              margin = 0)
+  
+
+fig</code></pre>
+<div id="htmlwidget-15" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-15">{"x":{"visdat":{"162ae1b702d9f":["function () ","plotlyVisDat"]},"cur_data":"162ae1b702d9f","attrs":{"162ae1b702d9f":{"r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","marker":{"size":10,"color":"red"},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar"},"162ae1b702d9f.1":{"r":[0,1,2,3],"theta":[180,225,270,315],"mode":"lines+markers","marker":{"size":6,"color":"red","symbol":"square"},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail02","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar","line":{"color":"blue"},"subplot":"polar1","inherit":true},"162ae1b702d9f.2":{"r":[4,3,5,5],"theta":[180,225,270,315],"mode":"lines+markers","marker":{"size":8,"color":"red","symbol":"square"},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar","line":{"color":"blue"},"subplot":"polar2","inherit":true}},"layout":{"margin":0,"polar2":{"domain":{"x":[100,100],"y":[0,10]},"hole":0.2,"radialaxis":{"visible":true,"range":[0,6],"angle":90,"tickangle":90,"color":"grey","nticks":4,"tickcolor":"rgba(0,0,255,1)","tickfont":{"size":10,"color":"blue"},"ticks":"outside","ticklen":10,"tickwidth":3,"gridcolor":"red"}},"polar1":{"domain":{"x":[100,100],"y":[0,0]},"radialaxis":{"tickfont":{"size":8}},"angularaxis":{"tickfont":{"size":8},"rotation":90,"direction":"clockwise"}},"showlegend":true,"showline":true,"paper_bgcolor":"#5875D5","title":"Radar Charts in R with Plotly","scene":{"xaxis":{"title":"Cos"},"yaxis":{"title":"Sin"},"zaxis":{"title":"Z"}},"titlefont":{"color":"#ffffff","size":12,"family":"Agency FB"},"font":{"family":"Agency FB","size":10},"hovermode":"closest"},"source":"A","config":{"showSendToCloud":false},"data":[{"fillcolor":"rgba(31,119,180,0.5)","r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","marker":{"color":"red","size":10,"line":{"color":"rgba(31,119,180,1)"}},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","type":"scatterpolar","line":{"color":"black","size":10},"frame":null},{"fillcolor":"rgba(255,127,14,0.5)","r":[0,1,2,3],"theta":[180,225,270,315],"mode":"lines+markers","marker":{"color":"red","size":6,"symbol":"square","line":{"color":"rgba(255,127,14,1)"}},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail02","type":"scatterpolar","line":{"color":"blue"},"subplot":"polar1","frame":null},{"fillcolor":"rgba(44,160,44,0.5)","r":[4,3,5,5],"theta":[180,225,270,315],"mode":"lines+markers","marker":{"color":"red","size":8,"symbol":"square","line":{"color":"rgba(44,160,44,1)"}},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","type":"scatterpolar","line":{"color":"blue"},"subplot":"polar2","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<pre class="r"><code> library(&#39;plotly&#39;)
+
+fig &lt;- plot_ly(
+  type = &#39;scatterpolar&#39;,
+  mode =&#39;lines+markers&#39;
+)
+
+
+  
+fig &lt;- fig %&gt;%
+  add_trace( r = c(0,1,2,3),
+  theta = c(180,225,270,315),
+  line = list(
+    color = &quot;blue&quot;),
+  marker = list(
+    color = &quot;red&quot;,size = 6, symbol = &#39;square&#39;),
+  name=&quot;Trail02&quot;,
+               subplot = &#39;polar1&#39;
+
+  )
+
+
+fig &lt;- fig %&gt;%
+  add_trace( r = c(4,3,5,5),
+             theta = c(180,225,270,315),
+             line = list(
+               color = &quot;blue&quot;),
+             marker = list(
+               color = &quot;red&quot;,
+               symbol = &#39;square&#39;,
+               size = 8
+               
+             ),
+             subplot = &#39;polar2&#39;
+  )
+
+fig &lt;- fig %&gt;%
+  layout(
+    polar2 = list(
+    domain = list(
+        x = c(100,100),
+        y = c(0,10)
+      ),
+      hole=0.2,
+      radialaxis = list(
+        visible = T,
+        range = c(0,6),
+          angle=90,
+        tickangle = 90,
+        color = &#39;grey&#39;,
+        nticks = 4,
+        tickcolor =toRGB(&#39;blue&#39;),
+        tickfont = list(
+               size = 10,
+               color = &quot;blue&quot;
+             ), 
+        ticks = &quot;outside&quot;,
+        ticklen = 10,
+        tickwidth = 3,
+        gridcolor = &#39;red&#39;#color of grid lines
+        
+
+      )),
+    polar1 = list(
+      domain = list(
+        x = c(100,100),
+        y = c(0,0)
+      ),
+      radialaxis = list(
+        tickfont = list(
+          size = 8
+        )
+      ),
+      angularaxis = list(
+        tickfont = list(
+          size = 8
+        ),
+        rotation = 90,
+        direction = &#39;clockwise&#39;
+      )
+    ),
+      showlegend = T,
+    showline = T
+  )
+
+fig &lt;- fig %&gt;% layout(paper_bgcolor=&#39;#5875D5&#39;,
+                      showlegend = T, 
+  title = &quot;Radar Charts in R with Plotly&quot;,
+  scene = list(
+    xaxis = list(title = &quot;Cos&quot;),
+    yaxis = list(title = &quot;Sin&quot;),
+    zaxis = list(title = &quot;Z&quot;)
+  ), titlefont = list(
+  color = &#39;#ffffff&#39;,size=12,family = &quot;Agency FB&quot;),
+  font = list(family = &#39;Agency FB&#39;,
+              size = 10), 
+              margin = 0)
+  
+
+fig</code></pre>
+<div id="htmlwidget-16" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-16">{"x":{"visdat":{"162ae5576ea91":["function () ","plotlyVisDat"]},"cur_data":"162ae5576ea91","attrs":{"162ae5576ea91":{"mode":"lines+markers","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar"},"162ae5576ea91.1":{"mode":"lines+markers","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar","r":[0,1,2,3],"theta":[180,225,270,315],"line":{"color":"blue"},"marker":{"color":"red","size":6,"symbol":"square"},"name":"Trail02","subplot":"polar1","inherit":true},"162ae5576ea91.2":{"mode":"lines+markers","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar","r":[4,3,5,5],"theta":[180,225,270,315],"line":{"color":"blue"},"marker":{"color":"red","symbol":"square","size":8},"subplot":"polar2","inherit":true}},"layout":{"margin":0,"polar2":{"domain":{"x":[100,100],"y":[0,10]},"hole":0.2,"radialaxis":{"visible":true,"range":[0,6],"angle":90,"tickangle":90,"color":"grey","nticks":4,"tickcolor":"rgba(0,0,255,1)","tickfont":{"size":10,"color":"blue"},"ticks":"outside","ticklen":10,"tickwidth":3,"gridcolor":"red"}},"polar1":{"domain":{"x":[100,100],"y":[0,0]},"radialaxis":{"tickfont":{"size":8}},"angularaxis":{"tickfont":{"size":8},"rotation":90,"direction":"clockwise"}},"showlegend":true,"showline":true,"paper_bgcolor":"#5875D5","title":"Radar Charts in R with Plotly","scene":{"xaxis":{"title":"Cos"},"yaxis":{"title":"Sin"},"zaxis":{"title":"Z"}},"titlefont":{"color":"#ffffff","size":12,"family":"Agency FB"},"font":{"family":"Agency FB","size":10},"hovermode":"closest"},"source":"A","config":{"showSendToCloud":false},"data":[{"mode":"lines+markers","type":"scatterpolar","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"line":{"color":"rgba(31,119,180,1)"},"frame":null},{"mode":"lines+markers","type":"scatterpolar","r":[0,1,2,3],"theta":[180,225,270,315],"line":{"color":"blue"},"marker":{"color":"red","size":6,"symbol":"square","line":{"color":"rgba(255,127,14,1)"}},"name":"Trail02","subplot":"polar1","frame":null},{"mode":"lines+markers","type":"scatterpolar","r":[4,3,5,5],"theta":[180,225,270,315],"line":{"color":"blue"},"marker":{"color":"red","symbol":"square","size":8,"line":{"color":"rgba(44,160,44,1)"}},"subplot":"polar2","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<pre class="r"><code> library(&#39;plotly&#39;)
+
+fig &lt;- plot_ly(
+  type = &#39;scatterpolar&#39;,
+  mode =&#39;lines+markers&#39;
+)
+
+
+  
+fig &lt;- fig %&gt;%
+  add_trace( r = c(0,1,2,3),
+  theta = c(180,225,270,315),
+  line = list(
+    color = &quot;blue&quot;),
+  marker = list(
+    color = &quot;red&quot;,size = 6, symbol = &#39;square&#39;),
+  name=&quot;Trail02&quot;,
+               subplot = &#39;polar1&#39;
+
+  )
+
+
+fig &lt;- fig %&gt;%
+  add_trace( r = c(4,3,5,5),
+             theta = c(180,225,270,315),
+             line = list(
+               color = &quot;blue&quot;),
+             marker = list(
+               color = &quot;red&quot;,
+               symbol = &#39;square&#39;,
+               size = 8
+               
+             ),
+             subplot = &#39;polar2&#39;
+  )
+
+fig &lt;- fig %&gt;%
+  layout(
+    polar2 = list(
+    domain = list(
+        x = c(0,0),
+        y = c(0,10)
+      ),
+      hole=0.2,
+      radialaxis = list(
+        visible = T,
+        range = c(0,6),
+          angle=90,
+        tickangle = 90,
+        color = &#39;grey&#39;,
+        nticks = 4,
+        tickcolor =toRGB(&#39;blue&#39;),
+        tickfont = list(
+               size = 10,
+               color = &quot;blue&quot;
+             ), 
+        ticks = &quot;outside&quot;,
+        ticklen = 10,
+        tickwidth = 3,
+        gridcolor = &#39;red&#39;#color of grid lines
+        
+
+      )),
+    polar1 = list(
+      domain = list(
+        x = c(0,0),
+        y = c(0,0)
+      ),
+      radialaxis = list(
+        tickfont = list(
+          size = 8
+        )
+      ),
+      angularaxis = list(
+        tickfont = list(
+          size = 8
+        ),
+        rotation = 90,
+        direction = &#39;clockwise&#39;
+      )
+    ),
+      showlegend = T,
+    showline = T
+  )
+
+fig &lt;- fig %&gt;% layout(
+  title = &quot;Radar Charts in R with Plotly&quot;,
+  scene = list(
+    xaxis = list(title = &quot;Cos&quot;),
+    yaxis = list(title = &quot;Sin&quot;),
+    zaxis = list(title = &quot;Z&quot;)
+  ))
+  
+
+
+fig</code></pre>
+<div id="htmlwidget-17" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-17">{"x":{"visdat":{"162ae168b93fe":["function () ","plotlyVisDat"]},"cur_data":"162ae168b93fe","attrs":{"162ae168b93fe":{"mode":"lines+markers","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar"},"162ae168b93fe.1":{"mode":"lines+markers","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar","r":[0,1,2,3],"theta":[180,225,270,315],"line":{"color":"blue"},"marker":{"color":"red","size":6,"symbol":"square"},"name":"Trail02","subplot":"polar1","inherit":true},"162ae168b93fe.2":{"mode":"lines+markers","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar","r":[4,3,5,5],"theta":[180,225,270,315],"line":{"color":"blue"},"marker":{"color":"red","symbol":"square","size":8},"subplot":"polar2","inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"polar2":{"domain":{"x":[0,0],"y":[0,10]},"hole":0.2,"radialaxis":{"visible":true,"range":[0,6],"angle":90,"tickangle":90,"color":"grey","nticks":4,"tickcolor":"rgba(0,0,255,1)","tickfont":{"size":10,"color":"blue"},"ticks":"outside","ticklen":10,"tickwidth":3,"gridcolor":"red"}},"polar1":{"domain":{"x":[0,0],"y":[0,0]},"radialaxis":{"tickfont":{"size":8}},"angularaxis":{"tickfont":{"size":8},"rotation":90,"direction":"clockwise"}},"showlegend":true,"showline":true,"title":"Radar Charts in R with Plotly","scene":{"xaxis":{"title":"Cos"},"yaxis":{"title":"Sin"},"zaxis":{"title":"Z"}},"hovermode":"closest"},"source":"A","config":{"showSendToCloud":false},"data":[{"mode":"lines+markers","type":"scatterpolar","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"line":{"color":"rgba(31,119,180,1)"},"frame":null},{"mode":"lines+markers","type":"scatterpolar","r":[0,1,2,3],"theta":[180,225,270,315],"line":{"color":"blue"},"marker":{"color":"red","size":6,"symbol":"square","line":{"color":"rgba(255,127,14,1)"}},"name":"Trail02","subplot":"polar1","frame":null},{"mode":"lines+markers","type":"scatterpolar","r":[4,3,5,5],"theta":[180,225,270,315],"line":{"color":"blue"},"marker":{"color":"red","symbol":"square","size":8,"line":{"color":"rgba(44,160,44,1)"}},"subplot":"polar2","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<pre class="r"><code> library(&#39;plotly&#39;)
+ 
+
+df &lt;- data.frame( r = c(0,1,2,3,4,3,5,6),
+  theta = c(180,225,270,315,180,225,270,315),           
+  group = c(&#39;A&#39;, &#39;A&#39;, &#39;A&#39;, &#39;A&#39;, &#39;B&#39;, &#39;B&#39;, &#39;B&#39;, &#39;B&#39;),
+  size = c(1, 2, 3, 4, 1, 2, 3, 4)
+  )
+
+            
+ colors_map &lt;- c(&quot;blue&quot;, &quot;green&quot;, &quot;red&quot;) 
+            
+
+fig &lt;- plot_ly(df,
+  type = &#39;scatterpolar&#39;,
+  mode =&#39;lines+markers&#39;,
+  hoverinfo=&quot;text&quot;,
+  marker = list(symbol = &#39;circle&#39;, line = list(width = 2, color = &#39;lightgrey&#39;)),
+  r = ~r,
+  theta = ~theta,
+  color = ~group, 
+  colors = colors_map, #Provide a color mapped vector
+  size = ~size, 
+  sizes = c(100,200), #Provide a range of size.
+  text = ~paste(&#39;&lt;b&gt;DETAILS &lt;/b&gt;&lt;br&gt;---------------&lt;br&gt;Radius:&#39;, r, &#39;&lt;br&gt;Theta:&#39;, theta, &#39;&lt;br&gt;Group:&#39;, group, &#39;&lt;br&gt;Size:&#39;, size))%&gt;%
+  layout(title = &#39;SAMPLE TITLE&#39;,
+         showlegend = TRUE,
+         polar = list(
+           #hole = 0.5,
+           radialaxis = list(
+             tickfont = list(
+               size = 20,
+               color = &quot;blue&quot;
+             ),
+             visible = TRUE,
+             tickcolor = toRGB(&quot;red&quot;),
+             ticks = &quot;outside&quot;,
+             #ticklen = 15,
+             #tickwidth = 20,
+             
+             range = c(0, max(df$r)),
+             rangemode = &quot;tozero&quot;,
+             angle = 90,
+             tickangle = 90,
+             #gridcolor = &#39;#FFF&#39;, #color of grid lines
+             categoryorder = &quot;array&quot;,
+             categoryarray = c(&quot;GroupA&quot;, &quot;GroupB&quot;, &quot;GroupC&quot;, &quot;GroupD&quot;) #Not working
+           ),
+           angularaxis = list(
+             tickfont = list(
+               size = 12
+             ),
+             rotation = 90,
+             direction = &#39;clockwise&#39; ,
+             categoryarray = c(&quot;A&quot;, &quot;B&quot;, &quot;C&quot;, &quot;D&quot;) #Not working
+           )
+         )
+  )
+ggplotly(fig)</code></pre>
+<div id="htmlwidget-18" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-18">{"x":{"visdat":{"162ae72390c5a":["function () ","plotlyVisDat"]},"cur_data":"162ae72390c5a","attrs":{"162ae72390c5a":{"mode":"lines+markers","hoverinfo":"text","marker":{"symbol":"circle","line":{"width":2,"color":"lightgrey"}},"r":{},"theta":{},"text":{},"color":{},"size":{},"colors":["blue","green","red"],"alpha_stroke":1,"sizes":[100,200],"spans":[1,20],"type":"scatterpolar"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"title":"SAMPLE TITLE","showlegend":true,"polar":{"radialaxis":{"tickfont":{"size":20,"color":"blue"},"visible":true,"tickcolor":"rgba(255,0,0,1)","ticks":"outside","range":[0,6],"rangemode":"tozero","angle":90,"tickangle":90,"categoryorder":"array","categoryarray":["GroupA","GroupB","GroupC","GroupD"]},"angularaxis":{"tickfont":{"size":12},"rotation":90,"direction":"clockwise","categoryarray":["A","B","C","D"]}},"hovermode":"closest"},"source":"A","config":{"showSendToCloud":false},"data":[{"mode":"lines+markers","hoverinfo":["text","text","text","text"],"marker":{"color":"rgba(0,0,255,1)","size":[100,133.333333333333,166.666666666667,200],"sizemode":"area","symbol":"circle","line":{"color":"lightgrey","width":2}},"r":[0,1,2,3],"theta":[180,225,270,315],"text":["<b>DETAILS <\/b><br>---------------<br>Radius: 0 <br>Theta: 180 <br>Group: A <br>Size: 1","<b>DETAILS <\/b><br>---------------<br>Radius: 1 <br>Theta: 225 <br>Group: A <br>Size: 2","<b>DETAILS <\/b><br>---------------<br>Radius: 2 <br>Theta: 270 <br>Group: A <br>Size: 3","<b>DETAILS <\/b><br>---------------<br>Radius: 3 <br>Theta: 315 <br>Group: A <br>Size: 4"],"type":"scatterpolar","name":"A","textfont":{"color":"rgba(0,0,255,1)","size":[100,133.333333333333,166.666666666667,200]},"line":{"color":"rgba(0,0,255,1)"},"frame":null},{"mode":"lines+markers","hoverinfo":["text","text","text","text"],"marker":{"color":"rgba(255,0,0,1)","size":[100,133.333333333333,166.666666666667,200],"sizemode":"area","symbol":"circle","line":{"color":"lightgrey","width":2}},"r":[4,3,5,6],"theta":[180,225,270,315],"text":["<b>DETAILS <\/b><br>---------------<br>Radius: 4 <br>Theta: 180 <br>Group: B <br>Size: 1","<b>DETAILS <\/b><br>---------------<br>Radius: 3 <br>Theta: 225 <br>Group: B <br>Size: 2","<b>DETAILS <\/b><br>---------------<br>Radius: 5 <br>Theta: 270 <br>Group: B <br>Size: 3","<b>DETAILS <\/b><br>---------------<br>Radius: 6 <br>Theta: 315 <br>Group: B <br>Size: 4"],"type":"scatterpolar","name":"B","textfont":{"color":"rgba(255,0,0,1)","size":[100,133.333333333333,166.666666666667,200]},"line":{"color":"rgba(255,0,0,1)"},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<pre class="r"><code> library(&#39;plotly&#39;)
+ 
+
+df &lt;- data.frame( r = c(0,1,2,3,4,3,5,6),
+  theta = c(180,225,270,315,180,225,270,315),           
+  group = c(&#39;A&#39;, &#39;A&#39;, &#39;A&#39;, &#39;A&#39;, &#39;B&#39;, &#39;B&#39;, &#39;B&#39;, &#39;B&#39;),
+  size = c(1, 2, 3, 4, 1, 2, 3, 4)
+  )
+
+            
+ colors_map &lt;- c(&quot;blue&quot;, &quot;green&quot;) 
+            
+
+fig &lt;- plot_ly(df,
+  type = &#39;scatterpolar&#39;,
+  mode =&#39;lines+markers&#39;,
+  hoverinfo=&quot;text&quot;,
+  marker = list(symbol = &#39;circle&#39;, line = list(width = 2, color = &#39;lightgrey&#39;)),
+  r = ~r,
+  theta = ~theta,
+  color = ~group, 
+  colors = colors_map, #Provide a color mapped vector
+  size = ~size, 
+  sizes = c(100,200), #Provide a range of size.
+  text = ~paste(&#39;&lt;b&gt;DETAILS &lt;/b&gt;&lt;br&gt;---------------&lt;br&gt;Radius:&#39;, r, &#39;&lt;br&gt;Theta:&#39;, theta, &#39;&lt;br&gt;Group:&#39;, group, &#39;&lt;br&gt;Size:&#39;, size))%&gt;%
+  layout(title = &#39;SAMPLE TITLE&#39;,
+         showlegend = TRUE,
+         polar = list(
+           #hole = 0.5,
+           radialaxis = list(
+             tickfont = list(
+               size = 20,
+               color = &quot;blue&quot;
+             ),
+             visible = TRUE,
+             tickcolor = toRGB(&quot;red&quot;),
+             ticks = &quot;outside&quot;,
+             #ticklen = 15,
+             #tickwidth = 20,
+             
+             range = c(0, max(df$r)),
+             rangemode = &quot;tozero&quot;,
+             angle = 90,
+             tickangle = 90,
+             #gridcolor = &#39;#FFF&#39;, #color of grid lines
+             categoryorder = &quot;array&quot;,
+             categoryarray = c(&quot;GroupA&quot;, &quot;GroupB&quot;, &quot;GroupC&quot;, &quot;GroupD&quot;) #Not working
+           ),
+           angularaxis = list(
+             tickfont = list(
+               size = 12
+             ),
+             rotation = 90,
+             direction = &#39;clockwise&#39; ,
+             categoryarray = c(&quot;A&quot;, &quot;B&quot;, &quot;C&quot;, &quot;D&quot;) #Not working
+           )
+         )
+  )
+
+fig &lt;- fig %&gt;% layout(
+  title = &quot;Radar Charts in R with Plotly&quot;,
+  scene = list(
+    xaxis = list(title = &quot;Cos&quot;),
+    yaxis = list(title = &quot;Sin&quot;),
+    zaxis = list(title = &quot;Z&quot;)
+  ))
+ggplotly(fig)</code></pre>
+<div id="htmlwidget-19" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-19">{"x":{"visdat":{"162ae76c3523e":["function () ","plotlyVisDat"]},"cur_data":"162ae76c3523e","attrs":{"162ae76c3523e":{"mode":"lines+markers","hoverinfo":"text","marker":{"symbol":"circle","line":{"width":2,"color":"lightgrey"}},"r":{},"theta":{},"text":{},"color":{},"size":{},"colors":["blue","green"],"alpha_stroke":1,"sizes":[100,200],"spans":[1,20],"type":"scatterpolar"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"title":"Radar Charts in R with Plotly","showlegend":true,"polar":{"radialaxis":{"tickfont":{"size":20,"color":"blue"},"visible":true,"tickcolor":"rgba(255,0,0,1)","ticks":"outside","range":[0,6],"rangemode":"tozero","angle":90,"tickangle":90,"categoryorder":"array","categoryarray":["GroupA","GroupB","GroupC","GroupD"]},"angularaxis":{"tickfont":{"size":12},"rotation":90,"direction":"clockwise","categoryarray":["A","B","C","D"]}},"scene":{"xaxis":{"title":"Cos"},"yaxis":{"title":"Sin"},"zaxis":{"title":"Z"}},"hovermode":"closest"},"source":"A","config":{"showSendToCloud":false},"data":[{"mode":"lines+markers","hoverinfo":["text","text","text","text"],"marker":{"color":"rgba(0,0,255,1)","size":[100,133.333333333333,166.666666666667,200],"sizemode":"area","symbol":"circle","line":{"color":"lightgrey","width":2}},"r":[0,1,2,3],"theta":[180,225,270,315],"text":["<b>DETAILS <\/b><br>---------------<br>Radius: 0 <br>Theta: 180 <br>Group: A <br>Size: 1","<b>DETAILS <\/b><br>---------------<br>Radius: 1 <br>Theta: 225 <br>Group: A <br>Size: 2","<b>DETAILS <\/b><br>---------------<br>Radius: 2 <br>Theta: 270 <br>Group: A <br>Size: 3","<b>DETAILS <\/b><br>---------------<br>Radius: 3 <br>Theta: 315 <br>Group: A <br>Size: 4"],"type":"scatterpolar","name":"A","textfont":{"color":"rgba(0,0,255,1)","size":[100,133.333333333333,166.666666666667,200]},"line":{"color":"rgba(0,0,255,1)"},"frame":null},{"mode":"lines+markers","hoverinfo":["text","text","text","text"],"marker":{"color":"rgba(0,255,0,1)","size":[100,133.333333333333,166.666666666667,200],"sizemode":"area","symbol":"circle","line":{"color":"lightgrey","width":2}},"r":[4,3,5,6],"theta":[180,225,270,315],"text":["<b>DETAILS <\/b><br>---------------<br>Radius: 4 <br>Theta: 180 <br>Group: B <br>Size: 1","<b>DETAILS <\/b><br>---------------<br>Radius: 3 <br>Theta: 225 <br>Group: B <br>Size: 2","<b>DETAILS <\/b><br>---------------<br>Radius: 5 <br>Theta: 270 <br>Group: B <br>Size: 3","<b>DETAILS <\/b><br>---------------<br>Radius: 6 <br>Theta: 315 <br>Group: B <br>Size: 4"],"type":"scatterpolar","name":"B","textfont":{"color":"rgba(0,255,0,1)","size":[100,133.333333333333,166.666666666667,200]},"line":{"color":"rgba(0,255,0,1)"},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+
+</div>
+</main>
+
+<section class="appendix">
+
+
+<div>
+  <div class="side side-left"><h3>Author's bio</h3></div>
+  <div>
+
+
+
+
+
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div>
+  <div class="side side-left"><h3>Citation</h3></div>
+  <p>For attribution, please cite this work as</p>
+  <pre><code class="no-highlight">Ahmed Alluqmani (2020). Polarchart add_Trace add_Trace. Merigan Son. http://example.org/post/2015-07-23-r-rmarkdown/untitled-folder-copy-2/</code></pre>
+  <p>BibTeX citation</p>
+  <pre><code class="no-highlight">@misc{
+  title = "Polarchart add_Trace add_Trace",
+  author = "Ahmed Alluqmani",
+  year = "2020",
+  journal = "Merigan Son",
+  note = "http://example.org/post/2015-07-23-r-rmarkdown/untitled-folder-copy-2/"
+}</code></pre>
+</div>
+
+</section>
+
+
+
+<nav class="post-nav">
+  <span class="nav-next">&larr; <a href="/post/2015-07-23-r-rmarkdown/index-posts-01/index01/" title="Next post (older)">Polarchart layout(</a></span>
+  &hercon;
+  <span class="nav-prev"><a href="/post/2015-07-23-r-rmarkdown/polarchart-add_trace/" title="Previous post (newer)">Polarchart add_trace</a> &rarr;</span>
+</nav>
+
+
+
+
+
+</div>
+
+
+  <footer>
+  <script async src="//yihui.org/js/center-img.js"></script>
+
+
+
+<script src="//yihui.org/js/math-code.js"></script>
+<script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script>
+hljs.configure({languages: []});
+hljs.initHighlightingOnLoad();
+</script>
+
+
+  <div class="footer">
+  
+  <ul>
+    
+  </ul>
+  </div>
+  
+  </footer>
+  <script async src="/js/features.js" data-page-features="[null,null,null]"></script>
+  </body>
+</html>
+

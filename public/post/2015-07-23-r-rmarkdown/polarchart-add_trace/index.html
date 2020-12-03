@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title> Polarchart add_trace | Merigan Son</title>
+    
+    
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="stylesheet" href="/css/custom.css" />
+    <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Polarchart add_trace"/>
+<meta name="twitter:description" content="#```{r setup, include=FALSE} knitr::opts_chunk$set(collapse = TRUE)
+R Markdown This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
+You can embed an R code chunk like this:
+library(&#39;plotly&#39;) fig &lt;- plot_ly( ) fig &lt;- fig %&gt;% add_trace( r = c(0,1,2,3), theta = c(180,225,270,315) ) fig  {&#34;"/>
+
+
+  </head>
+
+  <body>
+
+    <nav class="menu">
+    <ul>
+      <li class="left">
+        <a href="/"><span>Merigan Son</span></a>
+      </li>
+      
+      <li>
+        <a href="/">Home</a>
+      </li>
+      
+      <li>
+        <a href="/about/">About</a>
+      </li>
+      
+      <li>
+        <a href="/sitemap/">Sitemap</a>
+      </li>
+      
+    </ul>
+    </nav>
+
+
+<div class="container single">
+<main>
+
+<div class="article-meta">
+<h1><span class="title">Polarchart add_trace</span></h1>
+
+<h3 class="author">
+Ahmed Alluqmani
+</h3>
+
+<h3 class="date">2020-12-01</h3>
+<p class="terms">
+  
+  
+  Categories: <a href="/categories/r">R</a> 
+  
+  
+  
+  Tags: <a href="/tags/r-markdown">R Markdown</a> <a href="/tags/plot">plot</a> <a href="/tags/regression">regression</a> 
+  
+  
+</p>
+</div>
+
+<div class="article">
+
+<link href="index_files/anchor-sections/anchor-sections.css" rel="stylesheet" />
+<script src="index_files/anchor-sections/anchor-sections.js"></script>
+<script src="index_files/htmlwidgets/htmlwidgets.js"></script>
+<script src="index_files/plotly-binding/plotly.js"></script>
+<script src="index_files/typedarray/typedarray.min.js"></script>
+<script src="index_files/jquery/jquery.min.js"></script>
+<link href="index_files/crosstalk/css/crosstalk.css" rel="stylesheet" />
+<script src="index_files/crosstalk/js/crosstalk.min.js"></script>
+<link href="index_files/plotly-htmlwidgets-css/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="index_files/plotly-main/plotly-latest.min.js"></script>
+
+
+<p>#```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE)</p>
+<div id="r-markdown" class="section level1">
+<h1>R Markdown</h1>
+<p>This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <a href="http://rmarkdown.rstudio.com" class="uri">http://rmarkdown.rstudio.com</a>.</p>
+<p>You can embed an R code chunk like this:</p>
+<pre class="r"><code>library(&#39;plotly&#39;)
+fig &lt;- plot_ly(
+  
+)
+  
+fig &lt;- fig %&gt;%
+  add_trace( r = c(0,1,2,3),
+  theta = c(180,225,270,315)
+  )
+fig</code></pre>
+<div id="htmlwidget-1" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"visdat":{"15c573c4ea848":["function () ","plotlyVisDat"]},"cur_data":"15c573c4ea848","attrs":{"15c573c4ea848":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"r":[0,1,2,3],"theta":[180,225,270,315],"inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"xaxis":{"domain":[0,1],"automargin":true},"yaxis":{"domain":[0,1],"automargin":true},"hovermode":"closest","showlegend":false},"source":"A","config":{"showSendToCloud":false},"data":[{"r":[0,1,2,3],"theta":[180,225,270,315],"type":"scatter","mode":"markers","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"line":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="including-plots" class="section level1">
+<h1>Including Plots</h1>
+<p>You can also embed plots. See Figure <a href="#fig:pie"><strong>??</strong></a> for example:</p>
+<pre class="r"><code>library(&#39;plotly&#39;)
+fig &lt;- plot_ly(
+  type = &#39;scatterpolar&#39;
+)
+  
+fig &lt;- fig %&gt;%
+  add_trace( r = c(0,1,2,3),
+  theta = c(180,225,270,315)
+  )
+fig</code></pre>
+<p><div id="htmlwidget-2" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-2">{"x":{"visdat":{"15c574c4b8017":["function () ","plotlyVisDat"]},"cur_data":"15c574c4b8017","attrs":{"15c574c4b8017":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar"},"15c574c4b8017.1":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar","r":[0,1,2,3],"theta":[180,225,270,315],"inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"hovermode":"closest","showlegend":true},"source":"A","config":{"showSendToCloud":false},"data":[{"type":"scatterpolar","mode":"markers","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"line":{"color":"rgba(31,119,180,1)"},"frame":null},{"type":"scatterpolar","r":[0,1,2,3],"theta":[180,225,270,315],"mode":"markers","marker":{"color":"rgba(255,127,14,1)","line":{"color":"rgba(255,127,14,1)"}},"line":{"color":"rgba(255,127,14,1)"},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+# Including Plots</p>
+<p>You can also embed plots. See Figure <a href="#fig:pie"><strong>??</strong></a> for example:</p>
+<pre class="r"><code>library(&#39;plotly&#39;)
+fig &lt;- plot_ly(
+  type = &#39;scatterpolar&#39;,
+  mode =&#39;lines+markers&#39; 
+)
+  
+fig &lt;- fig %&gt;%
+  add_trace( r = c(0,1,2,3),
+  theta = c(180,225,270,315)
+  )
+fig </code></pre>
+<div id="htmlwidget-3" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-3">{"x":{"visdat":{"15c577b5bed05":["function () ","plotlyVisDat"]},"cur_data":"15c577b5bed05","attrs":{"15c577b5bed05":{"mode":"lines+markers","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar"},"15c577b5bed05.1":{"mode":"lines+markers","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar","r":[0,1,2,3],"theta":[180,225,270,315],"inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"hovermode":"closest","showlegend":true},"source":"A","config":{"showSendToCloud":false},"data":[{"mode":"lines+markers","type":"scatterpolar","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"line":{"color":"rgba(31,119,180,1)"},"frame":null},{"mode":"lines+markers","type":"scatterpolar","r":[0,1,2,3],"theta":[180,225,270,315],"marker":{"color":"rgba(255,127,14,1)","line":{"color":"rgba(255,127,14,1)"}},"line":{"color":"rgba(255,127,14,1)"},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="including-plots-1" class="section level1">
+<h1>Including Plots</h1>
+<p>You can also embed plots. See Figure <a href="#fig:pie"><strong>??</strong></a> for example:</p>
+<pre class="r"><code>library(&#39;plotly&#39;)
+fig &lt;- plot_ly(
+  type = &#39;scatterpolar&#39;,
+  mode =&#39;lines+markers&#39;,
+  fill = &#39;toself&#39;
+)
+  
+fig &lt;- fig %&gt;%
+  add_trace( r = c(0,1,2,3),
+  theta = c(180,225,270,315)
+  )
+fig </code></pre>
+<div id="htmlwidget-4" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-4">{"x":{"visdat":{"15c5777a537d3":["function () ","plotlyVisDat"]},"cur_data":"15c5777a537d3","attrs":{"15c5777a537d3":{"mode":"lines+markers","fill":"toself","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar"},"15c5777a537d3.1":{"mode":"lines+markers","fill":"toself","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar","r":[0,1,2,3],"theta":[180,225,270,315],"inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"hovermode":"closest","showlegend":true},"source":"A","config":{"showSendToCloud":false},"data":[{"fillcolor":"rgba(31,119,180,0.5)","mode":"lines+markers","fill":"toself","type":"scatterpolar","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"line":{"color":"rgba(31,119,180,1)"},"frame":null},{"fillcolor":"rgba(255,127,14,0.5)","mode":"lines+markers","fill":"toself","type":"scatterpolar","r":[0,1,2,3],"theta":[180,225,270,315],"marker":{"color":"rgba(255,127,14,1)","line":{"color":"rgba(255,127,14,1)"}},"line":{"color":"rgba(255,127,14,1)"},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="including-plots-2" class="section level1">
+<h1>Including Plots</h1>
+<p>You can also embed plots. See Figure <a href="#fig:pie"><strong>??</strong></a> for example:</p>
+<pre class="r"><code>library(&#39;plotly&#39;)
+fig &lt;- plot_ly(
+  type = &#39;scatterpolar&#39;,
+    mode = &#39;lines+markers&#39;,
+  fill = &#39;toself&#39;)
+  
+fig &lt;- fig %&gt;%
+  add_trace( r = c(0,1,2,3),
+  theta = c(180,225,270,315)
+  )
+fig</code></pre>
+<div id="htmlwidget-5" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-5">{"x":{"visdat":{"15c577b4e41ee":["function () ","plotlyVisDat"]},"cur_data":"15c577b4e41ee","attrs":{"15c577b4e41ee":{"mode":"lines+markers","fill":"toself","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar"},"15c577b4e41ee.1":{"mode":"lines+markers","fill":"toself","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar","r":[0,1,2,3],"theta":[180,225,270,315],"inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"hovermode":"closest","showlegend":true},"source":"A","config":{"showSendToCloud":false},"data":[{"fillcolor":"rgba(31,119,180,0.5)","mode":"lines+markers","fill":"toself","type":"scatterpolar","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"line":{"color":"rgba(31,119,180,1)"},"frame":null},{"fillcolor":"rgba(255,127,14,0.5)","mode":"lines+markers","fill":"toself","type":"scatterpolar","r":[0,1,2,3],"theta":[180,225,270,315],"marker":{"color":"rgba(255,127,14,1)","line":{"color":"rgba(255,127,14,1)"}},"line":{"color":"rgba(255,127,14,1)"},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="including-plots-3" class="section level1">
+<h1>Including Plots</h1>
+<p>You can also embed plots. See Figure <a href="#fig:pie"><strong>??</strong></a> for example:</p>
+<pre class="r"><code> library(&#39;plotly&#39;)
+fig &lt;- plot_ly(
+  type = &#39;scatterpolar&#39;,
+    mode = &#39;lines+markers&#39;, 
+  fill = &#39;toself&#39;)
+  
+fig &lt;- fig %&gt;%
+  add_trace( r = c(0,1,2,3),
+  theta = c(180,225,270,315),
+  line = list(
+    color = &quot;blue&quot;),
+  marker = list(
+    color = &quot;red&quot;)
+  )
+fig</code></pre>
+<div id="htmlwidget-6" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-6">{"x":{"visdat":{"15c575cc824e9":["function () ","plotlyVisDat"]},"cur_data":"15c575cc824e9","attrs":{"15c575cc824e9":{"mode":"lines+markers","fill":"toself","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar"},"15c575cc824e9.1":{"mode":"lines+markers","fill":"toself","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar","r":[0,1,2,3],"theta":[180,225,270,315],"line":{"color":"blue"},"marker":{"color":"red"},"inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"hovermode":"closest","showlegend":true},"source":"A","config":{"showSendToCloud":false},"data":[{"fillcolor":"rgba(31,119,180,0.5)","mode":"lines+markers","fill":"toself","type":"scatterpolar","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"line":{"color":"rgba(31,119,180,1)"},"frame":null},{"fillcolor":"rgba(255,127,14,0.5)","mode":"lines+markers","fill":"toself","type":"scatterpolar","r":[0,1,2,3],"theta":[180,225,270,315],"line":{"color":"blue"},"marker":{"color":"red","line":{"color":"rgba(255,127,14,1)"}},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="including-plots-4" class="section level1">
+<h1>Including Plots</h1>
+<p>You can also embed plots. See Figure <a href="#fig:pie"><strong>??</strong></a> for example:</p>
+<pre class="r"><code>library(&#39;plotly&#39;)
+fig &lt;- plot_ly(
+  type = &#39;scatterpolar&#39;,
+    mode = &#39;lines+markers&#39;,
+  fill = &#39;toself&#39;)
+  
+fig &lt;- fig %&gt;%
+  add_trace( r = c(0,1,2,3),
+  theta = c(180,225,270,315),
+  line = list(
+    color = &quot;blue&quot;),
+  marker = list(
+    color = &quot;red&quot;,size = 6)
+  )
+fig  </code></pre>
+<div id="htmlwidget-7" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-7">{"x":{"visdat":{"15c5727c1d74d":["function () ","plotlyVisDat"]},"cur_data":"15c5727c1d74d","attrs":{"15c5727c1d74d":{"mode":"lines+markers","fill":"toself","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar"},"15c5727c1d74d.1":{"mode":"lines+markers","fill":"toself","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar","r":[0,1,2,3],"theta":[180,225,270,315],"line":{"color":"blue"},"marker":{"color":"red","size":6},"inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"hovermode":"closest","showlegend":true},"source":"A","config":{"showSendToCloud":false},"data":[{"fillcolor":"rgba(31,119,180,0.5)","mode":"lines+markers","fill":"toself","type":"scatterpolar","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"line":{"color":"rgba(31,119,180,1)"},"frame":null},{"fillcolor":"rgba(255,127,14,0.5)","mode":"lines+markers","fill":"toself","type":"scatterpolar","r":[0,1,2,3],"theta":[180,225,270,315],"line":{"color":"blue"},"marker":{"color":"red","size":6,"line":{"color":"rgba(255,127,14,1)"}},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="including-plots-5" class="section level1">
+<h1>Including Plots</h1>
+<p>You can also embed plots. See Figure <a href="#fig:pie"><strong>??</strong></a> for example:</p>
+<pre class="r"><code>library(&#39;plotly&#39;)
+fig &lt;- plot_ly(
+  type = &#39;scatterpolar&#39;,
+    mode = &#39;lines+markers&#39;, 
+  fill = &#39;toself&#39;)
+  
+fig &lt;- fig %&gt;%
+  add_trace( r = c(0,1,2,3),
+  theta = c(180,225,270,315),
+  line = list(
+    color = &quot;blue&quot;),
+  marker = list(
+    color = &quot;red&quot;,size = 6, symbol = &#39;square&#39;)
+  )
+fig </code></pre>
+<div id="htmlwidget-8" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-8">{"x":{"visdat":{"15c5727dbe6c9":["function () ","plotlyVisDat"]},"cur_data":"15c5727dbe6c9","attrs":{"15c5727dbe6c9":{"mode":"lines+markers","fill":"toself","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar"},"15c5727dbe6c9.1":{"mode":"lines+markers","fill":"toself","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar","r":[0,1,2,3],"theta":[180,225,270,315],"line":{"color":"blue"},"marker":{"color":"red","size":6,"symbol":"square"},"inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"hovermode":"closest","showlegend":true},"source":"A","config":{"showSendToCloud":false},"data":[{"fillcolor":"rgba(31,119,180,0.5)","mode":"lines+markers","fill":"toself","type":"scatterpolar","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"line":{"color":"rgba(31,119,180,1)"},"frame":null},{"fillcolor":"rgba(255,127,14,0.5)","mode":"lines+markers","fill":"toself","type":"scatterpolar","r":[0,1,2,3],"theta":[180,225,270,315],"line":{"color":"blue"},"marker":{"color":"red","size":6,"symbol":"square","line":{"color":"rgba(255,127,14,1)"}},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="including-plots-6" class="section level1">
+<h1>Including Plots</h1>
+<p>You can also embed plots. See Figure <a href="#fig:pie"><strong>??</strong></a> for example:</p>
+<pre class="r"><code>library(&#39;plotly&#39;)
+fig &lt;- plot_ly(
+  type = &#39;scatterpolar&#39;,
+  r = c(0,1,2,3),
+  theta = c(0,45,90,135),
+    mode = &#39;lines+markers&#39;, marker = list(size = 10,color=&quot;red&quot;),
+  lines = list(size = 10,color=&quot;black&quot;),
+  fill = &#39;toself&#39;,
+  name=&#39;Trail&#39;
+) 
+  
+fig &lt;- fig %&gt;%
+  add_trace( r = c(0,1,2,3),
+  theta = c(180,225,270,315),
+  line = list(
+    color = &quot;blue&quot;),
+  marker = list(
+    color = &quot;red&quot;,size = 6, symbol = &#39;square&#39;)
+  )
+fig </code></pre>
+<div id="htmlwidget-9" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-9">{"x":{"visdat":{"15c5759920012":["function () ","plotlyVisDat"]},"cur_data":"15c5759920012","attrs":{"15c5759920012":{"r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","marker":{"size":10,"color":"red"},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar"},"15c5759920012.1":{"r":[0,1,2,3],"theta":[180,225,270,315],"mode":"lines+markers","marker":{"size":6,"color":"red","symbol":"square"},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar","line":{"color":"blue"},"inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"hovermode":"closest","showlegend":true},"source":"A","config":{"showSendToCloud":false},"data":[{"fillcolor":"rgba(31,119,180,0.5)","r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","marker":{"color":"red","size":10,"line":{"color":"rgba(31,119,180,1)"}},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","type":"scatterpolar","line":{"color":"black","size":10},"frame":null},{"fillcolor":"rgba(255,127,14,0.5)","r":[0,1,2,3],"theta":[180,225,270,315],"mode":"lines+markers","marker":{"color":"red","size":6,"symbol":"square","line":{"color":"rgba(255,127,14,1)"}},"lines":{"size":10,"color":"black"},"fill":"toself","name":"Trail","type":"scatterpolar","line":{"color":"blue"},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+
+</div>
+</main>
+
+<section class="appendix">
+
+
+<div>
+  <div class="side side-left"><h3>Author's bio</h3></div>
+  <div>
+
+
+
+
+
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div>
+  <div class="side side-left"><h3>Citation</h3></div>
+  <p>For attribution, please cite this work as</p>
+  <pre><code class="no-highlight">Ahmed Alluqmani (2020). Polarchart add_trace. Merigan Son. http://example.org/post/2015-07-23-r-rmarkdown/polarchart-add_trace/</code></pre>
+  <p>BibTeX citation</p>
+  <pre><code class="no-highlight">@misc{
+  title = "Polarchart add_trace",
+  author = "Ahmed Alluqmani",
+  year = "2020",
+  journal = "Merigan Son",
+  note = "http://example.org/post/2015-07-23-r-rmarkdown/polarchart-add_trace/"
+}</code></pre>
+</div>
+
+</section>
+
+
+
+<nav class="post-nav">
+  <span class="nav-next">&larr; <a href="/post/2015-07-23-r-rmarkdown/untitled-folder-copy-2/" title="Next post (older)">Polarchart add_Trace add_Trace</a></span>
+  &hercon;
+  <span class="nav-prev"></span>
+</nav>
+
+
+
+
+
+</div>
+
+
+  <footer>
+  <script async src="//yihui.org/js/center-img.js"></script>
+
+
+
+<script src="//yihui.org/js/math-code.js"></script>
+<script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script>
+hljs.configure({languages: []});
+hljs.initHighlightingOnLoad();
+</script>
+
+
+  <div class="footer">
+  
+  <ul>
+    
+  </ul>
+  </div>
+  
+  </footer>
+  <script async src="/js/features.js" data-page-features="[null,null,null]"></script>
+  </body>
+</html>
+
