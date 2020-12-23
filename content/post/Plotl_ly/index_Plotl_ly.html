@@ -1,0 +1,243 @@
+---
+title: "Plotl_ly  وظائف عمل"
+author: "Ahmed Alluqmani"
+date: 2020-12-01T21:13:14-05:00
+categories: ["R"]
+tags: ["R Markdown", "plot", "regression"]
+---
+
+<link href="/rmarkdown-libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/anchor-sections/anchor-sections.js"></script>
+<script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
+<script src="/rmarkdown-libs/plotly-binding/plotly.js"></script>
+<script src="/rmarkdown-libs/typedarray/typedarray.min.js"></script>
+<script src="/rmarkdown-libs/jquery/jquery.min.js"></script>
+<link href="/rmarkdown-libs/crosstalk/css/crosstalk.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/crosstalk/js/crosstalk.min.js"></script>
+<link href="/rmarkdown-libs/plotly-htmlwidgets-css/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/plotly-main/plotly-latest.min.js"></script>
+
+
+<div id="plot_ly" class="section level1">
+<h1>plot_ly()</h1>
+<pre class="r"><code>library(plotly)
+
+fig &lt;- plot_ly()
+
+fig</code></pre>
+<div id="htmlwidget-1" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"visdat":{"131886616402c":["function () ","plotlyVisDat"]},"cur_data":"131886616402c","attrs":{"131886616402c":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20]}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"xaxis":{"domain":[0,1],"automargin":true},"yaxis":{"domain":[0,1],"automargin":true},"hovermode":"closest","showlegend":false},"source":"A","config":{"showSendToCloud":false},"data":[{"type":"scatter","mode":"markers","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"line":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<div id="plot_lyrtheta" class="section level2">
+<h2>plot_ly(r,theta)</h2>
+<pre class="r"><code>library(plotly)
+fig &lt;- plot_ly(
+ r = c(0,1,2,3),
+theta = c(0,45,90,135)
+               )
+
+fig</code></pre>
+<div id="htmlwidget-2" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-2">{"x":{"visdat":{"1318817b205a7":["function () ","plotlyVisDat"]},"cur_data":"1318817b205a7","attrs":{"1318817b205a7":{"r":[0,1,2,3],"theta":[0,45,90,135],"alpha_stroke":1,"sizes":[10,100],"spans":[1,20]}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"xaxis":{"domain":[0,1],"automargin":true},"yaxis":{"domain":[0,1],"automargin":true},"hovermode":"closest","showlegend":false},"source":"A","config":{"showSendToCloud":false},"data":[{"r":[0,1,2,3],"theta":[0,45,90,135],"type":"scatter","mode":"markers","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"line":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<p><strong>APPENDIX plot_Ly(r,theta)</strong>
+- plot_ly(r)</p>
+<pre class="r"><code>library(plotly)
+ 
+fig &lt;- plot_ly(
+ r = c(0,1,2,3))
+
+fig</code></pre>
+<div id="htmlwidget-3" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-3">{"x":{"visdat":{"1318850971176":["function () ","plotlyVisDat"]},"cur_data":"1318850971176","attrs":{"1318850971176":{"r":[0,1,2,3],"alpha_stroke":1,"sizes":[10,100],"spans":[1,20]}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"xaxis":{"domain":[0,1],"automargin":true},"yaxis":{"domain":[0,1],"automargin":true},"hovermode":"closest","showlegend":false},"source":"A","config":{"showSendToCloud":false},"data":[{"r":[0,1,2,3],"type":"scatter","mode":"markers","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"line":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<ul>
+<li>plot_ly(theta)</li>
+</ul>
+</div>
+<div id="plot_lytypefillname" class="section level2">
+<h2>plot_ly(type,fill,name)</h2>
+<p><strong>APPENDIX plot_ly(type,fill,name)</strong></p>
+<pre class="r"><code>library(plotly)
+
+fig &lt;- plot_ly(
+  r = c(0,1,2,3),
+  theta = c(0,45,90,135),
+  type = &#39;scatterpolar&#39;,
+           fill = &#39;toself&#39;,
+           name = &#39;Trail&#39;
+)
+
+fig</code></pre>
+<div id="htmlwidget-4" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-4">{"x":{"visdat":{"131881b69eff2":["function () ","plotlyVisDat"]},"cur_data":"131881b69eff2","attrs":{"131881b69eff2":{"r":[0,1,2,3],"theta":[0,45,90,135],"fill":"toself","name":"Trail","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"hovermode":"closest","showlegend":false},"source":"A","config":{"showSendToCloud":false},"data":[{"fillcolor":"rgba(31,119,180,0.5)","r":[0,1,2,3],"theta":[0,45,90,135],"fill":"toself","name":"Trail","type":"scatterpolar","mode":"markers","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"line":{"color":"rgba(31,119,180,1)"},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<pre><code>Appendix mode (type,modes, fill,names)
+  
+    plot_ly(mode = markers)
+    plot_ly(r = c(0,1,2,3),theta = c(0,45,90,135))
+    plot_ly(type = &#39;scatterpolar&#39;)
+    plot_ly(modes(markers), plot_ly(lines), plot_ly(lines+markers)
+    plotl_ly(fill = &#39;toself&#39;)
+    plotl_ly(name = &#39;Trail&#39;)</code></pre>
+<hr />
+<ul>
+<li>plot_ly(type)</li>
+</ul>
+<pre class="r"><code>library(plotly)
+
+fig &lt;- plot_ly(type = &#39;scatterpolar&#39;)
+
+fig</code></pre>
+<div id="htmlwidget-5" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-5">{"x":{"visdat":{"131886fed68d":["function () ","plotlyVisDat"]},"cur_data":"131886fed68d","attrs":{"131886fed68d":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"hovermode":"closest","showlegend":false},"source":"A","config":{"showSendToCloud":false},"data":[{"type":"scatterpolar","mode":"markers","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"line":{"color":"rgba(31,119,180,1)"},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<ul>
+<li>plot_ly(fill = toself))</li>
+</ul>
+<pre class="r"><code>library(plotly)
+fig &lt;- plot_ly(
+  type = &#39;scatterpolar&#39;,
+  r = c(0,1,2,3),
+  theta = c(0,45,90,135),
+  mode = &#39;lines+markers&#39;,
+  fill = &#39;toself&#39;
+)
+fig</code></pre>
+<div id="htmlwidget-6" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-6">{"x":{"visdat":{"131887d4d7cd5":["function () ","plotlyVisDat"]},"cur_data":"131887d4d7cd5","attrs":{"131887d4d7cd5":{"r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","fill":"toself","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"hovermode":"closest","showlegend":false},"source":"A","config":{"showSendToCloud":false},"data":[{"fillcolor":"rgba(31,119,180,0.5)","r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","fill":"toself","type":"scatterpolar","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"line":{"color":"rgba(31,119,180,1)"},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<ul>
+<li>plot_ly(name)</li>
+</ul>
+<pre class="r"><code>library(plotly)
+fig &lt;- plot_ly(
+  type = &#39;scatterpolar&#39;,
+  r = c(0,1,2,3),
+  theta = c(0,45,90,135),
+  mode = &#39;lines+markers&#39;,
+  fill = &#39;toself&#39;,
+  name = &#39;Trail&#39;
+)
+
+fig</code></pre>
+<div id="htmlwidget-7" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-7">{"x":{"visdat":{"131883ec42d5f":["function () ","plotlyVisDat"]},"cur_data":"131883ec42d5f","attrs":{"131883ec42d5f":{"r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","fill":"toself","name":"Trail","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"hovermode":"closest","showlegend":false},"source":"A","config":{"showSendToCloud":false},"data":[{"fillcolor":"rgba(31,119,180,0.5)","r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","fill":"toself","name":"Trail","type":"scatterpolar","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"line":{"color":"rgba(31,119,180,1)"},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<pre><code>  plot_ly(name =&#39;Trail&#39;) is unviewed becuase we need to use layout(showlegend = T, showline = T) 
+ 
+    * fig &lt;-  fig %&gt;% layout(showlegend = T, showline = T)
+  </code></pre>
+<hr />
+</div>
+<div id="plot_lymode" class="section level2">
+<h2>plot_ly(mode)</h2>
+<p><strong>APPENDIX plot_ly(mode)</strong></p>
+<ul>
+<li>plot_ly(mode = markers)</li>
+</ul>
+<pre class="r"><code>library(ggplot2)
+library(plotly)
+fig &lt;- plot_ly(
+   type = &#39;scatterpolar&#39;,
+ r = c(0,1,2,3),
+theta = c(0,45,90,135),
+   mode = &#39;markers&#39; 
+)
+
+fig</code></pre>
+<div id="htmlwidget-8" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-8">{"x":{"visdat":{"131886ea1cefd":["function () ","plotlyVisDat"]},"cur_data":"131886ea1cefd","attrs":{"131886ea1cefd":{"r":[0,1,2,3],"theta":[0,45,90,135],"mode":"markers","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"hovermode":"closest","showlegend":false},"source":"A","config":{"showSendToCloud":false},"data":[{"r":[0,1,2,3],"theta":[0,45,90,135],"mode":"markers","type":"scatterpolar","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"line":{"color":"rgba(31,119,180,1)"},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="plot_lymarkerlist" class="section level2">
+<h2>plot_ly(marker(list))</h2>
+<p><strong>APPENDIX plot_ly (marker(list(size,color,symbol)))</strong>
+- plot_ly(marker list(size))</p>
+<pre class="r"><code>library(plotly)
+fig &lt;- plot_ly(
+  type = &#39;scatterpolar&#39;,
+  r = c(0,1,2,3),
+  theta = c(0,45,90,135),
+  mode = &#39;lines+markers&#39;, marker = list(size = 10),
+  fill = &#39;toself&#39;
+  )
+fig</code></pre>
+<div id="htmlwidget-9" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-9">{"x":{"visdat":{"1318835449184":["function () ","plotlyVisDat"]},"cur_data":"1318835449184","attrs":{"1318835449184":{"r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","marker":{"size":10},"fill":"toself","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"hovermode":"closest","showlegend":false},"source":"A","config":{"showSendToCloud":false},"data":[{"fillcolor":"rgba(31,119,180,0.5)","r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","marker":{"color":"rgba(31,119,180,1)","size":10,"line":{"color":"rgba(31,119,180,1)"}},"fill":"toself","type":"scatterpolar","line":{"color":"rgba(31,119,180,1)"},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<ul>
+<li>plot_ly(marker (list(color,symbol)))</li>
+</ul>
+<pre class="r"><code>library(plotly)
+
+fig &lt;- plot_ly(
+  type = &#39;scatterpolar&#39;,
+  r = c(0,1,2,3),
+  theta = c(0,45,90,135),
+    mode = &#39;lines+markers&#39;, marker = list(size = 10,color=&quot;red&quot;, 
+                                          symbol = &#39;square&#39; ),
+  fill = &#39;toself&#39;
+)
+
+
+fig</code></pre>
+<div id="htmlwidget-10" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-10">{"x":{"visdat":{"1318819de9e9f":["function () ","plotlyVisDat"]},"cur_data":"1318819de9e9f","attrs":{"1318819de9e9f":{"r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","marker":{"size":10,"color":"red","symbol":"square"},"fill":"toself","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"hovermode":"closest","showlegend":false},"source":"A","config":{"showSendToCloud":false},"data":[{"fillcolor":"rgba(31,119,180,0.5)","r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","marker":{"color":"red","size":10,"symbol":"square","line":{"color":"rgba(31,119,180,1)"}},"fill":"toself","type":"scatterpolar","line":{"color":"rgba(31,119,180,1)"},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<ul>
+<li>plot_ly(mode = lines)</li>
+</ul>
+<pre class="r"><code>library(plotly)
+fig &lt;- plot_ly(
+   type = &#39;scatterpolar&#39;,
+   r = c(0,1,2,2),
+   theta = c(0,45,90,0),
+   mode =&#39;lines&#39;
+)
+
+fig</code></pre>
+<div id="htmlwidget-11" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-11">{"x":{"visdat":{"1318856d4799d":["function () ","plotlyVisDat"]},"cur_data":"1318856d4799d","attrs":{"1318856d4799d":{"r":[0,1,2,2],"theta":[0,45,90,0],"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"hovermode":"closest","showlegend":false},"source":"A","config":{"showSendToCloud":false},"data":[{"r":[0,1,2,2],"theta":[0,45,90,0],"mode":"lines","type":"scatterpolar","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"line":{"color":"rgba(31,119,180,1)"},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="plot_ly-lineslist" class="section level2">
+<h2>plot_ly (lines(list))</h2>
+<p><strong>APPENDIX plot_ly(lines(list(color, width)))</strong></p>
+<p>plot_ly(lines (list(color, width)))</p>
+<pre class="r"><code>library(plotly)
+
+fig &lt;- plot_ly(
+  type = &#39;scatterpolar&#39;,
+  r = c(0,1,2,3),
+  theta = c(0,45,90,135),
+    mode = &#39;lines+markers&#39;, marker = list(size = 10,color=&quot;red&quot;, 
+                                          symbol = &#39;square&#39; ),
+  lines = list(color=&quot;black&quot;,width=5),
+  fill = &#39;toself&#39;
+)
+
+
+fig</code></pre>
+<div id="htmlwidget-12" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-12">{"x":{"visdat":{"13188663df137":["function () ","plotlyVisDat"]},"cur_data":"13188663df137","attrs":{"13188663df137":{"r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","marker":{"size":10,"color":"red","symbol":"square"},"lines":{"color":"black","width":5},"fill":"toself","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"hovermode":"closest","showlegend":false},"source":"A","config":{"showSendToCloud":false},"data":[{"fillcolor":"rgba(31,119,180,0.5)","r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","marker":{"color":"red","size":10,"symbol":"square","line":{"color":"rgba(31,119,180,1)"}},"lines":{"color":"black","width":5},"fill":"toself","type":"scatterpolar","line":{"color":"black","width":5},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<pre><code>    plot_ly(r = c(0,1,2,3),theta = c(0,45,90,135))
+    plot_ly(type = &#39;scatterpolar&#39;)
+    plot_ly(modes(lines+markers),fill = &#39;toself&#39;)
+    plot_ly(mode = &#39;lines+markers&#39;)
+    
+   *marker = (list(size= 10)
+    marker = (list(symbole = &#39;square&#39;)
+    marker = (list(color = &#39;-&#39;)
+   
+   *lines = list(color=&quot;black&quot;)
+    lines = list(width=5)
+   </code></pre>
+<hr />
+<p><strong>APPENDIX plot_ly(mode) plot_ly(line(list),marker(list))</strong></p>
+<ul>
+<li>plot_ly(mode=lines+markers) plot_ly(line(list),marker(list))</li>
+</ul>
+<pre class="r"><code>library(plotly)
+
+fig &lt;- plot_ly(
+  type = &#39;scatterpolar&#39;,
+  r = c(0,1,2,3),
+  theta = c(0,45,90,135),
+  mode = &#39;lines+markers&#39;
+)
+
+fig</code></pre>
+<div id="htmlwidget-13" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-13">{"x":{"visdat":{"131886a636791":["function () ","plotlyVisDat"]},"cur_data":"131886a636791","attrs":{"131886a636791":{"r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"hovermode":"closest","showlegend":false},"source":"A","config":{"showSendToCloud":false},"data":[{"r":[0,1,2,3],"theta":[0,45,90,135],"mode":"lines+markers","type":"scatterpolar","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"line":{"color":"rgba(31,119,180,1)"},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>

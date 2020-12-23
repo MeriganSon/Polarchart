@@ -1,0 +1,42 @@
+---
+title: 'Plotl_ly  وظائف عمل '
+author: "Ahmed Alluqmani"
+---
+ 
+ 
+ 
+```{r setup, include=FALSE} 
+knitr::opts_chunk$set(warning = FALSE, message = FALSE)
+```
+ 
+ 
+# plot_ly()
+
+
+```{r}
+
+library(plotly)
+
+fig <- plot_ly()
+
+fig
+
+ 
+```
+
+
+## plot_ly(r,theta)
+
+```{r plot_ly(r,theta}
+
+library(plotly)
+fig <- plot_ly(
+ r = c(0,1,2,3),
+theta = c(0,45,90,135)
+               )
+
+fig
+
+
+```
+ 

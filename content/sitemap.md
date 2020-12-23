@@ -4,7 +4,7 @@ layout: sitemap
 menu:
   header:
     weight: 3
-title: Sitemap
+title:  خارطة
 ---
 
-Below is a full list of posts and pages on this website ordered by date.
+أدناه يوجد خارطة الموقع وهي قائمة لجميع المنشورات والصفحات على هذا الموقع بن مريغان و التي تم تحميلها حسب الكاتب والتاريخ المشار اليه.

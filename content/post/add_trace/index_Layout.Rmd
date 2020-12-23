@@ -1,0 +1,585 @@
+---
+title: "add_trace وظائف عمل"
+author: "Ahmed Alluqmani"
+date: 2020-12-01T21:13:14-05:00
+categories: ["R"]
+tags: ["R Markdown", "plot", "regression"]
+---
+
+ 
+```{r setup, include=FALSE} 
+knitr::opts_chunk$set(warning = FALSE, message = FALSE)
+```
+ 
+  
+ 
+# add_trace
+
+## add_trace(r,theta)
+
+```{r}
+library('plotly')
+fig <- plot_ly(
+  type = 'scatterpolar'
+)
+  
+fig <- fig %>%
+  add_trace( r = c(0,1,2,3),
+  theta = c(180,225,270,315)
+  )
+fig
+
+ 
+
+```
+
+
+-   Appendix add_trace(r,theta)
+
+
+-   add_trace(r)
+
+```{r }
+library('plotly')
+fig <- plot_ly(
+  
+)
+  
+fig <- fig %>%
+  add_trace( r = c(0,1,2,3)
+  )
+fig
+ 
+```
+
+
+-   add_trace(theta)
+ 
+
+```{r}
+library('plotly')
+fig <- plot_ly(
+  type = 'scatterpolar'
+)
+  
+fig <- fig %>%
+  add_trace( r = c(0,1,2,3),
+  theta = c(180,225,270,315)
+  )
+fig
+
+ 
+
+```
+ Appendix plot_ly() add_trace(r,theta)
+
+
+- plot_ly(type, mode) add_trace(r,theta) 
+
+```{r}
+ 
+library('plotly')
+fig <- plot_ly(
+  type = 'scatterpolar',
+  mode ='lines+markers' 
+)
+  
+fig <- fig %>%
+  add_trace( r = c(0,1,2,3),
+  theta = c(180,225,270,315)
+  )
+fig 
+ 
+ 
+
+```
+
+- plot_ly(fill,type, mode) add_trace(r,theta) 
+
+```{r}
+library('plotly')
+fig <- plot_ly(
+  type = 'scatterpolar',
+  mode ='lines+markers',
+  fill = 'toself'
+)
+  
+fig <- fig %>%
+  add_trace( r = c(0,1,2,3),
+  theta = c(180,225,270,315)
+  )
+fig 
+ 
+
+```
+
+
+
+ 
+## add_trace(line (list), marker (list))
+    
+
+```{r}
+ library('plotly')
+fig <- plot_ly(
+  type = 'scatterpolar',
+    mode = 'lines+markers', 
+  fill = 'toself')
+  
+fig <- fig %>%
+  add_trace( r = c(0,1,2,3),
+  theta = c(180,225,270,315),
+  line = list(
+    color = "blue"),
+  marker = list(
+    color = "red")
+  )
+fig
+```
+
+
+-    Appendix add_trace marker(list)
+
+-   add_trace marker(list (red,size))
+
+```{r}
+library('plotly')
+fig <- plot_ly(
+  type = 'scatterpolar',
+    mode = 'lines+markers',
+  fill = 'toself')
+  
+fig <- fig %>%
+  add_trace( r = c(0,1,2,3),
+  theta = c(180,225,270,315),
+  line = list(
+    color = "blue"),
+  marker = list(
+    color = "red",size = 6)
+  )
+fig  
+
+
+```
+
+
+ 
+-   add_trace marker(list (color,size))
+
+
+```{r}
+library('plotly')
+fig <- plot_ly(
+  type = 'scatterpolar',
+    mode = 'lines+markers', 
+  fill = 'toself')
+  
+fig <- fig %>%
+  add_trace( r = c(0,1,2,3),
+  theta = c(180,225,270,315),
+  line = list(
+    color = "blue"),
+  marker = list(
+    color = "red",size = 6, symbol = 'square')
+  )
+fig 
+
+```
+
+
+#   add_trace marker(list (symbol))
+
+
+```{r}
+library('plotly')
+fig <- plot_ly(
+  type = 'scatterpolar',
+  r = c(0,1,2,3),
+  theta = c(0,45,90,135),
+    mode = 'lines+markers', marker = list(size = 10,color="red"),
+  lines = list(size = 10,color="black"),
+  fill = 'toself',
+  name='Trail'
+) 
+  
+fig <- fig %>%
+  add_trace( r = c(0,1,2,3),
+  theta = c(180,225,270,315),
+  line = list(
+    color = "blue"),
+  marker = list(
+    color = "red",size = 6, symbol = 'square')
+  )
+fig 
+ 
+
+
+```
+
+
+
+
+
+
+
+
+- radialaxis (list(visible, range, angle,color,nticks ,tickcolor))
+  
+-   Appendix radialaxis = (list)
+  
+```{r layout(polar list( radialaxis (list()))}
+ 
+
+library(plotly)
+
+fig <- plot_ly(
+  type = 'scatterpolar',
+  r = c(0,1,2,3),
+  theta = c(0,45,90,135),
+    mode = 'lines+markers', marker = list(size = 10,color="red", 
+                                          symbol = 'square' ),
+  lines = list(color="black",width=5),
+  fill = 'toself'
+)
+
+fig <- fig %>%
+  layout(
+    polar = list( radialaxis = list(
+     
+    )))
+fig
+
+
+
+```
+
+
+    plot_ly(
+    type = 'scatterpolar',
+    r = c(0,1,2,3),
+    theta = c(0,45,90,135),
+    mode = 'lines+markers', marker = list(size = 10,color="red", 
+                                          symbol = 'square' ),
+    lines = list(color="black",width=5),
+    fill = 'toself'
+    )
+    
+  ---
+
+
+
+-   radialaxis = list(visible, range)))
+
+```{r layout(polar(list(radialaxis (list(visible,range)))))}
+ 
+ library(plotly)
+fig <- plot_ly(
+  type = 'scatterpolar',
+  r = c(0,1,2,3),
+  theta = c(0,45,90,135),
+  mode = 'lines+markers', marker = list(size = 10,color="red"),
+  lines = list(size = 10,color="black"),
+  fill = 'toself'
+  
+) 
+fig <- fig %>%
+  layout(
+    polar = list(
+      radialaxis = list(
+        visible = T,
+        range = c(0,3)
+      )
+    )
+  )
+
+fig
+
+ 
+```
+
+
+
+    radialaxis (list(angle))
+
+ 
+
+```{r layout(polar list(radialaxis  list(angle)))}
+
+  library(plotly)
+fig <- plot_ly(
+  type = 'scatterpolar',
+  r = c(0,1,2,3),
+  theta = c(0,45,90,135),
+  marker = list(size = 10,color="red"),
+  lines = list(size = 10,color="black"),
+  fill = 'toself'
+) 
+fig <- fig %>%
+  layout(
+    polar = list(
+      radialaxis = list(
+        visible = T,
+        range = c(0,3),
+          angle=90
+      )
+    )
+  )
+
+fig
+ 
+
+```
+
+ 
+
+radialaxis(list(color,nticks ,tickcolor)
+
+```{r layout(polar list(radialaxis  list(color,nticks ,tickcolor))}
+ 
+  library(plotly)
+fig <- plot_ly(
+  type = 'scatterpolar',
+  r = c(0,1,2,3),
+  theta = c(0,45,90,135),
+   marker = list(size = 10,color="red"),
+  lines = list(size = 10,color="black"),
+  fill = 'toself'
+) 
+fig <- fig %>%
+  layout(
+    polar = list(
+      radialaxis = list(
+        visible = T,
+        range = c(0,3),
+          angle=90,
+        color = 'grey',
+        nticks = 4,
+        tickcolor =toRGB('blue')
+      )
+    )
+  )
+
+fig
+ 
+
+```
+ 
+### polar((hole)) 
+
+  polar(list(hole=0.5)) 
+
+
+```{r layout(polar (list(hole))}
+ 
+  library(plotly)
+fig <- plot_ly(
+  type = 'scatterpolar',
+  r = c(0,1,2,3),
+  theta = c(0,45,90,135),
+   mode = 'lines+markers', marker = list(size = 10,color="red"),
+  lines = list(size = 10,color="black"),
+  fill = 'toself'
+) 
+fig <- fig %>%
+  layout(
+    polar = list(
+      hole=0.5
+    )
+  )
+
+fig
+
+ 
+ 
+
+```
+
+
+##  layout(showlegend ,showline )
+  -- layout(showlegend = T ,showline = F)
+  
+```{r layout(showlegend ,showline )}
+ 
+  library(plotly)
+fig <- plot_ly(
+  type = 'scatterpolar',
+  r = c(0,1,2,3),
+  theta = c(0,45,90,135),
+    mode = 'lines+markers', marker = list(size = 10,color="red"),
+  lines = list(size = 10,color="black"),
+  fill = 'toself'
+) 
+fig <- fig %>%
+  layout(
+    polar = list(
+      hole=0.2,
+      radialaxis = list(
+        visible = T,
+        range = c(0,3),
+          angle=90,
+        color = 'grey',
+        nticks = 4,
+        tickcolor =toRGB('blue')
+      )
+    ),
+      showlegend = T,
+    showline = T
+  )
+
+fig
+ 
+
+```
+
+
+## layout(title)
+
+  -- layout( title = "Radar Charts in R with Plotly") 
+
+
+```{r layout(title (scene list()) layout(name)}
+ 
+ 
+  library(plotly)
+fig <- plot_ly(
+  type = 'scatterpolar',
+  r = c(0,1,2,3),
+  theta = c(0,45,90,135),
+    mode = 'lines+markers', marker = list(size = 10,color="red"),
+  lines = list(size = 10,color="black"),
+  fill = 'toself',
+  name='Trail'
+) 
+fig <- fig %>%
+  layout(
+    polar = list(
+      hole=0.2,
+      radialaxis = list(
+        visible = T,
+        range = c(0,3),
+          angle=90,
+        color = 'grey',
+        nticks = 4,
+        tickcolor =toRGB('blue')
+      )
+    ),
+      showlegend = T,
+    showline = T
+  )
+
+fig <- fig %>% layout(
+  title = "Radar Charts in R with Plotly",
+  scene = list(
+  ))
+
+fig
+ 
+
+```
+
+
+## layout(scene = list)
+
+  -- layout(scene list( xaxis (list(title) yaxis (list(title ) zaxis (list(title)))))
+
+ 
+
+```{r layout(scene list( xaxis ( list(title) yaxis (list(title ) zaxis (list(title))))))}
+ 
+ 
+  library(plotly)
+fig <- plot_ly(
+  type = 'scatterpolar',
+  r = c(0,1,2,3),
+  theta = c(0,45,90,135),
+    mode = 'lines+markers', marker = list(size = 10,color="red"),
+  lines = list(size = 10,color="black"),
+  fill = 'toself',
+  name='Trail'
+) 
+fig <- fig %>%
+  layout(
+    polar = list(
+      hole=0.2,
+      radialaxis = list(
+        visible = T,
+        range = c(0,3),
+          angle=90,
+        color = 'grey',
+        nticks = 4,
+        tickcolor =toRGB('blue')
+      )
+    )
+  )
+
+fig <- fig %>% layout( showlegend = T,
+    showline = T,
+  title = "Radar Charts in R with Plotly",
+  scene = list(
+    xaxis = list(title = "Cos"),
+    yaxis = list(title = "Sin"),
+    zaxis = list(title = "Z")
+  ))
+
+fig
+
+
+
+
+ 
+```
+
+
+
+```{r layout(scene list()}
+ 
+ 
+  library(plotly)
+fig <- plot_ly(
+  type = 'scatterpolar',
+  r = c(0,1,2,3),
+  theta = c(0,45,90,135),
+    mode = 'lines+markers', marker = list(size = 10,color="red"),
+  lines = list(size = 10,color="black"),
+  fill = 'toself',
+  name='Trail'
+) 
+fig <- fig %>%
+  layout(
+    polar = list(
+      hole=0.2,
+      radialaxis = list(
+        visible = T,
+        range = c(0,3),
+          angle=90,
+        color = 'grey',
+        nticks = 4,
+        tickcolor =toRGB('blue')
+      )
+    )
+  )
+
+fig <- fig %>% layout(paper_bgcolor='#5875D5',
+                      showlegend = T, 
+  title = "Radar Charts in R with Plotly",
+  scene = list(
+    xaxis = list(title = "Cos"),
+    yaxis = list(title = "Sin"),
+    zaxis = list(title = "Z")
+  ), titlefont = list(
+  color = '#ffffff',size=12,family = "Agency FB"),
+  font = list(family = 'Agency FB',
+              size = 10), 
+              margin = 0)
+  
+
+fig
+
+
+
+
+ 
+```
+
+
+

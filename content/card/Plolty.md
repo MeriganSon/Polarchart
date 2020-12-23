@@ -1,12 +1,12 @@
 ---
-style: 'background: lightslategray; color: white;'
-title:   الرسم الراداري
-weight: 3
+style: 'background: #f7f9fb;'
+title:  برنامج بلوتلي
+weight: 2
 ---
  
                                                                                                                             .
                                                                                                                             .               
- Radarchar                                                                                                                  .
+ Plotly                                                                                                                     .
                                                                                                                             .
                                                                                                                             .
                                                                                                                             

@@ -1,12 +1,12 @@
 ---
-style: 'background: lightslategray; color: white;'
-title:   الرسم الراداري
-weight: 3
+style: 'background: darkslategray; color: white;'
+title:  برنامج الآر
+weight: 1
 ---
- 
+
                                                                                                                             .
                                                                                                                             .               
- Radarchar                                                                                                                  .
+ Rstudio                                                                                                                    .
                                                                                                                             .
                                                                                                                             .
                                                                                                                             

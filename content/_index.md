@@ -2,15 +2,18 @@
 menu:
   header:
     weight: 1
-title: Home
+title: الصفحة الرئيسية 
 ---
+ كاتب  و مؤسس الموقع ، **أحمد اللقماني الحربي**، ابن المدينة المنورة، المنورة، درس هندسة الاتصالات والالكترونيات و في العقدين الثاني و الثالث من عمره و ترعرع بين الأردن و مصر. واصل المجال الأكاديمي و عمل في مرافق المشاريع الاسترالية البحثية المتخصصة في الهندسة الكهربائية و الالكترونية في جامعة ملبورن الملكية، حتى عام ٢٠١٩. اختبر شخصيته و أبعادها عبر مختلف الثقافات. زوال المهنة الهندسية في شركة أعمال و اعتلى منصب المدير التنفيذي، بعد خبرة سنة في مجال حقول هتدسة ابراج الجوال. التحق الى برنامج خادم الحرمين للابتعاث الخارجي لدراسة الماستر في عام ٢٠١٤-٢٠١٥. حصل على دعوة للتقديم و مواصلة للدراسة البحثية في جامعة كوينزلاند ابان ان يحل أزمة كورونا في ٢٠٢٠
 
-**Lucius Annaeus Seneca** (c. 4 BC -- AD 65), also known as **Seneca the Younger**, was a Hispano-Roman Stoic philosopher, statesman, dramatist, and—in one work—satirist from the Silver Age of Latin literature.
 
 <div class="quote-right">
 
-> Until we have begun to go without them, we fail to realize how unnecessary many things are. We've been using them not because we needed them but because we had them.
+>اليوم في عام ٢٠٢٠، اصبح الفرصة مواتية  لمواكبة  التحول الافتراضي و الانغماس التقني التي فرضته  الثورة التقنية و ازمة كورونا.ما وفرت الاسباب لتحقيق نجاح المشاريع على أرضية قد تنافس مرافق الجامعات. 
+موقع بن مريغان سوف يقدم أدوات برمجية من اكواد و شرح نوافذ للبرنامجين معا (الار) باستخدام  (بلوتلي) : هذه النسخة ستهتم حول الرسم البياني الراداري. 
+  
 
 </div>
 
-Seneca was born in Cordoba in Hispania, and raised in Rome, where he was trained in rhetoric and philosophy. His father was Seneca the Elder, his elder brother was Lucius Junius Gallio Annaeanus, and his nephew was the poet Lucan. In AD 41, Seneca was exiled to the island of Corsica under emperor Claudius, but was allowed to return in 49 to become a tutor to Nero. When Nero became emperor in 54, Seneca became his advisor and, together with the praetorian prefect Sextus Afranius Burrus, provided competent government for the first five years of Nero's reign. Seneca's influence over Nero declined with time, and in 65 Seneca was forced to take his own life for alleged complicity in the Pisonian conspiracy to assassinate Nero, in which he was likely to have been innocent. His stoic and calm suicide has become the subject of numerous paintings.
+
+
