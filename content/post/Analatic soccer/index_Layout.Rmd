@@ -262,3 +262,460 @@ fig
 
 
 ```
+
+
+
+```{r echo=FALSE}
+ 
+library('plotly')
+
+fig <- plot_ly(
+  type = 'scatterpolar',
+  mode ='lines+markers'
+)
+
+
+  
+fig <- fig %>% add_trace( r = c(28.57142857,
+                                61.53846154,
+                                28.57142857,
+                                14.28571429,
+                                30.76923077,
+                                25,
+                                54.54545455,
+                                34.44564047,
+                                34.44564047,
+                                33.08733087,
+                                50),
+   theta = c(
+"إجمالي التسديدات","تسديدات على الهدف","تسديدات خارج الهدف","فرص خطيرة","الضربات الركنية","العرضيات","حالات التسلل","الركلات الحرة","تمريرات","تمريرات اكتملت","هجمات" 
+),
+  line = list(
+    color = "blue"),
+  marker = list(
+    color = "#8B008B",size = 5, symbol = 'square'),
+  name="القادسية"
+
+  )
+
+
+fig <- fig %>% add_trace( r = c(71.42857143,
+                                38.46153846,
+                                71.42857143,
+                                85.71428571,
+                                69.23076923,
+                                75,
+                                45.45454545,
+                                45.45454545,
+                                65.55435953,
+                                66.91266913,
+                                50),
+   theta = c(
+"إجمالي التسديدات","تسديدات على الهدف","تسديدات خارج الهدف","فرص خطيرة","الضربات الركنية","العرضيات","حالات التسلل","الركلات الحرة","تمريرات","تمريرات اكتملت","هجمات" 
+),
+             line = list(
+               color = "#8B008B"),
+             marker = list(
+               color = "blue",
+               symbol = 'square',
+               size = 5),
+               name= "الهلال"
+             ,
+             subplot = 'polar2'
+  )
+
+
+fig <- fig %>% add_trace( r = c(71.42857143,
+                                38.46153846,
+                                71.42857143,
+                                85.71428571,
+                                69.23076923,
+                                75,
+                                45.45454545,
+                                45.45454545,
+                                65.55435953,
+                                66.91266913,
+                                50),
+   theta = c(
+"إجمالي التسديدات","تسديدات على الهدف","تسديدات خارج الهدف","فرص خطيرة","الضربات الركنية","العرضيات","حالات التسلل","الركلات الحرة","تمريرات","تمريرات اكتملت","هجمات" 
+),
+             line = list(
+               color = "#8B008B"),
+             marker = list(
+               color = "blue",
+               symbol = 'square',
+               size = 5),
+               name= "الهلال"
+             ,
+             subplot = 'polar3',
+        showlegend = F
+  )
+
+
+
+fig <- fig %>% add_trace( r = c(71.42857143,
+                                38.46153846,
+                                71.42857143,
+                                85.71428571,
+                                69.23076923,
+                                75,
+                                45.45454545,
+                                45.45454545,
+                                65.55435953,
+                                66.91266913,
+                                50),
+   theta = c(
+"إجمالي التسديدات","تسديدات على الهدف","تسديدات خارج الهدف","فرص خطيرة","الضربات الركنية","العرضيات","حالات التسلل","الركلات الحرة","تمريرات","تمريرات اكتملت","هجمات" 
+),
+             line = list(
+               color = "#8B008B"),
+             marker = list(
+               color = "blue",
+               symbol = 'square',
+               size = 5),
+               name= "الهلال"
+             ,
+             subplot = 'polar4',
+        showlegend = F
+  )
+
+fig <- fig %>%
+  layout(
+    polar = list(
+    domain = list(
+        x = c(0,0.46),
+        y = c(0.56,1)
+      ),
+    angularaxis = list(thetaunit = 'radians'),
+      hole=0,
+      radialaxis = list(
+        visible = T,
+        range = c(0,100),
+          angle=90,
+        tickangle = 90,
+        color = 'grey',
+        nticks = 10,
+        tickcolor =toRGB('#FF00FF'),
+        tickfont = list(
+               size = 10,
+               color = "blue"
+             ), 
+        ticks = "outside",
+        ticklen = 10,
+        tickwidth = 1,
+        gridcolor = 'grey'
+
+      )),
+    polar2 = list(
+      domain = list(x = c(0,0.46),
+                    y = c(0,0.42)
+      ),
+      radialaxis = list(
+        range = c(0,100),
+        angle=90,
+        tickangle = 90,
+        tickcolor =toRGB('#FF00FF'),
+        tickfont = list(
+               size = 10,
+               color = "blue"
+             ),
+        tickfont = list(
+          size = 8
+        ),gridcolor = 'grey'
+      ),
+      angularaxis = list(
+        tickfont = list(
+          size = 8
+        )
+      )
+    ),
+    
+    polar3 = list(
+      domain = list(
+      x = c(0.54,1),
+      y = c(0.56,1)
+      ),
+      radialaxis = list(
+        range = c(0,100),
+        angle=90,
+        tickangle = 90,
+        tickcolor =toRGB('#FF00FF'),
+        tickfont = list(
+               size = 10,
+               color = "blue"
+             ),
+        tickfont = list(
+          size = 8
+        ),gridcolor = 'grey'
+      ),
+      angularaxis = list(
+        tickfont = list(
+          size = 8
+        )
+      )
+    ),sector = c(0,180),
+    radialaxis = list(type = 'log', angle = 45),
+polar4 = list(
+      domain = list(
+        x = c(0.54,1),
+        y = c(0,0.44)
+      ),
+      radialaxis = list(
+        range = c(0,100),
+        angle=90,
+        tickangle = 90,
+        tickcolor =toRGB('#FF00FF'),
+        tickfont = list(
+               size = 10,
+               color = "blue"
+             ),
+        tickfont = list(
+          size = 8
+        ),gridcolor = 'grey'
+      ),
+      angularaxis = list(
+        tickfont = list(
+          size = 8
+        )
+      )
+    )
+  )
+
+fig <- fig %>% layout(paper_bgcolor='#9370DB',
+      showlegend = T,
+    showline = T, 
+  title = " تحليل احصائي مباراة القادسية و الهلال ٢٠٢٠",
+  scene = list(
+    xaxis = list(title = "Cos"),
+    yaxis = list(title = "Sin"),
+    zaxis = list(title = "Z")
+  ), titlefont = list(
+  color = '#ffffff',size=20,family = "Agency FB"),
+  font = list(family = 'Agency FB',
+              size = 10), 
+              margin = 0)
+  
+
+fig
+
+```
+
+
+
+```{r echo=FALSE}
+ 
+library('plotly')
+
+fig <- plot_ly(
+  type = 'scatterpolar',
+  mode ='lines+markers'
+)
+
+
+fig <- fig %>% add_trace(r = c( 30.76923077,
+                                34.44564047,
+                                34.44564047,
+                                33.08733087,
+                                50),
+                           theta = c("الضربات الركنية","الركلات الحرة" ,"تمريرات","تمريرات اكتملت","هجمات"),
+  line = list(
+    color = "blue"),
+  marker = list(
+    color = "#8B008B",size = 5, symbol = 'square'),
+  name="القادسية",showlegend = F
+  )
+
+
+fig <- fig %>% add_trace( r = c( 69.23076923,
+                                45.45454545,
+                                65.55435953,
+                                66.91266913,
+                                50),
+                           theta = c("الضربات الركنية","الركلات الحرة" ,"تمريرات","تمريرات اكتملت","هجمات"),
+ 
+             line = list(
+               color = "#8B008B"),
+             marker = list(
+               color = "blue",
+               symbol = 'square',
+               size = 5),
+               name= "الهلال",showlegend =F
+             )
+
+
+
+
+
+
+fig <- fig %>% add_trace( r = c(
+                                85.71428571,
+                                75,
+                                45.45454545
+                                ),
+                          
+                           theta = c("فرص خطيرة","العرضيات","حالات التسلل"
+
+),
+  
+             line = list(
+               color = "#8B008B"),
+             marker = list(
+               color = "blue",
+               symbol = 'square',
+               size = 5),
+               name= "الهلال"
+             ,
+             subplot = 'polar2')
+
+
+
+ 
+fig <- fig %>% add_trace( r = c(14.28571429,
+                                25,
+                                54.54545455
+                                ),
+                           theta = c("فرص خطيرة","العرضيات","حالات التسلل"),
+  line = list(
+    color = "blue"),
+  marker = list(
+    color = "#8B008B",size = 5, symbol = 'square'),
+  name="القادسية",subplot = 'polar2'
+  )
+
+
+
+
+
+
+
+fig <- fig %>% add_trace( r = c(71.42857143,
+                                38.46153846,
+                                71.42857143
+),
+    theta = c(
+ "إجمالي التسديدات","تسديدات على الهدف","تسديدات خارج الهدف"
+),
+             line = list(
+               color = "#8B008B"),
+             marker = list(
+               color = "blue",
+               symbol = 'square',
+               size = 5)
+             ,
+             subplot = 'polar3',
+                    showlegend = F
+  )
+
+
+fig <- fig %>% add_trace( r = c(28.57142857,
+                                61.53846154,
+                                28.57142857
+),
+    theta = c(
+ "إجمالي التسديدات","تسديدات على الهدف","تسديدات خارج الهدف"
+),
+          
+  line = list(
+    color = "blue"),
+  marker = list(
+    color = "#8B008B",size = 5, symbol = 'square')
+             ,
+             subplot = 'polar3',
+                    showlegend = F
+  )
+
+fig <- fig %>%
+  layout(
+    polar = list(
+    domain = list(
+        x = c(0,0.46),
+        y = c(0.56,1)
+      ),
+      hole=0,
+      radialaxis = list(
+        visible = T,
+        range = c(0,100),
+          angle=90,
+        tickangle = 90,
+        color = 'grey',
+        nticks = 10,
+        tickcolor =toRGB('#FF00FF'),
+        tickfont = list(
+               size = 10,
+               color = "blue"
+             ), 
+        ticks = "outside",
+        ticklen = 10,
+        tickwidth = 1,
+        gridcolor = 'grey'#color of grid lines
+        
+
+      )),
+    polar2 = list(
+      domain = list(x = c(0,0.46),
+                    y = c(0,0.42)
+      ),
+      radialaxis = list(
+        range = c(0,100),
+        angle=90,
+        tickangle = 90,
+        tickcolor =toRGB('#FF00FF'),
+        tickfont = list(
+               size = 10,
+               color = "blue"
+             ),
+        tickfont = list(
+          size = 8
+        ),gridcolor = 'grey'
+      ),
+      angularaxis = list(
+        tickfont = list(
+          size = 8
+        )
+      )
+    ),
+    
+    polar3 = list(
+      domain = list(
+      x = c(0.54,1),
+      y = c(0,1)
+      ),
+      radialaxis = list(
+        range = c(0,100),
+        angle=90,
+        tickangle = 90,
+        tickcolor =toRGB('#FF00FF'),
+        tickfont = list(
+               size = 10,
+               color = "blue"
+             ),
+        tickfont = list(
+          size = 8
+        ),gridcolor = 'grey'
+      ),
+      angularaxis = list(
+        tickfont = list(
+          size = 8
+        )
+      )
+    )
+  )
+
+fig <- fig %>% layout(paper_bgcolor='#9370DB',
+      showlegend = T,
+    showline = T, 
+  title = " تحليل احصائي مباراة القادسية و الهلال ٢٠٢٠",
+  scene = list(
+    xaxis = list(title = "Cos"),
+    yaxis = list(title = "Sin"),
+    zaxis = list(title = "Z")
+  ), titlefont = list(
+  color = '#ffffff',size=20,family = "Agency FB"),
+  font = list(family = 'Agency FB',
+              size = 10), 
+              margin = 0)
+  
+
+fig
+
+```
